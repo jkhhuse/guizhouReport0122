@@ -1,0 +1,31 @@
+{
+  "datacenter_resource_distribution": [
+    {
+      "big_data_amount": 267,
+      "business_support_amount": 0,
+      "data_center": "贵安",
+      "information_technology_amount": 155,
+      "network_department_amount": 273,
+      "server_type": "4路虚拟化",
+      "total_amount": 695
+    },
+    {
+      "big_data_amount": 0,
+      "business_support_amount": 0,
+      "data_center": "金阳",
+      "information_technology_amount": 0,
+      "network_department_amount": 645,
+      "server_type": "4路虚拟化",
+      "total_amount": 645
+    },
+    {
+      "big_data_amount": 267,
+      "business_support_amount": 0,
+      "data_center": "汇总",
+      "information_technology_amount": 155,
+      "network_department_amount": 918,
+      "server_type": "总类型",
+      "total_amount": 1340
+    }
+  ]
+}

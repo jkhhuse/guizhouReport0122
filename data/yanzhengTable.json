@@ -1,0 +1,46 @@
+{
+"tables": [
+  {
+    "Cname": "验证发票导入状态信息",
+    "Ename": "SB_FI_AP_ValidateImportAPInvoiceSrv",
+    "time": "13423",
+    "category":"验证"
+  },
+  {
+    "Cname": "验证薪酬发放导入应付状态信息",
+    "Ename": "SB_HR_PAY_ValidateImportPayPaymentInfoSrv",
+    "time": "2725",
+    "category":"验证"
+  },
+  {
+    "Cname": "验证导入薪酬发放报账单服务",
+    "Ename": "SB_FI_EAS_ValidateImportTransPayCostInfoSrv",
+    "time": "323",
+    "category":"验证"
+  },
+  {
+    "Cname": "验证导入人工成本报销报账单审核信息服务",
+    "Ename": "SB_HR_PAY_ValidateImportTransExpenseInfoSrv",
+    "time": "82",
+    "category":"验证"
+  },
+  {
+    "Cname": "验证导入人工成本报销报账单审核信息服务",
+    "Ename": "SB_FI_EAS_ValidateImportExpenseApprovStatInfoSrv",
+    "time": "82",
+    "category":"验证"
+  },
+
+  {
+    "Cname": "验证总账导入服务",
+    "Ename": "SB_FI_GL_TDValidateImportGLEntrySrv",
+    "time": "37",
+    "category":"验证"
+  },
+  {
+    "Cname": "验证应收发票导入结果服务",
+    "Ename": "SB_FI_AR_ValidateImportARTransactionSrv",
+    "time": "35",
+    "category":"验证"
+  }
+]}

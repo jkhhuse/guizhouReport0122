@@ -1,0 +1,28 @@
+{
+  "resource_statistics": [
+    {
+      "nename": "x86物理机",
+      "sum_value": 2224
+    },
+    {
+      "nename": "x86虚拟机",
+      "sum_value": 1340
+    },
+    {
+      "nename": "存储总量",
+      "sum_value": 1589380
+    },
+    {
+      "nename": "小型机",
+      "sum_value": 43
+    },
+    {
+      "nename": "支撑业务个数",
+      "sum_value": 96
+    },
+    {
+      "nename": "支撑业务部门数",
+      "sum_value": 3
+    }
+  ]
+}

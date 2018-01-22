@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>中间件</title>
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/echarts.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="lib/bootstrap-table/bootstrap-table.min.css">
+
+    <link href="css/table.css" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="lib/bootstrap-table/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="lib/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+  <style type="text/css">
+    html, body {
+      background: #12141B;
+      color: #ccc;
+      height: 100%;
+    }
+    a {
+      color: #ccc;
+    }
+    a:hover, a:focus {
+      color: #ccc;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #262C37;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+    .table-wrapper{
+      padding: 5px;
+    }
+    #detail_table thead {
+      height: 44px;
+      background-color: #2d3543;
+      font-weight: normal;
+      font-size: 12px;
+
+    }
+
+    #detail_table > thead > tr > th {
+      /*padding-left: 15px;*/
+      border-bottom: 2px solid #5792E5;
+    }
+
+    #detail_table > tbody > tr > td {
+      padding: 0;
+    }
+
+    #detail_table > tbody > tr > td {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      background: #1C2331;
+      font-weight: normal;
+      font-size: 12px;
+      border-bottom: 1px solid #32507A;
+    }
+
+    #detail_table > tbody > tr:hover, #detail_table > tbody a:hover {
+      color: #5792E5;
+    }
+
+    #detail_table .glyphicon {
+      color: #4A90E2;
+      padding-left: 3px;
+    }
+  </style>
+  <style type="text/css">
+    .docker .right-main {
+      padding: 5px;
+    }
+
+    .docker .right-main .action_btns .btn {
+      margin-bottom: 5px;
+    }
+
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+      background: none;
+      color: #ccc;
+    }
+    .chart-wrap {
+      height: 45%;
+      margin: 0 10px;
+    }
+    .chart-container {
+      height: 100%;
+      background: #1C2331;
+      border-radius: 4px;
+      border: 1px solid #1B3C6E;
+    }
+    .chart-box {
+      height: 100%;
+      width: 32%;
+      margin-right: 1%;
+      padding: 5px;
+      float: left;
+    }
+    .chart-title {
+      border-bottom: 1px solid #3D5B77;
+      padding: 2px 0 3px 10px;
+    }
+    #tomcat-pie, #cpu-bar, #memory-bar {
+      height: calc(100% - 26px);
+    }
+    .table>thead>tr>th, .table>tbody>tr>td {
+      border-color: #555;
+    }
+    #tomcat-ul{
+      padding-top:15px;
+      margin: 0 10px;
+      border-color:#32507A !important;
+    }
+    #tomcat-ul .active a{
+      border: 1px solid #32507A !important;
+      border-radius: 3px;
+
+    }
+    #tomcat-ul li a:hover{
+      background-color: #1c2331;
+      color: #ccc;
+      border-color:#32507A !important;
+    }
+    #detail_table >tbody>tr:hover {
+         background-color: #1C2331;
+    }
+  </style>
+</head>
+<body>
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav-black.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top-black.html');
+  </script>
+</div>
+<div class="right" style="margin-left: 200px; height: 100%;">
+  <div class="appStore" style="height: 100%">
+    <div class="breadcrumb-nav">
+      <img src="image/svg/tomcat.svg" class="breadcrumb-svg" alt=""/>
+      <span class="breadcrumb-span"><a href="tomcat-black.html">中间件</a></span>
+    </div>
+    <!-- Nav tabs -->
+    <!--<ul class="nav nav-tabs" id="tomcat-ul" role="tablist">
+      <li class="active">
+        <a id="return-tomcat" href="#" style="cursor: pointer;">开源中间件</a>
+      </li>
+      <li class="disabled">
+        <a href="javascript:void(0)">商用中间件</a>
+      </li>
+    </ul>-->
+    <div class="chart-wrap" style="margin-top:20px; ">
+      <div class="chart-container">
+        <div class="chart-box">
+          <div class="chart-title">tomcat数量</div>
+          <div id="tomcat-pie"></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-title">CPU使用率</div>
+          <div id="cpu-bar"></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-title">内存使用率</div>
+          <div id="memory-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="docker">
+      <div breadcrumb title="中间件" image="docker-black"></div>
+      <div class="right-main">
+        <!--
+        <table class="table" id="tomcat-table">
+          <thead>
+          <tr>
+            <th>服务名称</th>
+            <th>所属中间件</th>
+            <th>所在域</th>
+            <th>镜像</th>
+            <th>服务地址</th>
+            <th>创建时间</th>
+            <th>所属应用</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <a href="">weblogicweblogic
+                <i class="glyphicon glyphicon-tags"></i>
+              </a>
+            </td>
+            <td>
+              <span class="label label-info">weblogic</span>
+            </td>
+            <td>10.123.11.100/user/weblogic:latest</td>
+            <td>10.132.49.111:3000</td>
+            <td style="color: rgb(83,173,125)">
+              4天前
+            </td>
+            <td>
+              <div class="action_btns">
+                <button type="button" class="btn btn-xs btn-danger">删除</button>
+                <button type="button" class="btn btn-xs btn-info">查看</button>
+              </div>
+            </td>
+            <td>智能建筑平台</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">agent-tomcat-1
+                <i class="glyphicon glyphicon-tags"></i>
+              </a>
+            </td>
+            <td>
+              <span class="label label-info">tomcat</span>
+            </td>
+            <td>10.132.51.100/tenxuser/tomcat:latest</td>
+            <td>10.132.51.100:8080</td>
+            <td style="color: rgb(83,173,125)">
+              2天前
+            </td>
+            <td>
+              <div class="action_btns">
+                <button type="button" class="btn btn-xs btn-danger">删除</button>
+                <button type="button" class="btn btn-xs btn-info">查看</button>
+              </div>
+            </td>
+            <td>咨询项目管理平台</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">agent-1801
+                <i class="glyphicon glyphicon-tags"></i>
+              </a>
+            </td>
+            <td>
+              <span class="label label-info">tomcat</span>
+            </td>
+            <td>10.132.49.100/tenxuser/tomcat:latest</td>
+            <td>10.132.49.100:3000</td>
+            <td style="color: rgb(83,173,125)">
+              2天前
+            </td>
+            <td>
+              <div class="action_btns">
+                <button type="button" class="btn btn-xs btn-danger">删除</button>
+                <button type="button" class="btn btn-xs btn-info">查看</button>
+              </div>
+            </td>
+            <td>和More系统</td>
+          </tr>
+          </tbody>
+        </table>
+-->
+          <div class="ability-top" style="width: 100%">
+              <div class="standard" style="height: 100%;padding-top: 10px;padding: 5px;">
+                  <table id="detail_table"></table>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="lib/echarts.min.js"></script>
+<script src="util/chart.js"></script>
+<script src="util/table.js"></script>
+<script>
+  var data = [
+    {
+      name: 'b-tomcat-1',
+      middle: 'tomcat',
+      area: 'B域',
+      mirror: '10.123.11.100/user/weblogic:latest',
+      address: '10.132.49.111:3000',
+      time: '4天前',
+      app: '贵州移动办公平台'
+    },
+    {
+      name: 'o-tomcat-1',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.100/tenxuser/tomcat:latest',
+      address: '10.132.51.100:8080',
+      time: '3天前',
+      app: '和More系统'
+    },
+    {
+      name: 'm-tomcat-1',
+      middle: 'tomcat',
+      area: 'M域',
+      mirror: '10.132.51.128/area-m/tomcat:latest',
+      address: '10.132.51.108:5080',
+      time: '7天前',
+      app: 'NPS系统'
+    },
+    {
+      name: 'o-tomcat-2',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.110/tenxuser/tomcat:latest',
+      address: '10.132.51.110:8080',
+      time: '3天前',
+      app: '和More系统'
+    },
+    {
+      name: 'b-tomcat-2',
+      middle: 'tomcat',
+      area: 'B域',
+      mirror: '10.132.51.190/tenxuser/tomcat:latest',
+      address: '10.132.51.210:8080',
+      time: '4天前',
+      app: '流量管理平台'
+    },
+    {
+      name: 'b-tomcat-3',
+      middle: 'tomcat',
+      area: 'B域',
+      mirror: '10.132.51.191/tenxuser/tomcat:latest',
+      address: '10.132.51.211:8080',
+      time: '4天前',
+      app: '流量管理平台'
+    },
+    {
+      name: 'm-tomcat-2',
+      middle: 'tomcat',
+      area: 'M域',
+      mirror: '10.132.51.129/area-m/tomcat:latest',
+      address: '10.132.51.109:5080',
+      time: '2天前',
+      app: 'NPS系统'
+    },
+    {
+      name: 'm-tomcat-3',
+      middle: 'tomcat',
+      area: 'M域',
+      mirror: '10.132.51.120/area-m/tomcat:latest',
+      address: '10.132.51.110:5080',
+      time: '2天前',
+      app: 'NPS系统'
+    },
+    {
+      name: 'm-tomcat-4',
+      middle: 'tomcat',
+      area: 'M域',
+      mirror: '10.132.51.121/area-m/tomcat:latest',
+      address: '10.132.51.111:5080',
+      time: '2天前',
+      app: 'NPS系统'
+    },
+    {
+      name: 'o-tomcat-3',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.111/tenxuser/tomcat:latest',
+      address: '10.132.51.129:7080',
+      time: '3天前',
+      app: '和More系统'
+    },
+    {
+      name: 'o-tomcat-4',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.112/tenxuser/tomcat:latest',
+      address: '10.132.51.128:7080',
+      time: '3天前',
+      app: '和More系统'
+    },
+    {
+      name: 'b-tomcat-5',
+      middle: 'tomcat',
+      area: 'B域',
+      mirror: '10.123.11.112/user/weblogic:latest',
+      address: '10.132.49.113:3000',
+      time: '4天前',
+      app: '贵州移动办公平台'
+    },
+    {
+      name: 'o-tomcat-5',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.101/tenxuser/tomcat:latest',
+      address: '10.132.51.103:8080',
+      time: '3天前',
+      app: '和More系统'
+    },
+    {
+      name: 'm-tomcat-5',
+      middle: 'tomcat',
+      area: 'M域',
+      mirror: '10.132.51.129/area-m/tomcat:latest',
+      address: '10.132.51.118:5080',
+      time: '7天前',
+      app: 'NPS系统'
+    },
+    {
+      name: 'b-tomcat-6',
+      middle: 'tomcat',
+      area: 'B域',
+      mirror: '10.123.11.132/user/weblogic:latest',
+      address: '10.132.49.133:3000',
+      time: '4天前',
+      app: '贵州移动办公平台'
+    },
+    {
+      name: 'o-tomcat-6',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.121/tenxuser/tomcat:latest',
+      address: '10.132.51.123:8080',
+      time: '9天前',
+      app: '和More系统'
+    },
+    {
+      name: 'o-tomcat-7',
+      middle: 'tomcat',
+      area: 'O域',
+      mirror: '10.132.51.141/tenxuser/tomcat:latest',
+      address: '10.132.51.143:8080',
+      time: '9天前',
+      app: '和More系统'
+    }
+  ];
+  buildTable($('#tomcat-table'), data);
+  var options = buildBlackRingOptions('tomcat', [
+    {value: 11, name: 'B域'},
+    {value: 9, name: 'O域'},
+    {value: 3, name: 'M域'}
+  ], 'right');
+  var tomcat = drawChart($('#tomcat-pie')[0], options);
+  tomcat.on('click', function (param) {
+    $('.chart-wrap').fadeOut();
+    var filterData = $.map(data, function(n) {
+      if(n.area == param.name) {
+        return n;
+      }
+    });
+    buildTable($('#tomcat-table'), filterData)
+  });
+  $('#return-tomcat').click(function(){
+    location.href = 'tomcat-black.html';
+  });
+  options = buildBlackOneBarOptions('CPU使用率', {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: '虚拟机', data: 27},
+    {name: '容器', data: 45}
+  ], '#ecbe65');
+  drawChart($('#cpu-bar')[0], options);
+  options = buildBlackOneBarOptions('内存使用率', {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: '虚拟机', data: 32},
+    {name: '容器', data: 49}
+  ], '#49b8f2');
+  drawChart($('#memory-bar')[0], options);
+
+
+  var hdsdata = 'data/tomcat_statistics.json';
+  var hpdata = 'data/block_storage_hp.json';
+  function initDetailTable(type) {
+    $(".detail-type").find("button").each(function () {
+      var text = $(this).text().trim();
+      if (text == type) {
+        $(this).css('background-color', '#5EA3F8');
+      } else {
+        $(this).css('background-color', '#3D5B77');
+      }
+    });
+
+    var url = '';
+    var columns = [{
+      field: 'service_name',
+      title: '服务名称'
+    }, {
+      field: 'belong_middleware',
+      title: '所属中间件',
+      align: 'center',
+      formatter: function (cell) {
+        return '<span class="label" style="background-color: #A089CF">' + cell+'';
+      }
+    }, {
+      field: 'belong_app',
+      title: '所属应用',
+      align: 'center'
+    },
+    /*  {
+      field: 'resource_type',
+      title: '应用类型',
+      align: 'center'
+    },*/
+      {
+      field: 'image',
+      title: '所用镜像',
+      align: 'center'
+    }, {
+      field: 'adress',
+      title: '所分配集群',
+      align: 'IP地址'
+    }, {
+      field: 'created',
+      title: '创建时间',
+      align: 'center'
+    }];
+    if (type == "HDS") {
+      url = hdsdata;
+    } else if (type == "HP") {
+      url = hpdata;
+    }
+    $("#detail_table").bootstrapTable('destroy').bootstrapTable({
+      method: 'get',
+      url: url,
+      cache: false,
+//        striped: true,
+      pagination: true,
+      pageSize: 9,
+      pageList: [5, 10, 15, 20],
+      columns: columns,
+      responseHandler: function (res) {
+        var rows = [];
+        if (type == "HDS") {
+          rows = res.tomcat_statistics;
+        } else if (type == "HP") {
+          rows = res.block_storage_hp;
+        }
+        return rows;
+//                return { rows: rows, total: rows.length}
+      }
+//            data: [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}, {id: 6}, {id: 7}, {id: 8}, {id: 9}, {id: 10}, {id: 11}]
+    });
+
+  }
+  initDetailTable("HDS");
+</script>
+</body>
+</html>

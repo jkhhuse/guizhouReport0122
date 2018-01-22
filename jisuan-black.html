@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>计算资源</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        /*
+         * Global add-ons
+         */
+
+        .sub-header {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /*
+         * Top navigation
+         * Hide default border to remove 1px line.
+         */
+        .navbar-fixed-top {
+            border: 0;
+        }
+
+        /*
+         * Sidebar
+         */
+
+        /* Hide for mobile, show later */
+        .sidebar {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 51px;
+                bottom: 0;
+                left: 0;
+                z-index: 1000;
+                display: block;
+                padding: 20px;
+                overflow-x: hidden;
+                overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+                background-color: #f5f5f5;
+                border-right: 1px solid #eee;
+            }
+        }
+
+        /*
+         * Main content
+         */
+
+        .main {
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .main {
+                padding-right: 40px;
+                padding-left: 40px;
+            }
+        }
+
+        .main .page-header {
+            margin-top: 0;
+        }
+
+        /*
+         * Placeholder dashboard ideas
+         */
+
+        .placeholders {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .placeholders h4 {
+            margin-bottom: 0;
+        }
+
+        .placeholder {
+            margin-bottom: 20px;
+        }
+
+        .placeholder img {
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .jumbotron {
+            background-color: #1C2331;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .jumbotron p {
+            font-size: inherit;
+        }
+
+        .big-character {
+            margin-right: 40px;
+            font-size: 24px;
+            color: #53ad7d;
+        }
+
+        .chart-box {
+            color:#fff;
+            height: 100%;
+            background-color: #1C2331;
+        }
+
+        .btn-close {
+            font-size: 16px;
+            color: #286090;
+        }
+
+        .detail-panel {
+            text-align: center;
+            position: relative;
+            backgroud-color:#12141B;
+            min-width: 800px;
+            padding: 40px;
+            display: none;
+        }
+
+        .detail-main-page {
+            display: none;
+        }
+
+        .detail-waiting-page {
+            height: 400px;
+        }
+
+        .detail-external-page {
+            display: none;
+        }
+
+        .detail-external-page.active {
+            display: block;
+        }
+
+        .terminal-box {
+            width: 100%;
+            background: #3f3f3f;
+            color: white;
+            font-family: Courier New;
+        }
+
+        .host-detail {
+            cursor: pointer;
+        }
+
+        .breadcrumb-nav {
+            height: 75px;
+            padding: 20px 40px 20px 40px;
+            background-color: #262C37;
+            box-shadow: 0 1px 3px #ddd;
+        }
+
+        .breadcrumb-nav .breadcrumb-svg {
+            height: 30px;
+            width: 30px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .breadcrumb-nav .breadcrumb-span {
+            font-size: 24px;
+        }
+        .jisuan-chart{
+            height: 260px;
+            width: 260px;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="left-nav-wrap">
+    <script>
+        $('.left-nav-wrap').load('leftNav-black.html');
+    </script>
+</div>
+<div class="top-wrap">
+    <script>
+        $('.top-wrap').load('fix-top-black.html');
+    </script>
+</div>
+<div class="breadcrumb-nav" style="margin-left:200px;">
+    <img src="image/svg/db.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span"><a href="jisuan-index.html" style="color: #ccc;">计算资源</a></span>
+</div>
+<div style="padding: 20px;margin-left: 200px;background-color: #12141B;color:#ccc;">
+
+    <script src="lib/echarts.min.js"></script>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="display:none;">
+        <!-- li role="presentation" class="nav-tab-title active"><a href="#home" aria-controls="home" role="tab"
+                                                         data-toggle="tab">总览</a></li> -->
+        <li role="presentation" class="nav-tab-title"><a id="profile-b-ctl" href="#profile-b" aria-controls="profile-b"
+                                                         role="tab"
+                                                         data-toggle="tab">B域物理机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="profile-o-ctl" href="#profile-o" aria-controls="profile-o"
+                                                         role="tab"
+                                                         data-toggle="tab">O域物理机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="profile-m-ctl" href="#profile-m" aria-controls="profile-m"
+                                                         role="tab"
+                                                         data-toggle="tab">M域物理机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="messages-b-ctl" href="#messages-b"
+                                                         aria-controls="messages-b" role="tab"
+                                                         data-toggle="tab">虚拟机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="messages-o-ctl" href="#messages-o"
+                                                         aria-controls="messages-o" role="tab"
+                                                         data-toggle="tab">虚拟机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="messages-m-ctl" href="#messages-m"
+                                                         aria-controls="messages-m" role="tab"
+                                                         data-toggle="tab">虚拟机</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="settings-b-ctl" href="#settings-b"
+                                                         aria-controls="settings-b" role="tab"
+                                                         data-toggle="tab">容器</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="settings-o-ctl" href="#settings-o"
+                                                         aria-controls="settings-o" role="tab"
+                                                         data-toggle="tab">容器</a></li>
+        <li role="presentation" class="nav-tab-title"><a id="settings-m-ctl" href="#settings-m"
+                                                         aria-controls="settings-m" role="tab"
+                                                         data-toggle="tab">容器</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="profile-b">
+
+            <h3>物理机 - B域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(1)>GZYD-DMZ-CMCC01</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>B域</td>
+                        <td>192.168.0.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(2)>GZYD-DMZ-CMCC02</a></td>
+                        <td>BC-RDB</td>
+                        <td>B域</td>
+                        <td>192.168.0.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(3)>GZYD-DMZ-CMCC03</a></td>
+                        <td>Oracle</td>
+                        <td>B域</td>
+                        <td>192.168.0.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(4)>GZYD-DMZ-CMCC04</a></td>
+                        <td>Vertica</td>
+                        <td>B域</td>
+                        <td>192.168.0.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(5)>GZYD-DMZ-CMCC05</a></td>
+                        <td>Oracle</td>
+                        <td>B域</td>
+                        <td>192.168.0.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(6)>GZYD-DMZ-CMCC06</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>B域</td>
+                        <td>192.168.0.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(7)>GZYD-DMZ-CMCC07</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>B域</td>
+                        <td>192.168.0.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(8)>GZYD-DMZ-CMCC08</a></td>
+                        <td>Oracle</td>
+                        <td>B域</td>
+                        <td>192.168.0.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(9)>GZYD-DMZ-CMCC09</a></td>
+                        <td>Vertica</td>
+                        <td>B域</td>
+                        <td>192.168.0.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(10)>GZYD-DMZ-CMCC10</a></td>
+                        <td>BC-RDB</td>
+                        <td>B域</td>
+                        <td>192.168.0.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(11)>GZYD-DMZ-CMCC11</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>B域</td>
+                        <td>192.168.0.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(12)>GZYD-DMZ-CMCC12</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>B域</td>
+                        <td>192.168.0.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(13)>GZYD-DMZ-CMCC13</a></td>
+                        <td>Oracle</td>
+                        <td>B域</td>
+                        <td>192.168.0.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(14)>GZYD-DMZ-CMCC14</a></td>
+                        <td>Vertica</td>
+                        <td>B域</td>
+                        <td>192.168.0.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(15)>GZYD-DMZ-CMCC15</a></td>
+                        <td>BC-RDB</td>
+                        <td>B域</td>
+                        <td>192.168.0.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="row placeholders detail-panel physical-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='physical_detail_title'>GZYD-DMZ-CMCC01（192.168.0.1）</h3>
+
+                        <p>主机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>756MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+                        <div id="chart11" class="jisuan-chart"></div>
+                        <div id="chart12" class="jisuan-chart"></div>
+                        <div id="chart13" class="jisuan-chart"></div>
+                        <div id="chart14" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart11 = echarts.init(document.getElementById('chart11'));
+                            var option11 = {
+                                title: {
+                                    text: 'CPU使用率',
+                                    textStyle: {
+                                        color: '#999999',
+                                        fontSize: 14
+                                    }
+                                },
+                                tooltip: {
+                                    trigger: 'item',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        label: {
+                                            backgroundColor: '#6a7985'
+                                        }
+                                    }
+                                },
+                                // 图例
+                                legend: {
+                                    data: ['CPU使用率'],
+                                    textStyle: {
+                                        color: '#ccc'
+                                    }
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                // 横轴坐标轴
+                                xAxis: [{
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: ['09:05', '09:15', '09:25', '09:35', '09:45', '09:55', '10:05', '10:15', '10:25', '10:35', '10:45']
+                                    ,
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 纵轴坐标轴
+                                yAxis: [{
+                                    type: 'value',
+                                    axisLabel: {
+                                        formatter: function (value) {
+                                            return value * 100 + '%';
+                                        },
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    },
+                                    boundaryGap: [0, '800%']
+                                }],
+                                // 数据内容数组
+                                series: [{
+                                    name: 'CPU使用率',
+                                    type: 'line',
+                                    data: [0.21, 0.25, 0.29, 0.26, 0.22, 0.28, 0.23, 0.25, 0.26, 0.20, 0.27]
+                                }],
+                                color: ['#4DCFFF']
+                            };
+                            myChart11.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart12 = echarts.init(document.getElementById('chart12'));
+                            var option12 = {
+                                title: {
+                                    text: '内存',
+                                    textStyle: {
+                                        color: '#999999',
+                                        fontSize: 14
+                                    }
+                                },
+                                tooltip: {
+                                    trigger: 'item',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        label: {
+                                            backgroundColor: '#6a7985'
+                                        }
+                                    }
+                                },
+                                // 图例
+                                legend: {
+                                    data: ['内存使用率'],
+                                    textStyle: {
+                                        color: '#ccc'
+                                    }
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                // 横轴坐标轴
+                                xAxis: [{
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: ['09:05', '09:15', '09:25', '09:35', '09:45', '09:55', '10:05', '10:15', '10:25', '10:35', '10:45']
+                                    ,
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 纵轴坐标轴
+                                yAxis: [{
+                                    type: 'value',
+                                    axisLabel: {
+                                        formatter: function (value) {
+                                            return value + 'MB';
+                                        },
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 数据内容数组
+                                series: [{
+                                    name: 'CPU使用率',
+                                    type: 'line',
+                                    data: ['751', '755', '756', '752', '761', '766', '763', '767', '769', '770', '775']
+                                }],
+                                color: ['#4DCFFF']
+                            };
+                            myChart12.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart13 = echarts.init(document.getElementById('chart13'));
+                            var option13 = {
+                                title: {
+                                    text: '硬盘IOPS',
+                                    textStyle: {
+                                        color: '#999999',
+                                        fontSize: 14
+                                    }
+                                },
+                                tooltip: {
+                                    trigger: 'item',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        label: {
+                                            backgroundColor: '#6a7985'
+                                        }
+                                    }
+                                },
+                                // 图例
+                                legend: {
+                                    data: ['硬盘IOPS'],
+                                    textStyle: {
+                                        color: '#ccc'
+                                    }
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                // 横轴坐标轴
+                                xAxis: [{
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: ['09:05', '09:15', '09:25', '09:35', '09:45', '09:55', '10:05', '10:15', '10:25', '10:35', '10:45']
+                                    ,
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 纵轴坐标轴
+                                yAxis: [{
+                                    type: 'value',
+                                    axisLabel: {
+                                        formatter: function (value) {
+                                            return value;
+                                        },
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 数据内容数组
+                                series: [{
+                                    name: '硬盘IOPS',
+                                    type: 'line',
+                                    data: ['0.01', '0.02', '0.66', '0.01', '0.01', '0.16', '0.01', '0.02', '0.02', '0.02', '0.01']
+                                }],
+                                color: ['#75E85B', '#46BDFB', '#FBDE66']
+                            };
+                            myChart13.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart14 = echarts.init(document.getElementById('chart14'));
+                            var option14 = {
+                                title: {
+                                    text: '硬盘吞吐量',
+                                    textStyle: {
+                                        color: '#999999',
+                                        fontSize: 14
+                                    }
+                                },
+                                tooltip: {
+                                    trigger: 'item',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        label: {
+                                            backgroundColor: '#6a7985'
+                                        }
+                                    }
+                                },
+                                // 图例
+                                legend: {
+                                    data: ['硬盘吞吐量'],
+                                    textStyle: {
+                                        color: '#ccc'
+                                    }
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                // 横轴坐标轴
+                                xAxis: [{
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: ['09:05', '09:15', '09:25', '09:35', '09:45', '09:55', '10:05', '10:15', '10:25', '10:35', '10:45']
+                                    ,
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 纵轴坐标轴
+                                yAxis: [{
+                                    type: 'value',
+                                    axisLabel: {
+                                        formatter: function (value) {
+                                            return value + "KB";
+                                        },
+                                        textStyle: {
+                                            color: '#ccc'
+                                        }
+                                    }
+                                }],
+                                // 数据内容数组
+                                series: [{
+                                    name: '硬盘IOPS',
+                                    type: 'line',
+                                    data: ['0', '0', '6', '1', '0', '1', '2', '0', '1', '0', '0']
+                                }]
+                            };
+                            myChart14.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 分隔 -->
+
+
+        <div role="tabpanel" class="tab-pane" id="profile-o">
+
+            <h3>物理机 - O域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(1)>GZYD-DMZ-CMCC01</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>O域</td>
+                        <td>192.168.0.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(2)>GZYD-DMZ-CMCC02</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(3)>GZYD-DMZ-CMCC03</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(4)>GZYD-DMZ-CMCC04</a></td>
+                        <td>Vertica</td>
+                        <td>O域</td>
+                        <td>192.168.0.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(5)>GZYD-DMZ-CMCC05</a></td>
+                        <td>Oracle</td>
+                        <td>O域</td>
+                        <td>192.168.0.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(6)>GZYD-DMZ-CMCC06</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>O域</td>
+                        <td>192.168.0.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(7)>GZYD-DMZ-CMCC07</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(8)>GZYD-DMZ-CMCC8</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(9)>GZYD-DMZ-CMCC09</a></td>
+                        <td>Vertica</td>
+                        <td>O域</td>
+                        <td>192.168.0.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(10)>GZYD-DMZ-CMCC10</a></td>
+                        <td>Oracle</td>
+                        <td>O域</td>
+                        <td>192.168.0.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(11)>GZYD-DMZ-CMCC11</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>O域</td>
+                        <td>192.168.0.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(12)>GZYD-DMZ-CMCC12</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(13)>GZYD-DMZ-CMCC13</a></td>
+                        <td>BC-RDB</td>
+                        <td>O域</td>
+                        <td>192.168.0.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(14)>GZYD-DMZ-CMCC14</a></td>
+                        <td>Vertica</td>
+                        <td>O域</td>
+                        <td>192.168.0.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(15)>GZYD-DMZ-CMCC15</a></td>
+                        <td>Oracle</td>
+                        <td>O域</td>
+                        <td>192.168.0.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="row placeholders detail-panel physical-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='physical_detail_title'>GZYD-DMZ-CMCC01（192.168.0.1）</h3>
+
+                        <p>主机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>756MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+
+                        <div id="chart1o1" class="jisuan-chart"></div>
+                        <div id="chart1o2" class="jisuan-chart"></div>
+                        <div id="chart1o3" class="jisuan-chart"></div>
+                        <div id="chart1o4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart1o1 = echarts.init(document.getElementById('chart1o1'));
+
+                            myChart1o1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart1o2 = echarts.init(document.getElementById('chart1o2'));
+
+                            myChart1o2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart1o3 = echarts.init(document.getElementById('chart1o3'));
+
+                            myChart1o3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart1o4 = echarts.init(document.getElementById('chart1o4'));
+
+                            myChart1o4.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- 分隔 -->
+
+
+        <div role="tabpanel" class="tab-pane" id="profile-m">
+
+            <h3>物理机 - M域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(1)>GZYD-DMZ-CMCC01</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(2)>GZYD-DMZ-CMCC02</a></td>
+                        <td>Vertica</td>
+                        <td>M域</td>
+                        <td>192.168.0.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(3)>GZYD-DMZ-CMCC03</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>M域</td>
+                        <td>192.168.0.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(4)>GZYD-DMZ-CMCC04</a></td>
+                        <td>Oracle</td>
+                        <td>M域</td>
+                        <td>192.168.0.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(5)>GZYD-DMZ-CMCC05</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(6)>GZYD-DMZ-CMCC06</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(7)>GZYD-DMZ-CMCC07</a></td>
+                        <td>Vertica</td>
+                        <td>M域</td>
+                        <td>192.168.0.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(8)>GZYD-DMZ-CMCC08</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>M域</td>
+                        <td>192.168.0.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(9)>GZYD-DMZ-CMCC09</a></td>
+                        <td>Oracle</td>
+                        <td>M域</td>
+                        <td>192.168.0.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(10)>GZYD-DMZ-CMCC10</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(11)>GZYD-DMZ-CMCC11</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(12)>GZYD-DMZ-CMCC12</a></td>
+                        <td>Vertica</td>
+                        <td>M域</td>
+                        <td>192.168.0.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(13)>GZYD-DMZ-CMCC13</a></td>
+                        <td>BC-Hadoop</td>
+                        <td>M域</td>
+                        <td>192.168.0.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(14)>GZYD-DMZ-CMCC14</a></td>
+                        <td>Oracle</td>
+                        <td>M域</td>
+                        <td>192.168.0.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayPhyDetail(15)>GZYD-DMZ-CMCC15</a></td>
+                        <td>BC-RDB</td>
+                        <td>M域</td>
+                        <td>192.168.0.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="row placeholders detail-panel physical-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='physical_detail_title'>GZYD-DMZ-CMCC01（192.168.0.1）</h3>
+
+                        <p>主机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>756MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+
+                        <div id="chart1m1" class="jisuan-chart"></div>
+                        <div id="chart1m2" class="jisuan-chart"></div>
+                        <div id="chart1m3" class="jisuan-chart"></div>
+                        <div id="chart1m4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart1m1 = echarts.init(document.getElementById('chart1m1'));
+
+                            myChart1m1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart1m2 = echarts.init(document.getElementById('chart1m2'));
+
+                            myChart1m2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart1m3 = echarts.init(document.getElementById('chart1m3'));
+
+                            myChart1m3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart1m4 = echarts.init(document.getElementById('chart1m4'));
+
+                            myChart1m4.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>主机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- 以上是物理机 -->
+
+
+        <div role="tabpanel" class="tab-pane" id="messages-b">
+
+            <h3>虚拟机 - B域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(1)>GZYD-XYZ-CMCC01</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(2)>GZYD-XYZ-CMCC02</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(3)>GZYD-XYZ-CMCC03</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(4)>GZYD-XYZ-CMCC04</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(5)>GZYD-XYZ-CMCC05</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(6)>GZYD-XYZ-CMCC06</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(7)>GZYD-XYZ-CMCC07</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(8)>GZYD-XYZ-CMCC08</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(9)>GZYD-XYZ-CMCC09</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(10)>GZYD-XYZ-CMCC10</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(11)>GZYD-XYZ-CMCC11</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(12)>GZYD-XYZ-CMCC12</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(13)>GZYD-XYZ-CMCC13</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(14)>GZYD-XYZ-CMCC14</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(15)>GZYD-XYZ-CMCC15</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">B域</span></td>
+                        <td>192.168.1.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel virtual-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='virtual_detail_title'>GZYD-XYZ-CMCC01（192.168.1.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>虚机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>763MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+
+                        <div id="chart2b1"  class="jisuan-chart"></div>
+                        <div id="chart2b2"  class="jisuan-chart"></div>
+                        <div id="chart2b3"  class="jisuan-chart"></div>
+                        <div id="chart2b4"  class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart2b1 = echarts.init(document.getElementById('chart2b1'));
+
+                            myChart2b1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart2b2 = echarts.init(document.getElementById('chart2b2'));
+
+                            myChart2b2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart2b3 = echarts.init(document.getElementById('chart2b3'));
+
+                            myChart2b3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart2b4 = echarts.init(document.getElementById('chart2b4'));
+
+                            myChart2b4.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- vm - o -->
+
+
+        <div role="tabpanel" class="tab-pane" id="messages-o">
+
+            <h3>虚拟机 - O域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(1)>GZYD-XYZ-CMCC01</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(2)>GZYD-XYZ-CMCC02</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(3)>GZYD-XYZ-CMCC03</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(4)>GZYD-XYZ-CMCC04</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(5)>GZYD-XYZ-CMCC05</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(6)>GZYD-XYZ-CMCC06</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(7)>GZYD-XYZ-CMCC07</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(8)>GZYD-XYZ-CMCC08</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(9)>GZYD-XYZ-CMCC09</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(10)>GZYD-XYZ-CMCC10</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(11)>GZYD-XYZ-CMCC11</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(12)>GZYD-XYZ-CMCC12</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(13)>GZYD-XYZ-CMCC13</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(14)>GZYD-XYZ-CMCC14</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(15)>GZYD-XYZ-CMCC15</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">O域</span></td>
+                        <td>192.168.1.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel virtual-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='virtual_detail_title'>GZYD-XYZ-CMCC01（192.168.1.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>虚机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>763MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+
+                        <div id="chart2o1" class="jisuan-chart"></div>
+                        <div id="chart2o2" class="jisuan-chart"></div>
+                        <div id="chart2o3" class="jisuan-chart"></div>
+                        <div id="chart2o4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart2o1 = echarts.init(document.getElementById('chart2o1'));
+
+                            myChart2o1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart2o2 = echarts.init(document.getElementById('chart2o2'));
+
+                            myChart2o2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart2o3 = echarts.init(document.getElementById('chart2o3'));
+
+                            myChart2o3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart2o4 = echarts.init(document.getElementById('chart2o4'));
+
+                            myChart2o4.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- vm - m -->
+
+
+        <div role="tabpanel" class="tab-pane" id="messages-m">
+
+            <h3>虚拟机 - M域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>所在域</th>
+                        <th>IP 地址</th>
+                        <th>主机状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(1)>GZYD-XYZ-CMCC01</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.1</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(2)>GZYD-XYZ-CMCC02</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.2</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(3)>GZYD-XYZ-CMCC03</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.3</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(4)>GZYD-XYZ-CMCC04</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.4</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(5)>GZYD-XYZ-CMCC05</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.5</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(6)>GZYD-XYZ-CMCC06</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.6</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(7)>GZYD-XYZ-CMCC07</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.7</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(8)>GZYD-XYZ-CMCC08</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.8</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(9)>GZYD-XYZ-CMCC09</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.9</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(10)>GZYD-XYZ-CMCC10</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.10</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(11)>GZYD-XYZ-CMCC11</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.11</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(12)>GZYD-XYZ-CMCC12</a></td>
+                        <td>MQ</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.12</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(13)>GZYD-XYZ-CMCC13</a></td>
+                        <td>东方信</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.13</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(14)>GZYD-XYZ-CMCC14</a></td>
+                        <td>Redis</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.14</td>
+                        <td>正常</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayVirtDetail(15)>GZYD-XYZ-CMCC15</a></td>
+                        <td>Tomcat</td>
+                        <td><span class="label label-info">M域</span></td>
+                        <td>192.168.1.15</td>
+                        <td>正常</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel virtual-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='virtual_detail_title'>GZYD-XYZ-CMCC01（192.168.1.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>虚机状态：<span class='big-character'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>763MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+
+                        <div id="chart2m1" class="jisuan-chart"></div>
+                        <div id="chart2m2" class="jisuan-chart"></div>
+                        <div id="chart2m3" class="jisuan-chart"></div>
+                        <div id="chart2m4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart2m1 = echarts.init(document.getElementById('chart2m1'));
+
+                            myChart2m1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart2m2 = echarts.init(document.getElementById('chart2m2'));
+
+                            myChart2m2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart2m3 = echarts.init(document.getElementById('chart2m3'));
+
+                            myChart2m3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart2m4 = echarts.init(document.getElementById('chart2m4'));
+
+                            myChart2m4.setOption(option14);
+
+                        </script>
+
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>虚机终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- end of virtual machine -->
+
+
+        <div role="tabpanel" class="tab-pane" id="settings-b">
+            <h3>容器 - B域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>版本</th>
+                        <th>IP 地址</th>
+                        <th>运行状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(1)>GZYD-CON-ZTMS01</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.1</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(2)>GZYD-CON-ZTMS02</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.2</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(3)>GZYD-CON-ZTMS03</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.3</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(4)>GZYD-CON-ZTMS04</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.4</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(5)>GZYD-CON-ZTMS05</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.5</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(6)>GZYD-CON-ZTMS06</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.6</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(7)>GZYD-CON-ZTMS07</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.7</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(8)>GZYD-CON-ZTMS08</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.8</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(9)>GZYD-CON-ZTMS09</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.9</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(10)>GZYD-CON-ZTMS10</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.10</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(11)>GZYD-CON-ZTMS11</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.11</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(12)>GZYD-CON-ZTMS12</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.12</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(13)>GZYD-CON-ZTMS13</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.13</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(14)>GZYD-CON-ZTMS14</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.14</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(15)>GZYD-CON-ZTMS15</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.15</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel container-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='container_detail_title'>GZYD-CON-ZTMS01（192.168.2.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>容器状态：<span class='big-character' id='container_detail_status'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>745MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+                        <div id="chart3b1" class="jisuan-chart"></div>
+                        <div id="chart3b2" class="jisuan-chart"></div>
+                        <div id="chart3b3" class="jisuan-chart"></div>
+                        <div id="chart3b4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart3b1 = echarts.init(document.getElementById('chart3b1'));
+
+                            myChart3b1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart3b2 = echarts.init(document.getElementById('chart3b2'));
+
+                            myChart3b2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart3b3 = echarts.init(document.getElementById('chart3b3'));
+
+                            myChart3b3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart3b4 = echarts.init(document.getElementById('chart3b4'));
+
+                            myChart3b4.setOption(option14);
+
+                        </script>
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- container o -->
+
+        <div role="tabpanel" class="tab-pane" id="settings-o">
+            <h3>容器 - O域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>版本</th>
+                        <th>IP 地址</th>
+                        <th>运行状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(1)>GZYD-CON-ZTMS01</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.1</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(2)>GZYD-CON-ZTMS02</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.2</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(3)>GZYD-CON-ZTMS03</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.3</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(4)>GZYD-CON-ZTMS04</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.4</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(5)>GZYD-CON-ZTMS05</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.5</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(6)>GZYD-CON-ZTMS06</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.6</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(7)>GZYD-CON-ZTMS07</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.7</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(8)>GZYD-CON-ZTMS08</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.8</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(9)>GZYD-CON-ZTMS09</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.9</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(10)>GZYD-CON-ZTMS10</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.10</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(11)>GZYD-CON-ZTMS11</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.11</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(12)>GZYD-CON-ZTMS12</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.12</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(13)>GZYD-CON-ZTMS13</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.13</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(14)>GZYD-CON-ZTMS14</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.14</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(15)>GZYD-CON-ZTMS15</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.15</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel container-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='container_detail_title'>GZYD-CON-ZTMS01（192.168.2.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>容器状态：<span class='big-character' id='container_detail_status'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>745MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+                        <div id="chart3o1" class="jisuan-chart"></div>
+                        <div id="chart3o2" class="jisuan-chart"></div>
+                        <div id="chart3o3" class="jisuan-chart"></div>
+                        <div id="chart3o4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart3o1 = echarts.init(document.getElementById('chart3o1'));
+
+                            myChart3o1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart3o2 = echarts.init(document.getElementById('chart3o2'));
+
+                            myChart3o2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart3o3 = echarts.init(document.getElementById('chart3o3'));
+
+                            myChart3o3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart3o4 = echarts.init(document.getElementById('chart3o4'));
+
+                            myChart3o4.setOption(option14);
+
+                        </script>
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- container m -->
+
+
+        <div role="tabpanel" class="tab-pane" id="settings-m">
+            <h3>容器 - M域 </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>节点名称</th>
+                        <th>承载服务</th>
+                        <th>版本</th>
+                        <th>IP 地址</th>
+                        <th>运行状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(1)>GZYD-CON-ZTMS01</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.1</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(2)>GZYD-CON-ZTMS02</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.2</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(3)>GZYD-CON-ZTMS03</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.3</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(4)>GZYD-CON-ZTMS04</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.4</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(5)>GZYD-CON-ZTMS05</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.5</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(6)>GZYD-CON-ZTMS06</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.6</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(7)>GZYD-CON-ZTMS07</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.7</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(8)>GZYD-CON-ZTMS08</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.8</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(9)>GZYD-CON-ZTMS09</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.9</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(10)>GZYD-CON-ZTMS10</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.10</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(11)>GZYD-CON-ZTMS11</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.11</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(12)>GZYD-CON-ZTMS12</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.12</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(13)>GZYD-CON-ZTMS13</a></td>
+                        <td>和more</td>
+                        <td><span class="label label-info">latest</span></td>
+                        <td>192.168.2.13</td>
+                        <td>运行中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(14)>GZYD-CON-ZTMS14</a></td>
+                        <td>移动办公平台</td>
+                        <td><span class="label label-info">8.0</span></td>
+                        <td>192.168.2.14</td>
+                        <td>重启中</td>
+                    </tr>
+                    <tr>
+                        <td><a class="host-detail" onClick=displayCtnDetail(15)>GZYD-CON-ZTMS15</a></td>
+                        <td>NPS系统</td>
+                        <td><span class="label label-info">5.5</span></td>
+                        <td>192.168.2.15</td>
+                        <td>伸缩中</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row placeholders detail-panel container-detail">
+                <div class="detail-waiting-page">
+                    加载中...
+                </div>
+                <div class="detail-main-page">
+                    <div style="float: right;"><a class='btn btn-close'>Ｘ</a></div>
+                    <div class="jumbotron">
+                        <h3 id='container_detail_title'>GZYD-CON-ZTMS01（192.168.2.1）</h3>
+
+                        <div style="float: right;position: relative;top: -50px;">
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(1)>日志</a>
+                            <a role="button" class="btn btn-primary" onclick=showDetailContent(2)>终端</a>
+                        </div>
+                        <p>容器状态：<span class='big-character' id='container_detail_status'>正常</span>
+                            CPU使用率：<span class='big-character'><span class='cpu-use-item'>32</span>%</span>
+                            内存使用量：<span class='big-character'>745MB</span>
+                        </p>
+                    </div>
+
+
+                    <div class="detail-external-page chart-box active clearfix">
+
+                        <div id="chart3m1" class="jisuan-chart"></div>
+                        <div id="chart3m2" class="jisuan-chart"></div>
+                        <div id="chart3m3" class="jisuan-chart"></div>
+                        <div id="chart3m4" class="jisuan-chart"></div>
+                        <script type="text/javascript">
+                            // 图一
+                            var myChart3m1 = echarts.init(document.getElementById('chart3m1'));
+
+                            myChart3m1.setOption(option11);
+                            //////////////////////////////////
+                            //图二
+                            var myChart3m2 = echarts.init(document.getElementById('chart3m2'));
+
+                            myChart3m2.setOption(option12);
+                            ////////////////////////////////////////////
+                            //表三
+                            var myChart3m3 = echarts.init(document.getElementById('chart3m3'));
+
+                            myChart3m3.setOption(option13);
+                            ////////////////////////////////////////////
+                            //表四
+                            var myChart3m4 = echarts.init(document.getElementById('chart3m4'));
+
+                            myChart3m4.setOption(option14);
+
+                        </script>
+
+                    </div>
+                </div>
+                <div class="detail-external-page host-log-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器日志</h4>
+
+                    <div style="margin-top: 20px;">
+                        <pre>暂无日志。</pre>
+                    </div>
+
+                </div>
+
+                <div class="detail-external-page host-terminal-page">
+                    <a role="button" class="btn" style="float: right;" onclick=showDetailContent(0)>X</a>
+                    <h4>容器终端</h4>
+                    <textarea rows=10 class="terminal-box">#host_ ~/: </textarea>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- end of panels -->
+
+
+    </div>
+
+</div>
+<script type="text/javascript">
+    function displayPhyDetail(index) {
+        $("#physical_detail_title").text("GZYD-DMZ-CMCC0" + index + "（192.168.0." + index + "）");
+        $(".physical-detail").show();
+        $(".detail-waiting-page").fadeOut(1000, function () {
+            $(".table-responsive").hide();
+            $(".detail-main-page").show();
+
+        });
+    }
+
+    function displayVirtDetail(index) {
+        $("#virtual_detail_title").text("GZYD-XYZ-CMCC0" + index + "（192.168.1." + index + "）");
+        $(".virtual-detail").fadeIn();
+        $(".detail-waiting-page").fadeOut(1000, function () {
+            $(".table-responsive").hide();
+            $(".detail-main-page").show();
+
+        });
+    }
+
+    function displayCtnDetail(index) {
+        $("#container_detail_title").text("GZYD-CON-ZTMS0" + index + "（192.168.2." + index + "）");
+        $("#container_detail_status").text(["运行中", "重启中", "伸缩中"][index - 1]);
+        $(".container-detail").fadeIn();
+        $(".detail-waiting-page").fadeOut(1000, function () {
+            $(".table-responsive").hide();
+            $(".detail-main-page").show();
+
+        });
+    }
+
+    function showDetailContent(index) {
+        $(".detail-external-page").removeClass('active');
+        $([".chart-box", ".host-log-page", ".host-terminal-page"][index]).addClass('active');
+    }
+
+    $(".btn-close").on("click", function () {
+        showDetailContent(0);
+        $(".detail-panel").hide();
+        $(".detail-waiting-page").show();
+        $(".detail-main-page").hide();
+
+        $(".table-responsive").show();
+    });
+
+    $(".nav-tab-title").on("click", function () {
+        showDetailContent(0);
+        $(".detail-panel").fadeOut();
+        $(".detail-waiting-page").show();
+        $(".detail-main-page").hide();
+        $(".table-responsive").show();
+    });
+
+    $(document).ready(function () {
+        var i = setInterval(function () {
+            $(".cpu-use-item").text(Math.round(Math.random() * 10) + 20);
+        }, 5000);
+    })
+
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    // 控制显示哪个panel
+    $(document).ready(function () {
+        var panel2Display = getQueryString("zone");
+        if (panel2Display == null) window.location.href = "jisuan-index.html";
+        console.log(panel2Display);
+        if (panel2Display != null) {
+            var panel2DisplayTab = panel2Display + '-ctl';
+            console.log(panel2DisplayTab);
+            var panel2DisplayTabEle = document.getElementById(panel2DisplayTab);
+            panel2DisplayTabEle.click();
+        }
+    });
+
+
+</script>
+</body>
+</html>

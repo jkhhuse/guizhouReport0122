@@ -1,0 +1,32 @@
+{
+  "resource_distribution_statistics": [
+    {
+      "belong_room": "金阳虚拟资源平台",
+      "cpu_account": 4867,
+      "is_account": 26557,
+      "physical_loc_info": 645,
+      "unused_cabinet_account": 3,
+      "unused_ip_account": 61,
+      "used_cabinet_account": 197,
+      "used_cpu_account": 363,
+      "used_ip_account": 6272,
+      "used_is_account": 11998,
+      "used_storage_account": 204,
+      "used_vm_account": 5742
+    },
+    {
+      "belong_room": "贵安虚拟资源平台",
+      "cpu_account": 12039,
+      "is_account": 420233,
+      "physical_loc_info": 695,
+      "unused_cabinet_account": 0,
+      "unused_ip_account": 154,
+      "used_cabinet_account": 104,
+      "used_cpu_account": 1225,
+      "used_ip_account": 53272,
+      "used_is_account": 174655,
+      "used_storage_account": 143,
+      "used_vm_account": 20436
+    }
+  ]
+}

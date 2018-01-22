@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>计算资源</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/echarts.min.js"></script>
+  <style type="text/css">
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      border-bottom: 1px solid #eee;
+      background-color: #fafafa;
+      box-shadow: 0 1px 3px #ddd;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+  </style>
+
+</head>
+<body style="height: 100%">
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top.html');
+  </script>
+</div>
+<div class="right" style="margin-left: 200px;height: 100%">
+  <div class="breadcrumb-nav">
+    <img src="image/svg/db-black.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span">计算资源</span>
+  </div>
+  <div style="height: calc(100% - 75px);background-color: #EBEDEF">
+
+    <div style="padding: 12px;height: 100%;">
+      <div style="width: 100%;height: 100%;background-color: #fff;padding: 12px;">
+
+        <div style="width: 33%; float:left; min-width:320px;height: 50%">
+          <div style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            物理机分布
+          </div>
+          <div id="chart11" style="width: 100%;height:calc(100% - 19px);display: inline-block;"></div>
+        </div>
+
+        <div style="width: 34%; float:left; min-width:320px;height: 50%;">
+          <div
+            style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            虚拟机分布
+          </div>
+          <div id="chart21" style="width: 100%;height:calc(100% - 19px);display: inline-block;"></div>
+        </div>
+
+        <div style="width: 33%; float:left; min-width:320px;height: 50%;">
+          <div style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            容器分布
+          </div>
+          <div id="chart31" style="height: calc(100% - 19px);width: 100%;display: inline-block;"></div>
+        </div>
+        <div style="clear:left;"></div>
+
+        <div style="width: 33%; float:left; min-width:320px; height: 50%;">
+          <div style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            物理机资源使用率
+          </div>
+          <div id="chart12" style="height: calc(100% - 19px);width: 100%;display: inline-block;"></div>
+        </div>
+
+        <div style="width: 34%; float:left; min-width:320px;height: 50%;">
+          <div style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            虚拟机资源使用率
+          </div>
+          <div id="chart22" style="height: calc(100% - 19px);width: 100%;display: inline-block;"></div>
+        </div>
+
+        <div style="width: 33%; float:left; min-width:320px;height: 50%;">
+          <div style="border-bottom: 1px solid #ECECEC;width: 80%;font-size: 13px;color: #999;margin-top: 5px;">
+            容器资源使用率
+          </div>
+          <div id="chart32" style="height: calc(100% - 19px);width: 100%;display: inline-block;"></div>
+        </div>
+        <div style="clear:left;"></div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    ////////////////////////////////////////////
+    //物理
+    var myChart11 = echarts.init(document.getElementById('chart11'));
+    var option11 = {
+      title: {
+        text: '1354',
+        left: '32%',
+        bottom: 'center',
+        textStyle: {
+          color: '#666666',
+          fontSize: 24
+        }
+      },
+      tooltip: {
+        trigger: 'item',
+        formatter: function (obj) {
+          return obj.seriesName + '<br/>' + obj.name + ": "  + obj.percent + '%';
+        }
+      },
+      // 图例
+      legend: {
+        data: ["B域", "O域", 'M域']
+      },
+      // 数据内容数组
+      series: [
+        {
+          name: '资源使用情况',
+          type: 'pie',
+          center: ['40%', '50%'],
+          radius: ['42%', '54%'],
+          avoidLabelOverlap: true,
+          label: {
+            normal: {
+              show: true
+            },
+            emphasis: {
+              show: true
+            }
+          },
+          data: [
+            {value: 0.34, name: 'B域'},
+            {value: 0.17, name: 'O域'},
+            {value: 0.49, name: 'M域'}
+          ],
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                formatter: '{b}: {d}%'
+              },
+              labelLine: {show: true}
+            }
+          }
+        }
+      ],
+      color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+    };
+    myChart11.setOption(option11);
+
+    //物理资源
+    var myChart12 = echarts.init(document.getElementById('chart12'));
+    var option12 = {
+      textStyle: {
+        color: '#9AA1B0'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['CPU', '内存']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        min: 0,
+        max: 100,
+        interval: 20,
+        axisLabel: {
+          formatter: '{value}%'
+        }
+      },
+      yAxis: {
+        type: 'category',
+        data: ['B域', 'O域', 'M域']
+      },
+      series: [
+        {
+          name: 'CPU',
+          type: 'bar',
+          barWidth: '30%',
+          data: [21, 20, 19],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        },
+        {
+          name: '内存',
+          type: 'bar',
+          barWidth: '30%',
+          data: [22, 22, 24],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        }
+      ],
+      color: ['#75E85B', '#46BDFB']
+    };
+    myChart12.setOption(option12);
+
+
+    var myChart21 = echarts.init(document.getElementById('chart21'));
+    var option21 = {
+      title: {
+        text: '1799',
+        left: '30%',
+        bottom: 'center',
+        textStyle: {
+          color: '#666666',
+          fontSize: 24
+        }
+      },
+      tooltip: {
+        trigger: 'item',
+        formatter: function (obj) {
+          return obj.seriesName + '<br/>' + obj.name + ": "  + obj.percent + '%';
+        }
+      },
+      // 图例
+      legend: {
+        data: [ "B域", "O域", 'M域']
+      },
+      // 数据内容数组
+      series: [
+        {
+          name: '资源使用情况',
+          type: 'pie',
+          center: ['40%', '50%'],
+          radius: ['42%', '54%'],
+          avoidLabelOverlap: true,
+          label: {
+            normal: {
+              show: true
+            },
+            emphasis: {
+              show: true
+            }
+          },
+          data: [
+            {value: 0.26, name: 'B域'},
+            {value: 0.29, name: 'O域'},
+            {value: 0.45, name: 'M域'}
+          ],
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                formatter: '{b}: {d}%'
+              },
+              labelLine: {show: true}
+            }
+          }
+        }
+      ],
+      color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+    };
+    myChart21.setOption(option21);
+
+    //虚拟机资源
+    var myChart22 = echarts.init(document.getElementById('chart22'));
+    var option22 = {
+      textStyle: {
+        color: '#9AA1B0'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['CPU', '内存']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        min: 0,
+        max: 100,
+        interval: 20,
+        axisLabel: {
+          formatter: '{value}%'
+        }
+      },
+      yAxis: {
+        type: 'category',
+        data: ['B域', 'O域', 'M域']
+      },
+      series: [
+        {
+          name: 'CPU',
+          type: 'bar',
+          barWidth: '30%',
+          data: [29, 31, 30],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        },
+        {
+          name: '内存',
+          type: 'bar',
+          barWidth: '30%',
+          data: [31, 34, 32],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        }
+      ],
+      color: ['#75E85B', '#46BDFB']
+    };
+    myChart22.setOption(option22);
+
+    var myChart31 = echarts.init(document.getElementById('chart31'));
+    var option31 = {
+      title: {
+        text: '240',
+        left: '30%',
+        bottom: 'center',
+        textStyle: {
+          color: '#666666',
+          fontSize: 24
+        }
+      },
+      tooltip: {
+        trigger: 'item',
+        formatter: function (obj) {
+          return obj.seriesName + '<br/>' + obj.name + ": "  + obj.percent + '%';
+        }
+      },
+      // 图例
+      legend: {
+        data: ["大数据", "B域", "O域", 'M域']
+      },
+      // 数据内容数组
+      series: [
+        {
+          name: '资源使用情况',
+          type: 'pie',
+          center: ['40%', '50%'],
+          radius: ['42%', '54%'],
+          avoidLabelOverlap: true,
+          label: {
+            normal: {
+              show: true
+            },
+            emphasis: {
+              show: true
+            }
+          },
+          data: [
+            {value: 0.36, name: 'B域'},
+            {value: 0.19, name: 'O域'},
+            {value: 0.45, name: 'M域'}
+          ],
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                formatter: '{b}: {d}%'
+              },
+              labelLine: {show: true}
+            }
+          }
+        }
+      ],
+      color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+    };
+    myChart31.setOption(option31);
+
+    //容器资源
+    var myChart32 = echarts.init(document.getElementById('chart32'));
+    var option32 = {
+      textStyle: {
+        color: '#9AA1B0'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['CPU', '内存']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        min: 0,
+        max: 100,
+        interval: 20,
+        axisLabel: {
+          formatter: '{value}%'
+        }
+      },
+      yAxis: {
+        type: 'category',
+        data: ['B域', 'O域', 'M域']
+      },
+      series: [
+        {
+          name: 'CPU',
+          type: 'bar',
+          barWidth: '30%',
+          data: [51, 51, 52],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        },
+        {
+          name: '内存',
+          type: 'bar',
+          barWidth: '30%',
+          data: [53, 54, 55],
+          label: {
+            normal: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                positiong: 'top',
+                formatter: '{c}%'
+              }
+            }
+          }
+        }
+      ],
+      color: ['#75E85B', '#46BDFB']
+    };
+    myChart32.setOption(option32);
+
+
+    var data_phy_url = [null, 'profile-b', 'profile-o', 'profile-m'];
+    var data_vrt_url = [null, 'messages-b', 'messages-o', 'messages-m'];
+    var data_ctn_url = [null, 'settings-b', 'settings-o', 'settings-m'];
+
+    function everyClick(param, i, txt, url) {    //程序这边的url需要传入
+      if (param.seriesIndex == 0 && param.dataIndex == i && i > 0) {
+        window.open(url, '_top');
+      }
+    }
+
+    //增加监听事件
+    function phyConsole(param) {
+      if (typeof param.seriesIndex != 'undefined') {
+        if (param.type == 'click') {
+          var peiLenght = option11.legend.data.length;
+          for (var i = 0; i < peiLenght; i++) {
+            everyClick(param, i, option11.legend.data[i], 'jisuan.html?zone=' + data_phy_url[i]);
+          }
+        } else {
+          document.getElementById('hover-console').innerHTML = 'Event Console : ' + param.dataIndex;
+        }
+      }
+    }
+
+    myChart11.on("click", phyConsole);
+    myChart11.on("hover", phyConsole);
+
+
+    function vrtConsole(param) {
+      console.log("111");
+      if (typeof param.seriesIndex != 'undefined') {
+        if (param.type == 'click') {
+          var peiLenght = option21.legend.data.length;
+          for (var i = 0; i < peiLenght; i++) {
+            everyClick(param, i, option11.legend.data[i], 'jisuan.html?zone=' + data_vrt_url[i]);
+          }
+        } else {
+          document.getElementById('hover-console').innerHTML = 'Event Console : ' + param.dataIndex;
+        }
+      }
+    }
+
+    myChart21.on("click", vrtConsole);
+    myChart21.on("hover", vrtConsole);
+
+
+    function ctnConsole(param) {
+
+      if (typeof param.seriesIndex != 'undefined') {
+        if (param.type == 'click') {
+          var peiLenght = option31.legend.data.length;
+          for (var i = 0; i < peiLenght; i++) {
+            everyClick(param, i, option11.legend.data[i], 'jisuan.html?zone=' + data_ctn_url[i]);
+          }
+        } else {
+          document.getElementById('hover-console').innerHTML = 'Event Console : ' + param.dataIndex;
+        }
+      }
+    }
+
+    myChart31.on("click", ctnConsole);
+    myChart31.on("hover", ctnConsole);
+
+
+  </script>
+</div>
+</body>
+</html>

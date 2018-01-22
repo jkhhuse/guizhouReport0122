@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据资产</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        html, body {
+            background: #12141B;
+            color: #ccc;
+            height: 100%;
+        }
+
+        a {
+            color: #ccc;
+        }
+
+        a:hover, a:focus {
+            color: #ccc;
+        }
+
+        .breadcrumb-nav {
+            height: 75px;
+            padding: 20px 40px 20px 40px;
+            font-size: 0;
+            background: #262C37;
+        }
+
+        .breadcrumb-nav .breadcrumb-svg {
+            height: 30px;
+            width: 30px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .breadcrumb-nav .breadcrumb-span {
+            font-size: 24px;
+        }
+
+        .docker .right-main .action_btns .btn {
+            margin-bottom: 5px;
+        }
+
+        #addModal, #loadModal {
+            color: #333;
+        }
+
+        #addModal .modal-header, #loadModal .modal-header {
+            background-color: #32507A;
+            color: #fff;
+        }
+
+        #addModal .close, #loadModal .close {
+            color: #fff;
+        }
+        .btn-wrapper{
+            margin: 30px 0 20px 35px;
+        }
+        .addModalBtn{
+            margin-right: 10px;
+        }
+        .addModalBtn, .loadModalBtn{
+            width: 59px;
+            height: 32px;
+            background: #4A90E2;
+            border-radius: 3px;
+        }
+        .search-div{
+            float: right;
+            width: 240px;
+            height: 32px;
+            line-height: 27px;
+            margin-right: 40px;
+            border: 1px solid #32507A;
+            border-radius: 3px;
+        }
+        .search-input{
+            background-color: #12141B;
+            border:none;
+        }
+        input::-webkit-input-placeholder{
+            padding-left:15px;
+            color: #404144;
+        }
+        input:-moz-placeholder{
+            padding-left:15px;
+            color: #404144;
+        }
+        input:-ms-input-placeholder{
+            padding-left:15px;
+            color: #404144;
+        }
+        .search-i{
+            float: right;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 7px;
+        }
+        .table-wrapper{
+            margin: 0 40px 0 35px;
+        }
+        #dm-table thead{
+            height: 44px;
+            background-color: #2d3543;
+            font-weight: normal;
+            font-size: 12px;
+
+        }
+        #dm-table>thead>tr>th {
+            padding-left: 15px;
+            border-bottom: 2px solid #5792E5;
+        }
+        #dm-table>tbody>tr>td{
+            padding: 0;
+        }
+        #dm-table>tbody>tr>td{
+            height: 40px;
+            line-height: 40px;
+            padding-left: 15px;
+            background: #1C2331;
+            font-weight: normal;
+            font-size: 12px;
+            border-bottom: 1px solid #32507A;
+        }
+        #dm-table .glyphicon{
+            color: #4A90E2;
+            padding-left: 5px;
+        }
+        #fenye{
+            float: right;
+            margin-right: 40px;
+        }
+        #fenye ul li a{
+            background-color: #12141B;
+            border-color:#32507A ;
+            color: #fff;
+
+        }
+        #fenye #active a{
+            background-color: #4A90E2;
+        }
+        .btn-wrong{
+            background-color: #545c6d;
+        }
+        .btn-reject{
+            background-color: #F8576A;
+        }
+    </style>
+</head>
+<body>
+<div class="left-nav-wrap">
+    <script>
+        $('.left-nav-wrap').load('leftNav-black.html');
+    </script>
+</div>
+<div class="top-wrap">
+    <script>
+        $('.top-wrap').load('fix-top-black.html');
+    </script>
+</div>
+<div class="right" style="margin-left: 200px; height: 100%;">
+    <div class="appStore" style="height: 100%">
+        <div class="breadcrumb-nav">
+            <img src="image/svg/appModule.svg" class="breadcrumb-svg" alt=""/>
+            <span class="breadcrumb-span"><a href="tomcat-black.html">数据资产</a></span>
+        </div>
+        <div class="docker">
+            <div class="right-main">
+                <div class="btn-wrapper">
+                    <button class="btn btn-primary loadModalBtn" data-toggle="modal" data-target="#loadModal">导出</button>
+                    <button class="btn btn-primary addModalBtn"  data-toggle="modal" data-target="#addModal">申请</button>
+                    <div class="search-div">
+                        <input type="text" class="search-input" placeholder="搜索表名"/>
+                        <img src="image/search-i.svg" class="search-i" alt=""/>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table" id="dm-table">
+                        <thead>
+                        <tr>
+                            <th>资产标识</th>
+                            <th>表名</th>
+                            <th>中文名</th>
+                            <th>层次</th>
+                            <th>安全级别</th>
+                            <th>提供部门</th>
+                            <th>发布人</th>
+                            <th>当前版本</th>
+                            <th>发布权限</th>
+                            <th>申请状态</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="">com.cmcc<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>冒烟hbase表</td>
+                            <td style="color: #A089CF">STD层</td>
+                            <td>高</td>
+                            <td>OPUITEST1</td>
+                            <td>OPUITEST1DEV6</td>
+                            <td>V1.1.0</td>
+                            <td style="color: #A089CF">只读</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">贵州和more<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>ZQQ_FTP_分区测试表</td>
+                            <td style="color: #A089CF">应用层</td>
+                            <td>高</td>
+                            <td>BCDAE</td>
+                            <td>admin</td>
+                            <td>V2.2.0</td>
+                            <td style="color: #A089CF">读写</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">cmcc.gz.BSS<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>test_stream1</td>
+                            <td style="color: #A089CF">基础层</td>
+                            <td>中</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>V1.2.0</td>
+                            <td style="color: #A089CF">读写</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-wrong">未申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">cmss<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hive_cmss</span></td>
+                            <td>cmss</td>
+                            <td style="color: #A089CF">STD层</td>
+                            <td>高</td>
+                            <td>admin123</td>
+                            <td>admin123</td>
+                            <td>V1.2.0</td>
+                            <td style="color: #A089CF">读写</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-wrong">未申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">com.cmcc<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>冒烟hbase表</td>
+                            <td style="color: #A089CF">STD层</td>
+                            <td>高</td>
+                            <td>OPUITEST1</td>
+                            <td>OPUITEST1DEV6</td>
+                            <td>V1.1.0</td>
+                            <td style="color: #A089CF">只读</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">贵州和more<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>ZQQ_FTP_分区测试表</td>
+                            <td style="color: #A089CF">应用层</td>
+                            <td>高</td>
+                            <td>BCDAE</td>
+                            <td>admin</td>
+                            <td>V2.2.0</td>
+                            <td style="color: #A089CF">读写</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">com.cmcc<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>冒烟hbase表</td>
+                            <td style="color: #A089CF">STD层</td>
+                            <td>高</td>
+                            <td>OPUITEST1</td>
+                            <td>OPUITEST1DEV6</td>
+                            <td>V1.1.0</td>
+                            <td style="color: #A089CF">只读</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">贵州和more<i class="glyphicon glyphicon-paperclip"></i></a></td>
+                            <td><span class="label"  style="background-color: #A089CF">hbase</span></td>
+                            <td>ZQQ_FTP_分区测试表</td>
+                            <td style="color: #A089CF">应用层</td>
+                            <td>高</td>
+                            <td>BCDAE</td>
+                            <td>admin</td>
+                            <td>V2.2.0</td>
+                            <td style="color: #A089CF">读写</td>
+                            <td><div class="action_btns"><button type="button" class="btn btn-xs btn-info">已申请</button></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="fenye">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" > < </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li id="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" > > </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="addModalLabel">申请资产</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="name">一级分类</label>
+                            <select class="form-control">
+                                <option>OPUITESTLEVEL1</option>
+                                <option>Hive一级目录</option>
+                                <option> 01_hive2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="name">二级分类</label>
+                            <select class="form-control">
+                                <option>OPUITESTLEVEL2</option>
+                                <option>Hive二级目录</option>
+                                <option>Hive二级分类节点</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="name">字段名</label>
+                            <input class="form-control" placeholder="请输入字段名">
+                            </input>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="name">中文名</label>
+                            <input class="form-control" placeholder="请输入中文名">
+                            </input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            数据库类型：
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                Hive
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Hbase
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Gbase
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="name">数据类型</label>
+                            <select class="form-control">
+                                <option>INT</option>
+                                <option>BYTE[]</option>
+                                <option>SMALLINT</option>
+                                <option>TIMESTAMP</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="name">状态</label>
+                            <select class="form-control">
+                                <option class="text-primary">已发布</option>
+                                <option class="text-warning">未发布</option>
+                                <option class="text-danger">已拒绝</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="name">描述：</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal" style="background-color: #32507A;color: #ffffff">
+                    确定
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="loadModal" tabindex="-1" role="dialog" aria-labelledby="loadModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loadModalLabel">导出文件</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-6 form-group">
+                            <label for="name">一级分类</label>
+                            <select class="form-control">
+                                <option>OPUITESTLEVEL1</option>
+                                <option>Hive一级目录</option>
+                                <option> 01_hive2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="name">二级分类</label>
+                            <select class="form-control">
+                                <option>OPUITESTLEVEL2</option>
+                                <option>Hive二级目录</option>
+                                <option>Hive二级分类节点</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-12 form-group">
+                            <label for="name">导出地址</label>
+                            <input class="form-control" type="text" style="display: inline-block;width: 78%;">
+
+                            </input>
+                            <a href="" class="btn" style="background-color: #32507A;color: #ffffff">浏览</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal" style="background-color: #32507A;color: #ffffff">
+                    确定
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

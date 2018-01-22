@@ -1,0 +1,68 @@
+{
+  "m_area_ods_28303": [
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "ID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "ID"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u72b6\u6001\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "\u72b6\u6001"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u5907\u6ce8\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(4000)",
+      "property_zh": "\u5907\u6ce8"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u540d\u79f0\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(255)",
+      "property_zh": "\u540d\u79f0"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u516c\u5f00\u6807\u8bc6\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "\u516c\u5f00\u6807\u8bc6"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u7f16\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(80)",
+      "property_zh": "\u7f16\u53f7"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u65e5\u671f\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "TIMESTAMP(6)",
+      "property_zh": "\u65e5\u671f"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u521b\u5efa\u4eba\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "\u521b\u5efa\u4eba"
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>应用概览</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/awesome/css/font-awesome.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <style>
+    html, body {
+      color: #333;
+      height: 100%;
+    }
+    a {
+      color: #333;
+    }
+    a:hover, a:focus {
+      color: #333;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #FAFAFA;
+    }
+    .app-content {
+      margin-left: 200px;
+      height: 100%;
+    }
+    .app-panel {
+      width: 60%;
+    }
+    .app-panel-body span {
+      margin-right: 25px;
+    }
+    .app-info-progress {
+      margin-bottom: 0;
+    }
+    .app-info-dropdown .btn-default {
+      padding: 2px 10px;
+    }
+    .add_minus .glyphicon {
+      color: #31708f;
+    }
+    .add_minus .glyphicon:hover {
+      cursor: pointer;
+    }
+    #app_info_link {
+      float: right;
+    }
+    #step-two {
+      display: none;
+    }
+    .loading-icon {
+      display: none;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+
+    .con-info, .con-info-vm {
+      height: 125px;
+      background: #eee;
+      margin: 20px 5px 12px 5px;
+      padding: 20px;
+    }
+
+    .info-box {
+      width: 23%;
+      float: left;
+      border: 1px solid #ccc;
+      margin-left: 1%;
+      margin-right: 1%;
+      padding: 27px 20px;
+      line-height: 30px;
+    }
+
+    .box-previous {
+      float: left;
+    }
+    .box-last {
+      padding: 0 15px;
+      background: red;
+      display: block;
+      float: left;
+      border-radius: 4px;
+      height: 30px;
+      margin-left: 11px;
+    }
+    .box-last.one {
+      background: #15AAAA;
+    }
+    .box-last.two {
+      background: #4A90E2;
+    }
+    .box-last.three {
+      background: #A089CF;
+    }
+    .box-last.four {
+      background: #00AAAB;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-nav-wrap">
+    <script>
+      $('.left-nav-wrap').load('leftNav.html');
+    </script>
+  </div>
+  <div class="top-wrap">
+    <script>
+      $('.top-wrap').load('fix-top.html');
+    </script>
+  </div>
+  <div class="app-content">
+    <div class="breadcrumb-nav">
+      <img src="image/svg/appStore-black.svg" class="breadcrumb-svg" alt=""/>
+      <span class="breadcrumb-span"><a href="app.html">应用概览</a></span>
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="padding: 15px 0 0 15px;">
+      <li role="presentation" class="active">
+        <a id="return-tomcat" href="#home" style="cursor: pointer;">虚拟机</a>
+      </li>
+      <li role="presentation">
+        <a href="#con">容器</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane" id="con" style="padding: 5px;">
+        <div class="con-info">
+          <div class="info-box">
+            <span class="box-previous">使用容器个数</span>
+            <span class="box-last one">31</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均部署时长</span>
+            <span class="box-last two">7.7s</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均CPU使用率: </span>
+            <span class="box-last three">63%</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均内存使用率: </span>
+            <span class="box-last four">71%</span>
+          </div>
+        </div>
+        <table class="table" id="app_table">
+          <thead>
+          <tr>
+            <th>应用名称</th>
+            <th>部署状态</th>
+            <th>部署版本</th>
+            <th>容器个数</th>
+            <th>运行状态</th>
+            <th>创建时间</th>
+            <th>使用模板</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="#" id="app_info">贵州移动办公平台</a></td>
+            <td>已部署</td>
+            <td>Latest</td>
+            <td>5</td>
+            <td>运行中</td>
+            <td>
+            </td>
+            <td>ZTMS0503</td>
+          </tr>
+          <tr>
+            <td><a href="#">掌上秒杀</a></td>
+            <td>已部署</td>
+            <td>4.6</td>
+            <td>7</td>
+            <td>运行中</td>
+            <td>2017-01-15</td>
+            <td>GZPO1223</td>
+          </tr>
+          <tr>
+            <td><a href="#">雅典娜</a></td>
+            <td>已部署</td>
+            <td>2.3</td>
+            <td>8</td>
+            <td>运行中</td>
+            <td>2017-02-04</td>
+            <td>GZTM0503</td>
+          </tr>
+          </tbody>
+        </table>
+        <div id="step-two" style="padding: 5px;">
+          <div class="panel panel-default app-panel">
+            <div class="panel-heading">
+              <span>贵州移动办公平台</span>
+              <a id="app_info_link" href="https://218.201.251.86:5443/webos" target="_blank">访问</a>
+            </div>
+            <div class="panel-body app-panel-body">
+              <span>创建时间：2017-05-03</span>
+              <span>部署版本：Latest</span>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>服务</th>
+              <th>健康状态</th>
+              <th>镜像</th>
+              <th>压力负载</th>
+              <th>容器数</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>tomcat</td>
+              <td>良好</td>
+              <td>gz.chinamobile.com/tomcat:8.5.8</td>
+              <td>
+                <div class="progress app-info-progress">
+                  <div class="progress-bar progress-bar-danger" style="width: 80%">
+                    <span>80%</span>
+                  </div>
+                </div>
+              </td>
+              <td class="add_minus">
+                <span>2</span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-minus"></span>
+              </td>
+              <td>
+                <span class="loading-icon">
+                  <span class="fa fa-spin fa-spinner"></span>
+                  <span>伸缩中</span>
+                </span>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">重新部署</a></li>
+                    <li><a href="#">删除</a></li>
+                    <li><a href="#">重启</a></li>
+                    <li><a href="#">停止</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Mysql</td>
+              <td>良好</td>
+              <td>gz.chinamobile.com/mysql:5.7.38</td>
+              <td>
+                <div class="progress app-info-progress">
+                  <div class="progress-bar progress-bar-success" style="width: 45%">
+                    <span>32%</span>
+                  </div>
+                </div>
+              </td>
+              <td class="add_minus">
+                <span>3</span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-minus"></span>
+              </td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">重新部署</a></li>
+                    <li><a href="#">删除</a></li>
+                    <li><a href="#">重启</a></li>
+                    <li><a href="#">停止</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table class="table" id="app_containers">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>服务</th>
+              <th>容器名称</th>
+              <th>运行状态</th>
+              <th>健康状态</th>
+              <th>标签</th>
+              <th>IP地址</th>
+              <th>主机</th>
+              <th>镜像</th>
+              <th>命令</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><a href="#">74a2821faa2a</a></td>
+              <td>tomcat</td>
+              <td>office-tomcat-1</td>
+              <td>运行中</td>
+              <td>良好</td>
+              <td>bigdata=true</td>
+              <td>192.168.19.12</td>
+              <td><a href="#">agent1877</a></td>
+              <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
+              <td>catalina.sh run</td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">上传文件</a></li>
+                    <li><a href="#">保存镜像</a></li>
+                    <li><a href="#">提取文件</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">7upk804ybseq</a></td>
+              <td>tomcat</td>
+              <td>office-tomcat-2</td>
+              <td>运行中</td>
+              <td>良好</td>
+              <td>bigdata=true</td>
+              <td>192.168.19.10</td>
+              <td><a href="#">agent1871</a></td>
+              <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
+              <td>catalina.sh run</td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">上传文件</a></li>
+                    <li><a href="#">保存镜像</a></li>
+                    <li><a href="#">提取文件</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">9hlv47df9mn</a></td>
+              <td>Mysql</td>
+              <td>office-Mysql-1</td>
+              <td>运行中</td>
+              <td>良好</td>
+              <td>innoDB=true</td>
+              <td>192.168.19.11</td>
+              <td><a href="#">agent1872</a></td>
+              <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
+              <td>service mysqld start</td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">上传文件</a></li>
+                    <li><a href="#">保存镜像</a></li>
+                    <li><a href="#">提取文件</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">1plfryun78v4</a></td>
+              <td>Mysql</td>
+              <td>office-Mysql-2</td>
+              <td>运行中</td>
+              <td>良好</td>
+              <td>innoDB=true</td>
+              <td>192.168.19.18</td>
+              <td><a href="#">agent1873</a></td>
+              <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
+              <td>service mysqld start</td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">上传文件</a></li>
+                    <li><a href="#">保存镜像</a></li>
+                    <li><a href="#">提取文件</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#">28opkjdf7y9f</a></td>
+              <td>Mysql</td>
+              <td>office-Mysql-3</td>
+              <td>运行中</td>
+              <td>良好</td>
+              <td>innoDB=true</td>
+              <td>192.168.19.19</td>
+              <td><a href="#">agent1876</a></td>
+              <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
+              <td>service mysqld start</td>
+              <td>
+                <div class="dropdown app-info-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    操作
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">上传文件</a></li>
+                    <li><a href="#">保存镜像</a></li>
+                    <li><a href="#">提取文件</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane active" id="home" style="padding: 5px;">
+        <div class="con-info-vm">
+          <div class="info-box">
+            <span class="box-previous">共使用节点: </span>
+            <span class="box-last one">79</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均部署时长: </span>
+            <span class="box-last two">9min36s</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均CPU使用率: </span>
+            <span class="box-last three">34%</span>
+          </div>
+          <div class="info-box">
+            <span class="box-previous">平均内存使用率: </span>
+            <span class="box-last four">32%</span>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>应用名称</th>
+            <th>部署状态</th>
+            <th>部署版本</th>
+            <th>容器个数</th>
+            <th>运行状态</th>
+            <th>创建时间</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>贵州移动办公平台</td>
+            <td>已部署</td>
+            <td>2.3.1</td>
+            <td>5</td>
+            <td>运行中</td>
+            <td>2017-05-03</td>
+          </tr>
+          <tr>
+            <td>NPS系统</td>
+            <td>已部署</td>
+            <td>4.6</td>
+            <td>7</td>
+            <td>运行中</td>
+            <td>2016-12-15</td>
+          </tr>
+          <tr>
+            <td>和more系统</td>
+            <td>已部署</td>
+            <td>2.3</td>
+            <td>8</td>
+            <td>运行中</td>
+            <td>2017-03-12</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="padding: 5px;">
+    </div>
+  </div>
+  <script>
+    $('.nav-tabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+    $('#app_info').click(function() {
+      $('#app_table').hide();
+      $('.con-info').hide();
+      $('#step-two').show();
+    });
+    $('.add_minus .glyphicon-plus').click(function(e) {
+      var tomcat_add = '<tr style="background: lightblue">' +
+        '<td><a href="#">86skfdupmnwq</a></td>' +
+        '<td>tomcat</td>' +
+        '<td>office-tomcat-3</td>' +
+        '<td>伸缩中</td>' +
+        '<td>未配置</td>' +
+        '<td>bigdata=true</td>' +
+        '<td>192.168.19.9</td>' +
+        '<td><a href="#">agent1869</a></td>' +
+        '<td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>' +
+        '<td>catalina.sh run</td>' +
+        '<td>' +
+          '<div class="dropdown app-info-dropdown">' +
+            '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+              '操作' +
+              '<span class="caret"></span>' +
+            '</button>' +
+            '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">' +
+              '<li><a href="#">上传文件</a></li>' +
+              '<li><a href="#">保存镜像</a></li>' +
+              '<li><a href="#">提取文件</a></li>' +
+            '</ul>' +
+          '</div>' +
+        '</td>' +
+      '</tr>';
+      $('#app_containers').find('tbody').prepend(tomcat_add);
+      setTimeout(function() {
+        $('#app_containers').find('tbody').children().eq(0).animate({opacity: 0.3}, 1000, function () {
+          $('#app_containers').find('tbody').children().eq(0).animate({opacity: 1}, 1000, function () {
+            $('#app_containers').find('tbody').children().eq(0).animate({opacity: 0.3}, 1000, function () {
+              $('#app_containers').find('tbody').children().eq(0).animate({opacity: 1}, 1000, function () {
+                $('#app_containers').find('tbody').children().eq(0).animate({opacity: 0.3}, 1000, function () {
+                  $('#app_containers').find('tbody').children().eq(0).animate({opacity: 1}, 1000);
+                });
+              });
+            });
+          });
+        });
+      }, 500);
+      $(e.target).parent().next().find('.loading-icon').show().css('display', 'inline-block');
+      $(e.target).parent().next().find('.app-info-dropdown').hide();
+      setTimeout(function() {
+        $(e.target).parent().next().find('.loading-icon').hide();
+        $(e.target).parent().next().find('.app-info-dropdown').show();
+        $(e.target).parent().prev().find('.progress-bar').removeClass('progress-bar-danger')
+          .addClass('progress-bar-warning').css('width', '58%').find('span').html('58%');
+        $('#app_containers').find('tbody').children().eq(0).css('background', 'none').children().eq(3).html('运行中');
+      }, 6000);
+      $(e.target).prev().html(parseInt($(e.target).prev().html()) + 1);
+    });
+    $('.add_minus .glyphicon-minus').click(function(e) {
+      $(e.target).parent().next().find('.loading-icon').show().css('display', 'inline-block');
+      $(e.target).parent().next().find('.app-info-dropdown').hide();
+      setTimeout(function() {
+        $(e.target).parent().next().find('.loading-icon').hide();
+        $(e.target).parent().next().find('.app-info-dropdown').show();
+      }, 6000);
+      $(e.target).prev().prev().html(parseInt($(e.target).prev().prev().html()) - 1);
+    });
+    Date.prototype.Format = function(fmt) {
+      var o = {
+        "M+" : this.getMonth()+1,                 //月份
+        "d+" : this.getDate(),                    //日
+        "h+" : this.getHours(),                   //小时
+        "m+" : this.getMinutes(),                 //分
+        "s+" : this.getSeconds(),                 //秒
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度
+        "S"  : this.getMilliseconds()             //毫秒
+      };
+      if(/(y+)/.test(fmt))
+        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+      for(var k in o)
+        if(new RegExp("("+ k +")").test(fmt))
+          fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+      return fmt;
+    };
+    $("#app_info").parent().next().next().next().next().next().html(new Date().Format('yyyy-MM-dd'));
+  </script>
+</body>
+</html>

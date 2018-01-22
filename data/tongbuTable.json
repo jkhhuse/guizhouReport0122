@@ -1,0 +1,82 @@
+{
+"tables": [
+  {
+    "Cname": "供应商信息同步服务",
+    "Ename": "SB_SC_PO_InquiryVendorInfoSrv",
+    "time": "26924",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步值集值信息服务（TD)",
+    "Ename": "SB_SY_SY_TDInquiryVSetValueInfoSrv",
+    "time": "14580",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商TD",
+    "Ename": "SB_SC_PO_TDInquiryVendorInfoSrv()",
+    "time": "11235",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商分页服务",
+    "Ename": "SB_SC_PO_PageInquiryVendorInfoSrv",
+    "time": "9005",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步OU组织",
+    "Ename": "SB_FI_GL_InquiryOuOrganizationSrv",
+    "time": "7258",
+    "category":"同步"
+  },
+
+  {
+    "Cname": "同步ERP账户组合信息服务",
+    "Ename": "SB_FI_GL_TDInquiryAccountCodeCombinationSrv",
+    "time": "4168",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商银行信息",
+    "Ename": "SB_SC_PO_TDInquiryVendorBankSrv",
+    "time": "2092",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商账户信息",
+    "Ename": "SB_SC_PO_TDInquiryVendorAccountSrv",
+    "time": "2092",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商地点信息（TD）",
+    "Ename": "SB_SC_PO_TDInquiryVendorSiteSrv",
+    "time": "2092",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步供应商与银行关系信息",
+    "Ename": "SB_SC_PO_TDInquiryVendorBankRelationSrv",
+    "time": "2088",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步收款方法账户信息",
+    "Ename": "SB_FI_AR_TDInquiryReceiptMethodBankSrv",
+    "time": "2082",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步收款方法头信息",
+    "Ename": "SB_FI_AR_TDInquiryReceiptMethodHeadSrv",
+    "time": "2082",
+    "category":"同步"
+  },
+  {
+    "Cname": "同步资产账簿信息",
+    "Ename": "SB_FI_FA_InquiryAssetCategorySrv",
+    "time": "81",
+    "category":"同步"
+  }
+]}

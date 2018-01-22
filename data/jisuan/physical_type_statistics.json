@@ -1,0 +1,25 @@
+{
+  "physical_type_statistics": [
+    {
+      "data_center": "贵安",
+      "four_amount": 816,
+      "hadoop_amount": 1270,
+      "high_performance_amount": 30,
+      "total_amount": 2116
+    },
+    {
+      "data_center": "金阳",
+      "four_amount": 108,
+      "hadoop_amount": 0,
+      "high_performance_amount": 0,
+      "total_amount": 108
+    },
+    {
+      "data_center": "汇总",
+      "four_amount": 924,
+      "hadoop_amount": 1270,
+      "high_performance_amount": 30,
+      "total_amount": 2224
+    }
+  ]
+}

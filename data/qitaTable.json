@@ -1,0 +1,46 @@
+{
+"tables": [
+  {
+    "Cname": "回传支付状态服务",
+    "Ename": "SB_FI_AP_UpdateCheckStatusSrv",
+    "time": "582972",
+    "category":"其他"
+  },
+  {
+    "Cname": "日期弹性域配置服务",
+    "Ename": "SB_SY_SY_InquiryDateParameterLimitedSrv",
+    "time": "48019",
+    "category":"其他"
+  },
+  {
+    "Cname": "预算检查与保留服务",
+    "Ename": "SB_FI_BMS_ImportBdgtReserveSrv",
+    "time": "36424",
+    "category":"其他"
+  },
+  {
+    "Cname": "回传支付状态服务(TD)",
+    "Ename": "SB_FI_AP_TDUpdateCheckStatusSrv",
+    "time": "25032",
+    "category":"其他"
+  },
+  {
+    "Cname": "提交增值税发票认证服务",
+    "Ename": "SB_FI_FP_ImportInvoiceDeductionInfoSrv",
+    "time": "6275",
+    "category":"其他"
+  },
+
+  {
+    "Cname": "预算资源释放服务",
+    "Ename": "SB_FI_BMS_ImportBdgtReleaseSrv",
+    "time": "2582",
+    "category":"其他"
+  },
+  {
+    "Cname": "ERP总账凭证导",
+    "Ename": "SB_FI_GL_ImportGLEntrySrv",
+    "time": "1693",
+    "category":"其他"
+  }
+]}

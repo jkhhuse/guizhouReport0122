@@ -1,0 +1,40 @@
+/**
+created by zhaohuihui 2017/07/11
+*/
+.standard .bootstrap-table {
+    color: #ccc;
+}
+.standard .bootstrap-table .fixed-table-container {
+    border: none;
+}
+.standard .bootstrap-table .fixed-table-container thead th {
+    border-left: none;
+}
+.standard .bootstrap-table .fixed-table-container tbody td {
+    border-left: none;
+}
+.standard .bootstrap-table .table {
+    border-bottom: none;
+}
+.standard .bootstrap-table .fixed-table-loading,
+.standard .bootstrap-table .no-records-found {
+    display: none!important;
+    background-color: #32507A;
+    opacity: 1;
+}
+.standard .pull-left.pagination-detail {
+    display: none;
+}
+.standard .pull-right.pagination {
+    color: #ccc;
+    /*background-color: #12141B;*/
+    border-color:#32507A ;
+}
+.standard .pull-right.pagination ul.pagination>li>a {
+    background-color: #12141B;
+    border-color:#32507A ;
+    color: #fff;
+}
+.standard .pull-right.pagination ul.pagination>li.active>a {
+    background-color: #4A90E2;
+}

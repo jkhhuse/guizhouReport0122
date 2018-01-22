@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>应用商城</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/awesome/css/font-awesome.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <style>
+    .store-content {
+      margin-left: 200px;
+      height: 100%;
+      background-color: #12141B;
+    }
+    html, body {
+      color: #333;
+      height: 100%;
+    }
+    a {
+      color: #333;
+    }
+    a:hover, a:focus {
+      color: #333;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #262C37;
+    }
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+      color:#ccc;
+    }
+    .app-list {
+      list-style: none;
+    }
+    .app-list li {
+      width: 20%;
+      float: left;
+      background: #1C2331;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #32507A;
+    }
+    .app-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+    .app-icon.icon-one {
+      background: url("image/office.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .app-icon.icon-two {
+      background: url("image/building.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .app-title {
+      margin: 10px auto;
+      text-align: center;
+    }
+    .app-deploy {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav-black.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top-black.html');
+  </script>
+</div>
+<div class="store-content">
+  <div class="breadcrumb-nav">
+    <img src="image/svg/appInstance.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span"><a href="tomcat.html" style="color:#ccc;">软件商城</a></span>
+  </div>
+  <ul class="app-list" style="margin-top: 2%;">
+    <li>
+      <div class="app-icon icon-one"></div>
+      <div class="app-title" style="color:#ccc">贵州移动网络代维管理平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <div style="clear: both"></div>
+    <!--<li>-->
+    <!--<div class="app-icon icon-two"></div>-->
+    <!--<div class="app-title">雅典娜</div>-->
+    <!--<div>-->
+    <!--<button type="button" class="btn btn-primary app-deploy">一键部署</button>-->
+    <!--</div>-->
+    <!--</li>-->
+  </ul>
+</div>
+<script>
+  $('.app-deploy').click(function () {
+    location.href = 'deploy-black.html';
+  });
+</script>
+</body>
+</html>

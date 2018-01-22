@@ -1,0 +1,112 @@
+{
+  "b_area_ods_14016": [
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "INTEGER",
+      "field_example": "",
+      "index": 1,
+      "invalid_field": "",
+      "primary_key": "",
+      "property_describe": "",
+      "property_en": "DR_TYPE",
+      "property_zh": "\u8bdd\u5355\u7c7b\u578b",
+      "required_fill": ""
+    },
+    {
+      "date_type": "VARCHAR(15)",
+      "date_type_bdi": "STRING",
+      "field_example": "",
+      "index": 2,
+      "invalid_field": "",
+      "primary_key": "\u662f",
+      "property_describe": "",
+      "property_en": "USER_NUMBER",
+      "property_zh": "\u7528\u6237\u624b\u673a\u53f7",
+      "required_fill": ""
+    },
+    {
+      "date_type": "VARCHAR(32)",
+      "date_type_bdi": "STRING",
+      "field_example": "",
+      "index": 3,
+      "invalid_field": "",
+      "primary_key": "\u662f",
+      "property_describe": "",
+      "property_en": "OPERATOR_CODE",
+      "property_zh": "\u64cd\u4f5c\u4ee3\u7801",
+      "required_fill": ""
+    },
+    {
+      "date_type": "VARCHAR(20)",
+      "date_type_bdi": "STRING",
+      "field_example": "",
+      "index": 4,
+      "invalid_field": "",
+      "primary_key": "\u662f",
+      "property_describe": "",
+      "property_en": "CP_CODE",
+      "property_zh": "SP\u4e1a\u52a1\u4ee3\u7801",
+      "required_fill": ""
+    },
+    {
+      "date_type": "VARCHAR(7)",
+      "date_type_bdi": "STRING",
+      "field_example": "",
+      "index": 5,
+      "invalid_field": "",
+      "primary_key": "\u662f",
+      "property_describe": "",
+      "property_en": "HPLMN2",
+      "property_zh": "\u4e8c\u7ea7\u5f52\u5c5e\u5c40",
+      "required_fill": ""
+    },
+    {
+      "date_type": "DECIMAL(18,2)",
+      "date_type_bdi": "DOUBLE",
+      "field_example": "",
+      "index": 6,
+      "invalid_field": "",
+      "primary_key": "",
+      "property_describe": "",
+      "property_en": "CHARGE4",
+      "property_zh": "\u8d39\u75284",
+      "required_fill": ""
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "INTEGER",
+      "field_example": "",
+      "index": 7,
+      "invalid_field": "",
+      "primary_key": "",
+      "property_describe": "\u8ba1\u8d39\u7c7b\u578b\n,01\uff1a\n,02\uff1a \u6309\u6b21\u8ba1\u8d39\n,03\uff1a\u5305\u6708\u8ba1\u8d39\n,04\uff1a\u5305\u6708\u67e5\u8be2\n,05\uff1a\u65f6\u957f\u8ba1\u8d39\n,06\uff1a\u4e0b\u8f7d\u91cd\u8bd5\n,07\uff1a\u70b9\u64ad\u91cd\u8bd5",
+      "property_en": "CHARGE_TYPE",
+      "property_zh": "\u4fe1\u606f\u8ba1\u8d39\u7c7b\u578b",
+      "required_fill": ""
+    },
+    {
+      "date_type": "TIMESTAMP",
+      "date_type_bdi": "DATETIME",
+      "field_example": "",
+      "index": 8,
+      "invalid_field": "",
+      "primary_key": "",
+      "property_describe": "",
+      "property_en": "START_TIME",
+      "property_zh": "\u901a\u8bdd\u8d77\u59cb\u65f6\u95f4",
+      "required_fill": ""
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "INTEGER",
+      "field_example": "",
+      "index": 9,
+      "invalid_field": "",
+      "primary_key": "\u662f",
+      "property_describe": "",
+      "property_en": "ACC_ITEM_CODE4",
+      "property_zh": "\u8d26\u52a1\u79d1\u76ee",
+      "required_fill": ""
+    }
+  ]
+}

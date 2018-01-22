@@ -1,0 +1,2054 @@
+{
+  "block_storage_hds": [
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A1_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:00",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A3_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:01",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A4_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:02",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A5_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:03",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A6_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:04",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A7_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:05",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A9_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:06",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A10_HW01_to_HW08",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:07",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_VC_5A7HW06_6A8HW06_7A8HW06",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:08",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_VC_5A7HW06_6A8HW06_7A8HW06",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:02:09",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:10",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:11",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:12",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:13",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A8_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:00",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A10_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:01",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A10_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:02",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A8_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:03",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A8_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:04",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "CRM_在线计费应用",
+      "assinged_resource_center": "GA_4A8_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:05",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "信安部_合规平台、互联网支撑室_宽带自排障、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_掌上运维系统、互联网支撑室_IP管理系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:06",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_掌上运维系统、互联网支撑室_IP管理系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:07",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_家客监控系统、支撑室_集中故障系统互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、、支撑室_手机安全系统、支撑室_掌上运维系统、互联网支撑室_IP管理系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:08",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:09",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:0F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:10",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:11",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:12",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:13",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:14",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_paas平台",
+      "assinged_resource_center": "GA_5A3_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:15",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_paas平台",
+      "assinged_resource_center": "GA_5A4_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:16",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_paas平台",
+      "assinged_resource_center": "GA_5A5_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:17",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_paas平台",
+      "assinged_resource_center": "GA_5A6_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:18",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_5A7_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:19",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A8_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_掌上运维系统、互联网支撑室_IP管理系统、互联网支撑室_宽带自排障、信安部_合规平台、支撑室_代维管理系统、支撑室_家客监控系统、支撑室_集中故障系统、支撑室_手机安全系统、支撑室_综合资源系统",
+      "assinged_resource_center": "GA_5A1_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_5A7_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_5A7_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_5A7_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:1F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_物联网、支撑室_paas平台",
+      "assinged_resource_center": "GA_5A7_HW01_to_HW06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:20",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A11_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:21",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A11_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:22",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A12_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:23",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A12_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:24",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A12_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:25",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A12_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:26",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_4A、业务支撑_PCC二期、业务支撑_知识库管理端、业务支撑_财务新收入准则",
+      "assinged_resource_center": "GA_4A12_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:03:27",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:28",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:29",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:30",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:31",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "管理信息域_项目决策流程、管理信息域_分布式OA检索系统",
+      "assinged_resource_center": "GA_2A6_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:00",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "管理信息域_项目决策流程、管理信息域_分布式OA检索系统",
+      "assinged_resource_center": "GA_2A7_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:01",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "管理信息域_慧眼平台",
+      "assinged_resource_center": "GA_2A8_LX01_to_LX04",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:02",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "管理信息域_慧眼平台",
+      "assinged_resource_center": "GA_2A8_LX01_to_LX04",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:03",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B1_HW01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:04",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B2_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:05",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B3_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:06",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B4_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:07",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B5_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:08",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B6_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:09",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B7_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B9_LX01_to_LX06",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "启明星辰_审计流量分析平台、东方国信_大数据运营分析平台、东方国信_大数据库Mpp、华为_大数据运行分析系统",
+      "assinged_resource_center": "GA_1F7_6B10_LX01_to_LX08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A8_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A8_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A8_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:0F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A9_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:10",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A9_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:11",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A9_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:12",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A10_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:13",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A10_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:14",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "安全室_4A平台",
+      "assinged_resource_center": "GA_5A10_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:15",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑财务新收入准则",
+      "assinged_resource_center": "GA_4A13_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:16",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A13_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:17",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A13_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:18",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A13_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:19",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A14_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:1A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A14_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:1B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "业务支撑_知识管理库、业务支撑_4A、业务支撑PCC二期",
+      "assinged_resource_center": "GA_4A14_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:1C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:1D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "支撑室_CMDB测试、成都咨元_Gpon、浪潮_家客系统、核心室_VoLTE业务、网优中心_ICAS二期",
+      "assinged_resource_center": "GA_5A2_HW01_to_HW08",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:05:1E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:1F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:20",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:21",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:22",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:23",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:24",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:25",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:26",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:27",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:28",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:29",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2A",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2B",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2C",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2D",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2E",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:2F",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:30",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:31",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:32",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:33",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:34",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:35",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:36",
+      "resource_center": "HDS-1",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:00",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:01",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:02",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:03",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:04",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:05",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:06",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:07",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:08",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:09",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0A",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0B",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0C",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0D",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0E",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:0F",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:10",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:11",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:12",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "2",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:13",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:00",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:01",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:02",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:03",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:04",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:05",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:06",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:07",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:08",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:09",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0A",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0B",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0C",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0D",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0E",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:0F",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:10",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:11",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:12",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:13",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:14",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:15",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:16",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:17",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:18",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:19",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1A",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1B",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1C",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1D",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1E",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:1F",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:20",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:21",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:22",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:23",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:24",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:25",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:26",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:27",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:28",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:29",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2A",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2B",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2C",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2D",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2E",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:2F",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:30",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:03:31",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:00",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:01",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:02",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:03",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:04",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:05",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:06",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:07",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:05:08",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "4",
+      "belong": null,
+      "is_assigned": "否",
+      "lum_number": "00:05:09",
+      "resource_center": "HDS-2",
+      "type": "VSP G1000"
+    }
+  ]
+}

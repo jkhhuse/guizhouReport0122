@@ -1,0 +1,19 @@
+{
+  "department_resource_statistics": [
+    {
+      "bm_name": "网络部",
+      "machine_type": "容器",
+      "x86_vm_account": 40
+    },
+    {
+      "bm_name": "信息技术中心",
+      "machine_type": "容器",
+      "x86_vm_account": 34
+    },
+    {
+      "bm_name": "大数据运营中心",
+      "machine_type": "容器",
+      "x86_vm_account": 26
+    }
+  ]
+}

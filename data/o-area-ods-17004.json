@@ -1,0 +1,676 @@
+{
+  "o_area_ods_17004": [
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u8d77\u59cb\u65f6\u95f4\u3002YYYY-MM-DD HH:MM:SS.SSS\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "TIMESTAMP",
+      "property_zh": "\u8d77\u59cb\u65f6\u95f4"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u54cd\u5e94\u65f6\u95f4\u3002YYYY-MM-DD HH:MM:SS.SSS\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "TIMESTAMP",
+      "property_zh": "\u54cd\u5e94\u65f6\u95f4"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u7ed3\u675f\u65f6\u95f4\u3002YYYY-MM-DD HH:MM:SS.SSS\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "TIMESTAMP",
+      "property_zh": "\u7ed3\u675f\u65f6\u95f4"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u6e90IP\u5730\u5740\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(16)",
+      "property_zh": "\u6e90IP\u5730\u5740"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u76ee\u7684IP\u5730\u5740\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(16)",
+      "property_zh": "\u76ee\u7684IP\u5730\u5740"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u7528\u6237IP\u5730\u5740\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(16)",
+      "property_zh": "\u7528\u6237IP\u5730\u5740"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u76ee\u7684IP\u5730\u5740\uff0cGI\u6bb5\u7684\u76ee\u7684IP\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(16)",
+      "property_zh": "GI\u6bb5\u7684\u76ee\u7684IP"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4e8b\u4ef6\u7c7b\u578b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u4e8b\u4ef6\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u91ca\u653e\u539f\u56e0\uff08\u5dee\u9519\u7801\uff09\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u91ca\u653e\u539f\u56e0\uff08\u5dee\u9519\u7801\uff09"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u5f69\u4fe1\u5927\u5c0f\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u5f69\u4fe1\u5927\u5c0f"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u5185\u5bb9\u957f\u5ea6\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u5185\u5bb9\u957f\u5ea6"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u6587\u4ef6\u504f\u79fb\u91cf\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u6587\u4ef6\u504f\u79fb\u91cf"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u4e0a\u884c\u7684TEID\u503c\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "LONG",
+      "property_zh": "\u4e0a\u884c\u7684TEID\u503c"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u63a5\u6536\u7684IP\u5305\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u63a5\u6536\u7684IP\u5305\u6570"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u53d1\u9001\u7684IP\u5305\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u53d1\u9001\u7684IP\u5305\u6570"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u63a5\u6536IP\u5305\u5b57\u8282\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "LONG",
+      "property_zh": "\u63a5\u6536IP\u5305\u5b57\u8282\u6570"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u53d1\u9001IP\u5305\u5b57\u8282\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "LONG",
+      "property_zh": "\u53d1\u9001IP\u5305\u5b57\u8282\u6570"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u54cd\u5e94\u6d88\u606f\u4e2d\u7684Status_code,\u5bf9\u5e94\u7684\u662fSOAP\u7ed3\u679c\u7801,mm7\u63a5\u53e3\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "SOAP\u7ed3\u679c\u7801"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u4e1a\u52a1\u901f\u7387\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4e1a\u52a1\u901f\u7387"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "PCU\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "PCU"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u65f6\u5ef6\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u65f6\u5ef6"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u5f69\u4fe1\u7ed3\u679c\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u5f69\u4fe1\u7ed3\u679c"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u8fc7\u7a0b\u7ed3\u679c\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u8fc7\u7a0b\u7ed3\u679c"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u8fdc\u7aef\u7ad9\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u8fdc\u7aef\u7ad9\u53f7"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "spid\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "spid"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u4e0a\u884c\u65f6\u5ef6\uff08\u6beb\u79d2\uff09\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4e0a\u884c\u65f6\u5ef6\uff08\u6beb\u79d2\uff09"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u4e0b\u884c\u65f6\u5ef6\uff08\u6beb\u79d2\uff09\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4e0b\u884c\u65f6\u5ef6\uff08\u6beb\u79d2\uff09"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u4e0a\u884c\u4e22\u5305\u6570\uff08\u4e2a\uff09\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4e0a\u884c\u4e22\u5305\u6570\uff08\u4e2a\uff09"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u4e0b\u884c\u4e22\u5305\u6570\uff08\u4e2a\uff09\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4e0b\u884c\u4e22\u5305\u6570\uff08\u4e2a\uff09"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u5c0f\u533a\u6807\u8bc6\uff0cIuPS\u53e3\u4e3a\u670d\u52a1\u533a\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(256)",
+      "property_zh": "\u5c0f\u533a\u6807\u8bc6"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f4d\u7f6e\u533a\u7f16\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u4f4d\u7f6e\u533a\u7f16\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u8def\u7531\u533a\u7f16\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u8def\u7531\u533a\u7f16\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u6e90\u7aef\u53e3\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u6e90\u7aef\u53e3\u53f7"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u76ee\u7684\u7aef\u53e3\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u76ee\u7684\u7aef\u53e3\u53f7"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "Gb\u63a5\u53e3DLCI\u7f16\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "DLCI\u7f16\u53f7"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u524d\u7aef\u673aID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u524d\u7aef\u673aID"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "BSC\u7f16\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "BSC\u7f16\u53f7"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "SGSN\u7f16\u53f7\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "SGSN\u7f16\u53f7"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "CDR\u7c7b\u578b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "CDR\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u534f\u8bae\u7c7b\u578b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u534f\u8bae\u7c7b\u578b"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "WAP\u7c7b\u578b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "WAP\u7c7b\u578b"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "tdr\u7c7b\u578b\uff0c0\u4e3a\u6b63\u5e38\uff0c1\u4e3a\u6ca1\u6709\u56de\u590d\u6d88\u606f\u800c\u5f3a\u884c\u5173\u95ed\u7684\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "tdr\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "APN\u540d\u5b57\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(32)",
+      "property_zh": "APN"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "URL\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(256)",
+      "property_zh": "URL"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4e3b\u673a\u540d\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(256)",
+      "property_zh": "\u4e3b\u673a\u540d"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "IMSI\u53f7\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(18)",
+      "property_zh": "IMSI\u53f7\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u6e90\u4fe1\u4ee4\u70b9\u7f16\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(3)",
+      "property_zh": "\u6e90\u4fe1\u4ee4\u70b9\u7f16\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u76ee\u7684\u4fe1\u4ee4\u70b9\u7f16\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(3)",
+      "property_zh": "\u76ee\u7684\u4fe1\u4ee4\u70b9\u7f16\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "MSISDN\u53f7\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(16)",
+      "property_zh": "MSISDN\u53f7\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u6587\u4ef6\u540d\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(7)",
+      "property_zh": "\u6587\u4ef6\u540d"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u63a5\u53e3\u7c7b\u578b\uff1a0\uff0cIUPS\uff1b1\uff0cGb\uff1b2\uff0cGn\uff1b3\uff0cGi;4,WAPGw\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u63a5\u53e3\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f20\u8f93\u7c7b\u578b0-conversational1-streaming2-interactive3-background,\u5bf9\u4e8e\u975eIUPS\u63a5\u53e3\uff0c1\uff1aTCP\u4f20\u8f93\uff0c2\uff1audp\u4f20\u8f93\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(256)",
+      "property_zh": "\u4f20\u8f93\u7c7b\u578b"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "uchSpcType;\u4fe1\u4ee4\u70b9\u7f16\u7801\u7c7b\u578b1424\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u4fe1\u4ee4\u70b9\u7f16\u7801\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "uchBearType;\u627f\u8f7d\u7c7b\u578b\uff0c0\uff1aATM\uff0c1\uff1aIP\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(10)",
+      "property_zh": "\u627f\u8f7d\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "MmsTitile[63];\u5f69\u4fe1\u6807\u9898\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(63)",
+      "property_zh": "\u5f69\u4fe1\u6807\u9898"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "MmsMsgId[25];mms\u6d88\u606fID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "mms\u6d88\u606fID"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "callingnum[26];\u4e3b\u53eb\u53f7\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u4e3b\u53eb\u53f7\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "callednum[26];\u88ab\u53eb\u53f7\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u88ab\u53eb\u53f7\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "imei[26];IMEI,\u524d\u7aef\u673a\u4f1a\u5173\u8054\u8d4b\u503c\uff0c\u670d\u52a1\u5668\u8865\u586b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "imei"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "req_num;\u8bf7\u6c42\u6b21\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u8bf7\u6c42\u6b21\u6570"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "ucRatType;\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "ucRatType"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "cdr_index[56];\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(56)",
+      "property_zh": "cdr_index"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "transid[32];\u4e8b\u52a1ID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(32)",
+      "property_zh": "\u4e8b\u52a1ID"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "content_type[64];\u5e94\u7528\u7c7b\u578b\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(64)",
+      "property_zh": "\u5e94\u7528\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "smtpid[32];mm4\u63a5\u53e3\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(32)",
+      "property_zh": "mm4\u63a5\u53e3"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "vasid[32];\u670d\u52a1id\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(32)",
+      "property_zh": "\u670d\u52a1id"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "cServiceId[32];\u4e1a\u52a1idupdate20100710\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(32)",
+      "property_zh": "\u4e1a\u52a1ID"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "mms_status[16];\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u77ed\u4fe1\u72b6\u6001"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "cStatusText[32];update20100710\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u72b6\u6001\u6587\u672c"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "cc_bcc_num;\u6284\u9001\u5bc6\u9001\u53f7\u7801\u4e2a\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u6284\u9001\u5bc6\u9001\u53f7\u7801\u4e2a\u6570"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "cc_bcc[26];\u6284\u9001\u5bc6\u9001\u53f7\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u6284\u9001\u5bc6\u9001\u53f7\u7801"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "called_num;\u7fa4\u53d1\u4e2a\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u7fa4\u53d1\u4e2a\u6570"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "uiServiceType;\u670d\u52a1\u7c7b\u578b\u6e56\u5357\u79fb\u52a8\u65b0\u589e\u529f\u80fd\u9700\u6c42\uff0c\u624b\u673a\u62a5\u3001\u901a\u7528\u4e0b\u8f7d\u3001\u65e0\u7ebf\u97f3\u4e50\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u670d\u52a1\u7c7b\u578b"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "online_host[64];\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(20)",
+      "property_zh": "\u5728\u7ebf\u4e3b\u673a"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "ullProcessID;\u524d\u7aef\u673a\u7d2f\u52a0\u751f\u6210\u7684\u4f1a\u8bddID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(30)",
+      "property_zh": "\u524d\u7aef\u673a\u4f1a\u8bddID"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "uiConnectDelay;TCP\u8fde\u63a5\u65f6\u5ef6\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "TCP\u8fde\u63a5\u65f6\u5ef6"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u56fd\u5bb6\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u56fd\u5bb6\u7801"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "\u7f51\u7edc\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u7f51\u7edc\u7801"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "uiSgsnDataTeid;\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(30)",
+      "property_zh": "uiSgsnDataTeid"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "uiGgsnDataTeid;\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(30)",
+      "property_zh": "uiGgsnDataTeid"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "ucPDPCreateTime[8];PDP\u521b\u5efa\u65f6\u95f4\u3002YYYY-MM-DD HH:MM:SS.SSS\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "TIMESTAMP",
+      "property_zh": "PDP\u521b\u5efa\u65f6\u95f4"
+    },
+    {
+      "date_type": "INTEGER",
+      "date_type_bdi": "ucRetransNum;\u91cd\u4f20\u6b21\u6570\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "INTEGER",
+      "property_zh": "\u91cd\u4f20\u6b21\u6570"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "aucResrver[7];\u5b57\u8282\u5bf9\u9f50\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(15)",
+      "property_zh": "\u5b57\u8282\u5bf9\u9f50"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u7528\u6237\u4ee3\u7406\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(128)",
+      "property_zh": "\u7528\u6237\u4ee3\u7406"
+    }
+  ]
+}

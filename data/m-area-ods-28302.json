@@ -1,0 +1,164 @@
+{
+  "m_area_ods_28302": [
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "ID\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "ID"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f1a\u8bae\u7eaa\u8981\u62df\u7a3f\u4eba\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "\u4f1a\u8bae\u7eaa\u8981\u62df\u7a3f\u4eba"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "OA\u53d1\u6587\u65f6\u95f4\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "DATE",
+      "property_zh": "OA\u53d1\u6587\u65f6\u95f4"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u4f1a\u5ba1\u65f6\u95f4\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "DATE",
+      "property_zh": "\u4f1a\u5ba1\u65f6\u95f4"
+    },
+    {
+      "date_type": "DOUBLE",
+      "date_type_bdi": "\u4f1a\u5ba1\u91d1\u989d\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19,2)",
+      "property_zh": "\u4f1a\u5ba1\u91d1\u989d"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "OA\u5448\u6279\u65f6\u95f4\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "DATE",
+      "property_zh": "OA\u5448\u6279\u65f6\u95f4"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(2000)",
+      "property_zh": "\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u76f8\u5173\u9644\u4ef6unit\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "\u76f8\u5173\u9644\u4ef6unit"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u72b6\u6001\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "\u72b6\u6001"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u63cf\u8ff0\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(4000)",
+      "property_zh": "\u63cf\u8ff0"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u540d\u79f0\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(255)",
+      "property_zh": "\u540d\u79f0"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u53d1\u5e03\u72b6\u6001\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(100)",
+      "property_zh": "\u53d1\u5e03\u72b6\u6001"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u7f16\u7801\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(80)",
+      "property_zh": "\u7f16\u7801"
+    },
+    {
+      "date_type": "DATETIME",
+      "date_type_bdi": "\u521b\u5efa\u65f6\u95f4\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "DATE",
+      "property_zh": "\u521b\u5efa\u65f6\u95f4"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u521b\u5efa\u4eba\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "\u521b\u5efa\u4eba"
+    },
+    {
+      "date_type": "LONG",
+      "date_type_bdi": "\u4f1a\u5ba1\u65b9\u5f0f\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "NUMBER(19)",
+      "property_zh": "\u4f1a\u5ba1\u65b9\u5f0f"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f1a\u5ba1\u5730\u70b9\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(500)",
+      "property_zh": "\u4f1a\u5ba1\u5730\u70b9"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u5176\u4ed6\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(4000)",
+      "property_zh": "\u5176\u4ed6\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f1a\u8bae\u603b\u7ed3\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(4000)",
+      "property_zh": "\u4f1a\u8bae\u603b\u7ed3"
+    },
+    {
+      "date_type": "STRING",
+      "date_type_bdi": "\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458Id\r",
+      "property_code": 0,
+      "property_describe": null,
+      "property_en": "VARCHAR2(2000)",
+      "property_zh": "\u4f1a\u5ba1\u53c2\u52a0\u4eba\u5458Id"
+    }
+  ]
+}

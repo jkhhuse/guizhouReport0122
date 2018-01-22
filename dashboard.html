@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>平台总览</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/echarts.min.js"></script>
+    <style type="text/css">
+        .breadcrumb-nav {
+            height: 75px;
+            padding: 20px 40px 20px 40px;
+            border: none;
+            background-color: #FAFAFA;
+            box-shadow: 0 1px 3px #ddd;
+        }
+
+        .breadcrumb-nav .breadcrumb-svg {
+            height: 30px;
+            width: 30px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .breadcrumb-nav .breadcrumb-span {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body style="height:100%">
+<div class="left-nav-wrap">
+    <script>
+        $('.left-nav-wrap').load('leftNav.html');
+    </script>
+</div>
+<div class="top-wrap">
+    <script>
+        $('.top-wrap').load('fix-top.html');
+    </script>
+</div>
+<div class="right" style="margin-left: 200px;height: 100%">
+    <div class="breadcrumb-nav">
+        <img src="image/svg/overview-black.svg" class="breadcrumb-svg" alt=""/>
+        <span class="breadcrumb-span">平台总览</span>
+    </div>
+    <div style="height: 100%">
+
+        <div style="width: 43%;float:left;padding: 12px;background-color: #EBEDEF;height: 100%">
+            <div style="font-size: 16px;color: #878F9F;padding: 5px;height:30px;">
+                <img src="image/resource.png" alt=""/>
+                <span style="margin-left: 3px">资源</span>
+            </div>
+            <div style="width: 100%;height:calc(100% - 30px);background-color: #FFFFFF;">
+                <div class="btn-group btn-group-xs" role="group" aria-label="..."
+                     style="border-bottom: 1px solid #ECECEC; width: 100%;    padding-top: 8px;
+                     ">
+                    <button type="button" class="btn" id="wuli" onclick="echartTab1();$('#zongshu').text('物理机总数');$('#zongshu_num').text('3573');$('#zongshu_num2').text('3573');$('#wuli').css('color','#fff');$('#xuni').css('color','#333');$('#rongqi').css('color','#333');$('#wuli').css('background-color','#5EA3F8');$('#xuni').css('background-color','#F0F0F0');$('#rongqi').css('background-color','#F0F0F0');"
+                            style="padding:3px 8px 0 8px;border-radius: 5px 5px 0 0;font-size:10px;margin-right:2px;background-color: #5EA3F8;color: white" >
+                        物理机
+                    </button>
+                    <button type="button" class="btn" id="xuni" onclick="echartTab2();$('#zongshu').text('虚拟机总数');$('#zongshu_num').text('7717');$('#zongshu_num2').text('7717');$('#wuli').css('color','#333');$('#rongqi').css('color','#333');$('#xuni').css('color','#fff');$('#wuli').css('background-color','#F0F0F0');$('#xuni').css('background-color','#5EA3F8');$('#rongqi').css('background-color','#F0F0F0');"
+                            style="padding:3px 8px 0 8px;border-radius: 5px 5px 0 0;font-size:10px;margin-right:2px;background-color: #F0F0F0;color:#333;">
+                        虚拟机
+                    </button>
+                    <button type="button" class="btn" id="rongqi" onclick="echartTab3();$('#zongshu').text('容器总数');$('#zongshu_num').text('9230');$('#zongshu_num2').text('9230');$('#xuni').css('color','#333');$('#wuli').css('color','#333');$('#rongqi').css('color','#fff');$('#wuli').css('background-color','#F0F0F0');$('#xuni').css('background-color','#F0F0F0');$('#rongqi').css('background-color','#5EA3F8');"
+                            style="padding:3px 8px 0 8px;border-radius: 5px 5px 0 0;font-size:10px;margin-right:2px;background-color: #F0F0F0;color:#333;">
+                        容器
+                    </button>
+                </div>
+                <div id="dashboardTab1" style="height: 100%">
+                    <div style="height:20px;border-bottom: 1px solid #ECECEC;width: 100%;font-size: 13px;color: #999;margin: 15px 0 5px 0;">
+                    </div>
+                    <div style="width: 100%">
+                        <div style="padding-left: 5px;display: inline-block">
+                            <span id="zongshu" style="font-size: 12px;color: #999;margin-right: 2px;">物理机总数</span>
+
+                            <p id="zongshu_num" style="display:inline-block;width: 55px;height: 28px;line-height:30px;color:white;background-color: #15AAAA;text-align: center;">
+                                3573</p>
+                        </div>
+                        <div style="padding-left: 5px;display: inline-block">
+                            <span style="font-size: 12px;color: #999;margin-right: 2px;">健康节点数</span>
+
+                            <p id="zongshu_num2" style="display:inline-block;width: 55px;height: 28px;line-height:30px;color:white;background-color: #4A90E2;text-align: center;">
+                                3573</p>
+                        </div>
+                        <div style="padding-left: 5px;display: inline-block">
+                            <span style="font-size: 12px;color: #999;margin-right: 2px;">停止节点数</span>
+
+                            <p style="display:inline-block;width: 55px;height: 28px;line-height:30px;color:white;background-color: #A08BCD;text-align: center;">
+                                0</p>
+                        </div>
+                    </div>
+                    <div style="border-bottom: 1px solid #ECECEC;width: 100%;font-size: 13px;color: #999;margin-top: 10px;padding-left:5px;">
+                        机器分配
+                    </div>
+                    <div style="width: 100%;height: 40%;">
+                        <div id="chart1" style="width: 100%;height:100%;display: inline-block;"></div>
+                    </div>
+
+                    <div style="border-bottom: 1px solid #ECECEC;width: 100%;font-size: 13px;color: #999;margin-top: 5px;padding-left: 5px;">
+                        资源分配
+                    </div>
+                    <div style="width: 100%;height: 35%;">
+                        <div id="chart2" style="width: 100%;height:100%;display: inline-block;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="width: 56%;float:left;height:100%;padding: 12px;background-color: #EBEDEF;">
+            <div style="font-size: 16px;color: #878F9F;padding: 5px;height:30px;">
+                <img src="image/data.png" alt=""/>
+                <span style="margin-left: 3px">数据</span>
+            </div>
+            <div style="width: 100%;height:calc(100% - 30px);background-color: #FFFFFF;">
+                <div style="width: 100%;height:49%;padding: 12px;">
+                    <div style="display: inline-block;width: 50%;height:100%;margin-top: 31px;">
+                        <div style="border-bottom: 1px solid #ECECEC;font-size: 13px;color: #999;margin-top: 5px;padding-left: 5px;">
+                            数据量统计及占比
+                        </div>
+                        <div id="chart3" style="width: 100%;height:100%;display: inline-block;"></div>
+                    </div>
+                    <div style="vertical-align:top;display: inline-block;width: 49%;height:100%;margin-top: 36px;">
+                        <div style="border-bottom: 1px solid #ECECEC;font-size: 13px;color: #999;padding-left:5px;">
+                            数据分层
+                        </div>
+                        <div id="chart4" style="width: 100%;padding:7%;height:85%;display: inline-block;"></div>
+                    </div>
+                </div>
+                <div style="vertical-align:top;width: 100%;height:49%;padding: 20px;">
+
+                    <div style="display: inline-block;width: 50%;height:100%;">
+                        <div style="border-bottom: 1px solid #ECECEC;font-size: 13px;color: #999;margin-top: 5px;padding-left:5px;">
+                            接口数
+                        </div>
+                        <div id="chart5" style="width: 100%;height:90%;display: inline-block;"></div>
+                    </div>
+
+                    <div style="display: inline-block;width: 48%;height:100%;">
+                        <div style="border-bottom: 1px solid #ECECEC;font-size: 13px;color: #999;margin-top: 5px;padding-left:5px;">
+                            数据源
+                        </div>
+                        <div id="chart6" style="width: 100%;height:90%;display: inline-block;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                        <div id="chart5" style="width: 150px;height:250px;display: inline-block;"></div>
+            -->
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <script type="text/javascript">
+        function echartTab1(){
+            ////////////////////////////////////////////
+            //表1
+            var myChart1 = echarts.init(document.getElementById('chart1'));
+            var option1 = {
+                title: {
+                    text: '3573',
+                    left: '35%',
+                    bottom: 'center',
+                    textStyle: {
+                        color: '#666666',
+                        fontSize: 20
+                    }
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (obj) {
+                        return obj.seriesName + '<br/>' + obj.name + ": " + Math.round(3573 * obj.value) + '(' + obj.percent + '%)';
+                    }
+                },
+                // 图例
+                legend: {
+                    orient: 'vertical',
+                    right: '5%',
+                    top: '30%',
+                    data: ["大数据", "B域", "O域", 'M域'],
+                    textStyle: {
+                        color: '#ccc'
+                    }
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: '资源使用情况',
+                        type: 'pie',
+                        center: ['40%', '50%'],
+                        radius: ['42%', '54%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: true
+                            },
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        data: [
+                            {value: 0.53, name: '大数据'},
+                            {value: 0.23, name: 'B域'},
+                            {value: 0.19, name: 'O域'},
+                            {value: 0.05, name: 'M域'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{b}: {d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+            };
+            myChart1.setOption(option1);
+            ////////////////////////////////////////////
+            //表2
+            var myChart2 = echarts.init(document.getElementById('chart2'));
+            var option2 = {
+                title: [
+                    {
+                        text: 'CPU',
+                        left: '15%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '内存',
+                        left: '45%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '磁盘',
+                        left: '76%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    }
+                ],
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: 'CPU',
+                        type: 'pie',
+                        center: ['20%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.37, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.08, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '内存',
+                        type: 'pie',
+                        center: ['50%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.38, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.13, name: 'O域'},
+                            {value: 0.06, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '磁盘',
+                        type: 'pie',
+                        center: ['80%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.4, name: '大数据'},
+                            {value: 0.18, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.07, name: 'M域'},
+                            {value: 0.23, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA', '#bbb']
+            };
+            myChart2.setOption(option2);
+        }
+        echartTab1();
+        ////////////////////////////////////////////
+        //表3
+        var myChart3 = echarts.init(document.getElementById('chart3'));
+        var option3 = {
+            title: [{
+                text: 'HDFS',
+                left: '22%',
+                bottom: '18%',
+                textStyle: {
+                    color: '#999999',
+                    fontSize: 12
+                }
+            }, {
+                text: 'Oracle',
+                left: '68%',
+                bottom: '18%',
+                textStyle: {
+                    color: '#999999',
+                    fontSize: 12
+                }
+            }],
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            // 图例
+            legend: {
+                orient: 'horizontal',
+                right: '0%',
+                top: '10%',
+                data: ["B域", "O域", 'M域'],
+                textStyle: {
+                    color: '#ccc'
+                }
+            },
+            // 数据内容数组
+            series: [
+                {
+                    name: '资源使用情况',
+                    type: 'pie',
+                    center: ['30%', '50%'],
+                    radius: ['28%', '38%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        {value: 0.02, name: 'B域'},
+                        {value: 0.89, name: 'O域'},
+                        {value: 0.09, name: 'M域'}
+                    ],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true,
+                                formatter: '{d}%'
+                            },
+                            labelLine: {
+                                show: true,
+                                length: 1
+                            }
+                        }
+                    }
+                },
+                {
+                    name: '资源使用情况',
+                    type: 'pie',
+                    center: ['75%', '50%'],
+                    radius: ['28%', '38%'],
+                    avoidLabelOverlap: true,
+                    label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        {value: 0.21, name: 'B域'},
+                        {value: 0.60, name: 'O域'},
+                        {value: 0.19, name: 'M域'}
+                    ],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true,
+                                formatter: '{d}%'
+                            },
+                            labelLine: {
+                                show: true,
+                                length: 1
+                            }
+                        }
+                    }
+                }
+            ],
+            color: ['#ECBE65', '#49B8F2', '#A08BCD']
+        };
+        myChart3.setOption(option3);
+        ////////////////////////////////////////////
+        //表5
+        var myChart4 = echarts.init(document.getElementById('chart4'));
+        var option4 = {
+            textStyle: {
+                color: '#9AA1B0'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['STD层', '基础层', '轻度汇总层', '挖掘模型', '应用层', '其他'],
+                    axisLabel: {
+                        rotate: -40,
+                        interval: 0
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#cccccc',
+                            type: 'dotted'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '数据分层',
+                    type: 'bar',
+                    data: [47, 89, 90, 58, 80, 50],
+                    barWidth: '35%',
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 1,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: '#61C6CF'
+                                }, {
+                                    offset: 1, color: '#61C6CF'
+                                }]
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        myChart4.setOption(option4);
+        ////////////////////////////////////////////
+        //表5
+        var myChart5 = echarts.init(document.getElementById('chart5'));
+        var option5 = {
+            textStyle: {
+                color: '#9AA1B0'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['NPS', '雅典娜', 'CRM', '和more', '移动办公', '信令监测','BOSS','智慧旅游'],
+
+                    axisLabel: {
+                        rotate: -40,
+                        interval: 0
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#cccccc',
+                            type: 'dotted'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '接口数',
+                    type: 'bar',
+                    data: [63, 73, 65, 40, 38, 63, 59, 40],
+                    barWidth: '50%',
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 1,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: '#75B8E2'
+                                }, {
+                                    offset: 1, color: '#75B8E2'
+                                }]
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        myChart5.setOption(option5);
+        ////////////////////////////////////////////
+        //表6
+        var myChart6 = echarts.init(document.getElementById('chart6'));
+        var option6 = {
+            textStyle: {
+                color: '#9AA1B0'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['NPS', '雅典娜', 'CRM', '和more', '移动办公', '信令监测','BOSS','智慧旅游'],
+                    axisLabel: {
+                        rotate: -40,
+                        interval: 0
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLine: {
+                        lineStyle: {
+                            color: '#2d3f64'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#cccccc',
+                            type: 'dotted'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '数据源',
+                    type: 'bar',
+                    data: [78, 88, 78, 72, 47, 45, 46, 77],
+                    barWidth: '50%',
+                    itemStyle: {
+                        normal: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 1,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: '#869BF6'
+                                }, {
+                                    offset: 1, color: '#869BF6'
+                                }]
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        myChart6.setOption(option6);
+
+
+        ////////////////////////////////////////////////////
+        function echartTab2(){
+            ////////////////////////////////////////////
+            //表21
+            var myChart21 = echarts.init(document.getElementById('chart1'));
+            var option21 = {
+                title: {
+                    text: '7717',
+                    left: '35%',
+                    bottom: 'center',
+                    textStyle: {
+                        color: '#666666',
+                        fontSize: 20
+                    }
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (obj) {
+                        return obj.seriesName + '<br/>' + obj.name + ": " + Math.round(3573 * obj.value) + '(' + obj.percent + '%)';
+                    }
+                },
+                // 图例
+                legend: {
+                    orient: 'vertical',
+                    right: '5%',
+                    top: '30%',
+                    data: ["大数据", "B域", "O域", 'M域'],
+                    textStyle: {
+                        color: '#ccc'
+                    }
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: '资源使用情况',
+                        type: 'pie',
+                        center: ['40%', '50%'],
+                        radius: ['42%', '54%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: true
+                            },
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        data: [
+                            {value: 0.2, name: '大数据'},
+                            {value: 0.23, name: 'B域'},
+                            {value: 0.29, name: 'O域'},
+                            {value: 0.45, name: 'M域'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{b}: {d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+            };
+            myChart21.setOption(option21);
+            ////////////////////////////////////////////
+            //表22
+            var myChart22 = echarts.init(document.getElementById('chart2'));
+            var option22 = {
+                title: [
+                    {
+                        text: 'CPU',
+                        left: '15%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '内存',
+                        left: '45%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '磁盘',
+                        left: '76%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    }
+                ],
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: 'CPU',
+                        type: 'pie',
+                        center: ['20%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.37, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.08, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '内存',
+                        type: 'pie',
+                        center: ['50%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.38, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.13, name: 'O域'},
+                            {value: 0.06, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '磁盘',
+                        type: 'pie',
+                        center: ['80%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.4, name: '大数据'},
+                            {value: 0.18, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.07, name: 'M域'},
+                            {value: 0.23, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA', '#bbb']
+            };
+            myChart22.setOption(option22);
+            ////////////////////////////////////////////
+        }
+
+        function echartTab3(){
+            ////////////////////////////////////////////
+            //表31
+            var myChart31 = echarts.init(document.getElementById('chart1'));
+            var option31 = {
+                title: {
+                    text: '9230',
+                    left: '35%',
+                    bottom: 'center',
+                    textStyle: {
+                        color: '#666666',
+                        fontSize: 20
+                    }
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (obj) {
+                        return obj.seriesName + '<br/>' + obj.name + ": " + Math.round(3573 * obj.value) + '(' + obj.percent + '%)';
+                    }
+                },
+                // 图例
+                legend: {
+                    orient: 'vertical',
+                    right: '5%',
+                    top: '30%',
+                    data: ["大数据", "B域", "O域", 'M域'],
+                    textStyle: {
+                        color: '#ccc'
+                    }
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: '资源使用情况',
+                        type: 'pie',
+                        center: ['40%', '50%'],
+                        radius: ['42%', '54%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: true
+                            },
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        data: [
+                            {value: 0.23, name: '大数据'},
+                            {value: 0.13, name: 'B域'},
+                            {value: 0.19, name: 'O域'},
+                            {value: 0.45, name: 'M域'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{b}: {d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
+            };
+            myChart31.setOption(option31);
+            ////////////////////////////////////////////
+            //表32
+            var myChart32 = echarts.init(document.getElementById('chart2'));
+            var option32 = {
+                title: [
+                    {
+                        text: 'CPU',
+                        left: '15%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '内存',
+                        left: '45%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    },
+                    {
+                        text: '磁盘',
+                        left: '76%',
+                        bottom: '15%',
+                        textStyle: {
+                            color: '#999999',
+                            fontSize: 12
+                        }
+                    }
+                ],
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                // 数据内容数组
+                series: [
+                    {
+                        name: 'CPU',
+                        type: 'pie',
+                        center: ['20%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.37, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.08, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '内存',
+                        type: 'pie',
+                        center: ['50%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.38, name: '大数据'},
+                            {value: 0.19, name: 'B域'},
+                            {value: 0.13, name: 'O域'},
+                            {value: 0.06, name: 'M域'},
+                            {value: 0.24, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    },
+                    {
+                        name: '磁盘',
+                        type: 'pie',
+                        center: ['80%', '50%'],
+                        radius: ['30%', '40%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 0.4, name: '大数据'},
+                            {value: 0.18, name: 'B域'},
+                            {value: 0.12, name: 'O域'},
+                            {value: 0.07, name: 'M域'},
+                            {value: 0.23, name: '空闲'}
+                        ],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    formatter: '{d}%'
+                                },
+                                labelLine: {show: true}
+                            }
+                        }
+                    }
+                ],
+                color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA', '#bbb']
+            };
+            myChart32.setOption(option32);
+            ////////////////////////////////////////////
+        }
+
+    </script>
+</div>
+</body>
+</html>

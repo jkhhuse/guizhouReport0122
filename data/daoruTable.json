@@ -1,0 +1,137 @@
+{
+"tables": [
+  {
+    "Cname": "导入值集（上市）",
+    "Ename": "SB_SY_SY_ImportVSetValueInfoSrv",
+    "time": "26430",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入值集（TD）",
+    "Ename": "SB_SY_SY_TDImportVSetValueInfoSrv",
+    "time": "25998",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入仓库收发存信息服务",
+    "Ename": "SB_SC_SCM_ImportWarehouseTransactionInfoSrv",
+    "time": "15237",
+    "category":"导入"
+  },
+  {
+    "Cname": "应付发票导入",
+    "Ename": "SB_FI_AP_ImportAPInvoiceSrv",
+    "time": "7621",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入红字增值税发票状态服务",
+    "Ename": "SB_FI_FP_ImportEInvoiceStatusInfoSrv",
+    "time": "6659",
+    "category":"导入"
+  },
+
+  {
+    "Cname": "收款发票导入服务",
+    "Ename": "SB_FI_AR_ImportARReciptsSrv",
+    "time": "932",
+    "category":"导入"
+  },
+  {
+    "Cname": "收款发票导入子服务",
+    "Ename": "SB_FI_AR_MISImportARReciptsSrv",
+    "time": "932",
+    "category":"导入"
+  },
+  {
+    "Cname": "退换票通知导入服务",
+    "Ename": "SB_FI_FP_ImportReturnInvoiceNoticeInfoSrv",
+    "time": "881",
+    "category":"导入"
+  },
+  {
+    "Cname": "薪酬发放导入应付状态信息",
+    "Ename": "SB_HR_PAY_ImportPayPaymentInfoSrv",
+    "time": "292",
+    "category":"导入"
+  },
+  {
+    "Cname": "地点组合批量导入服务（上市）",
+    "Ename": "SB_FI_FA_BImportAssetLocCombSrv",
+    "time": "282",
+    "category":"导入"
+  },
+
+  {
+    "Cname": "地点组合批量导入服务（TD）",
+    "Ename": "SB_FI_FA_TDBImportAssetLocCombSrv",
+    "time": "228",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入薪酬发放报账单服务",
+    "Ename": "SB_FI_EAS_ImportTransPayCostInfoSrv",
+    "time": "183",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入采购订单信息",
+    "Ename": "SB_SC_SCM_ImportOrderInfoSrv",
+    "time": "156",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入合同基本信息服务",
+    "Ename": "SB_SC_SCM_ImportContractInfoSrv",
+    "time": "115",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入红字发票信息",
+    "Ename": "SB_FI_EAS_ImportRedInvoiceInfoSrv",
+    "time": "61",
+    "category":"导入"
+  },
+
+  {
+    "Cname": "导入总帐TD",
+    "Ename": "SB_FI_GL_TDImportGLEntrySrv",
+    "time": "54",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入人工成本报销类报账单审核信息服务",
+    "Ename": "SB_FI_EAS_ImportExpenseApprovStatInfoSrv",
+    "time": "48",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入人工成本报销报账单审核信息",
+    "Ename": "SB_HR_PAY_ImportTransExpenseInfoSrv",
+    "time": "43",
+    "category":"导入"
+  },{
+    "Cname": "应收导入",
+    "Ename": "SB_FI_AR_ImportARTransactionSrv",
+    "time": "41",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入呆滞物资信息服务",
+    "Ename": "SB_SC_SCM_ImportGlassyMaterialInfoSrv",
+    "time": "25",
+    "category":"导入"
+  },
+  {
+    "Cname": "导入应付发票TD",
+    "Ename": "SB_FI_AP_TDImportAPInvoiceSrv",
+    "time": "24",
+    "category":"导入"
+  }, {
+    "Cname": "导入薪酬发放报账单审批退回信息服务",
+    "Ename": "SB_HR_PAY_ImportPayPaymentApprovRejSrv",
+    "time": "17",
+    "category":"导入"
+  }
+
+]}

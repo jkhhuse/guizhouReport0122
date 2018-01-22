@@ -1,0 +1,314 @@
+/**
+ * Created by PengJianlin on 2017/5/14.
+ */
+
+function buildRingOptions(name, data) {
+  return {
+    tooltip: {
+      trigger: 'item',
+      formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    color: ['#ecbe65', '#49b8f2', '#a08bcd', '#15aaaa'],
+    legend: {
+      orient: 'vertical',
+      x: 'right',
+      y: 'bottom',
+      data: $.map(data, function(n) {return n.name})
+    },
+    series: [
+      {
+        name: name,
+        type: 'pie',
+        radius: ['55%', '70%'],
+        label: {
+          normal: {
+            show: true,
+            formatter: "{b}: {c}"
+          },
+          emphasis: {
+            show: true
+          }
+        },
+        itemStyle: {
+          normal: {
+            label: {
+              show: true,
+              formatter: '{b}: {d}%'
+            }
+          }
+        },
+        labelLine: {
+          normal: {
+            show: true
+          }
+        },
+        data: data
+      }
+    ]
+  }
+}
+
+function buildBlackRingOptions(name, data, legendX) {
+  return {
+    tooltip: {
+      trigger: 'item',
+      formatter: "{a} <br/>{b}: {d}%"
+    },
+    color: ['#ecbe65', '#49b8f2', '#a08bcd', '#15aaaa'],
+    legend: {
+      orient: 'vertical',
+      x: legendX,
+      y: 'bottom',
+      textStyle: {
+        color: '#ccc'
+      },
+      data: $.map(data, function(n) {return n.name})
+    },
+    series: [
+      {
+        name: name,
+        type: 'pie',
+        radius: ['45%', '58%'],
+        label: {
+          normal: {
+            show: true,
+            formatter: "{d}%"
+          },
+          emphasis: {
+            show: true
+          }
+        },
+        itemStyle: {
+          normal: {
+            label: {
+              show: true,
+              formatter: ' {d}%'
+            }
+          }
+        },
+        labelLine: {
+          normal: {
+            show: true
+          }
+        },
+        data: data
+      }
+    ]
+  }
+}
+
+function buildBarOptions(xAxis, yAxis, data) {
+  var series = [];
+  for(var i = 0; i < data.length; i++) {
+    series.push({
+      type: 'bar',
+      barWidth: '20%',
+      name: data[i].name,
+      data: data[i].data
+    });
+  }
+  return {
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      top: 10,
+      data : $.map(data, function(n) {return n.name})
+    },
+    color: ['#ecbe65', '#49b8f2', '#a08bcd', '#15aaaa'],
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : xAxis,
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: {
+          interval: 0
+        }
+      }
+    ],
+    yAxis : [yAxis],
+    series : series
+  };
+}
+
+function buildBlackBarOptions(xAxis, yAxis, data) {
+  var series = [];
+  for(var i = 0; i < data.length; i++) {
+    series.push({
+      type: 'bar',
+      barWidth: '20%',
+      name: data[i].name,
+      data: data[i].data
+    });
+  }
+  return {
+    textStyle: {
+      color: '#ccc'
+    },
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      top: 10,
+      textStyle: {
+        color: '#ccc'
+      },
+      data : $.map(data, function(n) {return n.name})
+    },
+    color: ['#ecbe65', '#49b8f2', '#a08bcd', '#15aaaa'],
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : xAxis,
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: {
+          interval: 0
+        }
+      }
+    ],
+    yAxis : [yAxis],
+    series : series
+  };
+}
+
+function buildBlackOneBarOptions(seriesName, yAxis, data, color) {
+  var series = [];
+  for(var i = 0; i < data.length; i++) {
+    series.push({
+    });
+  }
+  return {
+    textStyle: {
+      color: '#ccc'
+    },
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      top: 10,
+      textStyle: {
+        color: '#ccc'
+      },
+      data : $.map(data, function(n) {return n.name})
+    },
+    grid: {
+      top: '15%',
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : $.map(data, function(n) {return n.name}),
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: {
+          interval: 0
+        }
+      }
+    ],
+    yAxis : [yAxis],
+    series : [{
+      type: 'bar',
+      name: seriesName,
+      barWidth: '20%',
+      itemStyle: {
+        normal: {
+          color: color
+        }
+      },
+      data: $.map(data, function(n) {return n.data})
+    }]
+  };
+}
+
+function buildOneBarOptions(seriesName, yAxis, data, color) {
+  var series = [];
+  for(var i = 0; i < data.length; i++) {
+    series.push({
+    });
+  }
+  return {
+    textStyle: {
+      color: '#333'
+    },
+    tooltip : {
+      trigger: 'axis',
+      axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+        type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      top: 10,
+      textStyle: {
+        color: '#333'
+      },
+      data : $.map(data, function(n) {return n.name})
+    },
+    grid: {
+      top: '15%',
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis : [
+      {
+        type : 'category',
+        data : $.map(data, function(n) {return n.name}),
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: {
+          interval: 0
+        }
+      }
+    ],
+    yAxis : [yAxis],
+    series : [{
+      type: 'bar',
+      name: seriesName,
+      barWidth: '20%',
+      itemStyle: {
+        normal: {
+          color: color
+        }
+      },
+      data: $.map(data, function(n) {return n.data})
+    }]
+  };
+}
+
+function drawChart(dom, options) {
+  var chart = echarts.init(dom);
+  chart.setOption(options);
+  return chart;
+}

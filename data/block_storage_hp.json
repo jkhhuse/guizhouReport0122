@@ -1,0 +1,2124 @@
+{
+  "block_storage_hp": [
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:00",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:01",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:02",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:03",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:04",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:05",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:06",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:07",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:08",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:09",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:0F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:10",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:11",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:12",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:13",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:14",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:15",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:16",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:17",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:18",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:19",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "落地&解码",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "rou主",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "rou备/user容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:1F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "rou备/user容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:20",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "rou备/user容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:21",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "user主",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:22",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "user备/rou容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:23",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "user备/rou容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:24",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "user备/rou容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:25",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM主/add容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:26",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM主/add容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:27",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM主/add容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:28",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM主/add容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:29",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM备/APS容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM备/APS容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM备/APS容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM备/APS容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ABM备/APS容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "APS主/add备",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:2F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "APS主/add备",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:30",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:31",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:32",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:33",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:34",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:35",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "add主/aps备/ABM容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:36",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:37",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:38",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:39",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session备/dup容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session备/dup容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session备/dup容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session备/dup容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "session备/dup容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "dup主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:3F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "dup主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:40",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "dup主/ismp容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:41",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:42",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:43",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:44",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:45",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:46",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "ismp主/dup备/session容",
+      "assinged_resource_center": "高性能资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:47",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "NBU集中备份系统",
+      "assinged_resource_center": "备份资源池",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "是",
+      "lum_number": "00:01:48",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:49",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:50",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:51",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:52",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:53",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:54",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:55",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:56",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:57",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:58",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:59",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5A",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5B",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5C",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5D",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5E",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5F",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:60",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:61",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:62",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:63",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:00",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:01",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:02",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:03",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:04",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:05",
+      "resource_center": "HP-1",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:00",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:01",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:02",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:03",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:04",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:05",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:06",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:07",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:08",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:09",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:0F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:10",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:11",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:12",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:13",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:14",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:15",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:16",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:17",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:18",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:19",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:1F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:20",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:21",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:22",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:23",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:24",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:25",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:26",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:27",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:28",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:29",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:2F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:30",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:31",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:32",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:33",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:34",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:35",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:36",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:37",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:38",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:39",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:3F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:40",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:41",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:42",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:43",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:44",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:45",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:46",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:47",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:48",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:49",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:4F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:50",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:51",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:52",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:53",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:54",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:55",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:56",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:57",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:58",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:59",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5A",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5B",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5C",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5D",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5E",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:5F",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:60",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:61",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:62",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:01:63",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:00",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:01",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:02",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:03",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": 0,
+      "is_assigned": "否",
+      "lum_number": "00:02:04",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    },
+    {
+      "assigned_bs": "",
+      "assinged_resource_center": "",
+      "avaliable_volume": "0.5",
+      "belong": null,
+      "is_assigned": "否",
+      "lum_number": "00:02:05",
+      "resource_center": "HP-2",
+      "type": "XP7"
+    }
+  ]
+}

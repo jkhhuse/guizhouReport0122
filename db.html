@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>数据库</title>
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    html, body {
+      color: #333;
+      height: 100%;
+    }
+    a {
+      color: #333;
+    }
+    a:hover, a:focus {
+      color: #333;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #fafafa;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+      color: #ccc;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+
+  </style>
+  <style type="text/css">
+    .docker .right-main {
+      padding: 40px;
+    }
+
+    .docker .right-main .action_btns .btn {
+      margin-bottom: 5px;
+    }
+
+    .main-content {
+      height: calc(100% - 75px);
+      padding: 2%;
+    }
+    .main-left, .main-right {
+      height: 100%;
+      width: 49%;
+      float: left;
+    }
+    .main-left {
+      margin-right: 2%;
+    }
+    .left-title, .right-title {
+      height: 24px;
+      line-height: 24px;
+      background: url("image/Oracle.png") no-repeat 0 0;
+      padding-left: 30px;
+      margin-bottom: 11px;
+    }
+    .right-title {
+      background: url("image/MySQL.png") no-repeat 0 0;
+    }
+    .left-content, .right-content {
+      border: 1px solid #fff;
+      height: calc(100% - 35px);
+      border-radius: 4px;
+    }
+    .chart-wrap {
+      height: 50%;
+      float: left;
+      width: 50%;
+      padding: 1%;
+    }
+    .chart-title {
+      border-bottom: 1px solid #3D5B77;
+      padding: 2px 0 3px 10px;
+    }
+    .chart {
+      height: calc(100% - 26px);
+    }
+    .table>thead>tr>th, .table>tbody>tr>td {
+      border-color: #555;
+    }
+  </style>
+</head>
+<body>
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top.html');
+  </script>
+</div>
+<div class="right" style="margin-left: 200px; height: 100%;">
+  <div class="appStore" style="height: 100%">
+    <div class="breadcrumb-nav">
+      <img src="image/svg/db-black.svg" class="breadcrumb-svg" alt=""/>
+      <span class="breadcrumb-span"><a href="db.html">数据库</a></span>
+    </div>
+    <div class="main-content">
+      <div class="main-left">
+        <div class="left-title">商用</div>
+        <div class="left-content">
+          <div class="chart-wrap">
+            <div class="chart-title">Oracle数量</div>
+            <div class="chart" id="oracle-chart"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">Vertica数量</div>
+            <div class="chart" id="vertica-chart"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">资源使用率</div>
+            <div class="chart" id="resource-chart"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">license复用个数</div>
+            <div class="chart" id="license-chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="right-title">自研</div>
+        <div class="right-content">
+          <div class="chart-wrap">
+            <div class="chart-title">大云MySQL数量</div>
+            <div class="chart" id="mysql-chart"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">大云MPP数量</div>
+            <div class="chart" id="mpp-chart"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">资源使用率</div>
+            <div class="chart" id="resource-chart2"></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-title">实例复用率</div>
+            <div class="chart" id="license-chart2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table-content" style="padding: 20px; display: none;">
+      <table id="db-table" class="table">
+        <thead>
+        <tr>
+          <th>数据库名称</th>
+          <th>数据库类型</th>
+          <th>所属域</th>
+          <th>状态</th>
+          <th>使用方式</th>
+          <th>CPU</th>
+          <th>内存</th>
+          <th>资源使用率</th>
+          <th>license</th>
+          <th>所属应用</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="lib/echarts.min.js"></script>
+<script src="util/chart.js"></script>
+<script src="util/table.js"></script>
+<script src="data/oracle.js"></script>
+<script>
+  var options = buildRingOptions('', [
+    {value: 308, name: 'B域'},
+    {value: 588, name: 'O域'},
+    {value: 276, name: 'M域'}
+  ], 'right');
+  var oracle = drawChart($('#oracle-chart')[0], options);
+  var clickEvent = function(param) {
+    $('.main-content').fadeOut();
+    $('.table-content').fadeIn();
+    buildTable($('#db-table'), $.map(oracleData, function(n) {
+      if(n.area == param.name) {
+        return n;
+      }
+    }));
+  };
+  oracle.on('click', function(param) {
+    clickEvent(param);
+  });
+
+  options = buildRingOptions('', [
+    {value: 323, name: 'B域'},
+    {value: 627, name: 'O域'},
+    {value: 428, name: 'M域'}
+  ]);
+  drawChart($('#vertica-chart')[0], options);
+
+  options = buildBarOptions(['传统数据库(未改造)', '云数据库'], {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: 'Oracle', data: [41, 67]},
+    {name: 'Vertica', data: [35, 62]}
+  ]);
+  drawChart($('#resource-chart')[0], options);
+
+  options = buildBarOptions(['传统数据库(未改造)', '云数据库'], {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: 'Oracle', data: [23, 59]},
+    {name: 'Vertica', data: [31, 62]}
+  ]);
+  drawChart($('#license-chart')[0], options);
+
+  options = buildRingOptions('', [
+    {value: 237, name: 'B域'},
+    {value: 466, name: 'O域'},
+    {value: 187, name: 'M域'}
+  ], 'right');
+  drawChart($('#mysql-chart')[0], options);
+
+  options = buildRingOptions('', [
+    {value: 128, name: 'B域'},
+    {value: 276, name: 'O域'},
+    {value: 99, name: 'M域'}
+  ], 'right');
+  drawChart($('#mpp-chart')[0], options);
+
+  options = buildBarOptions(['传统数据库(未改造)', '云数据库'], {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: '大云MySQL', data: [41, 70]},
+    {name: '大云MPP', data: [36, 64]}
+  ]);
+  drawChart($('#resource-chart2')[0], options);
+
+  options = buildBarOptions(['传统数据库(未改造)', '云数据库'], {
+    type: 'value',
+    min: 0,
+    max: 80,
+    interval: 20,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  }, [
+    {name: '大云MySQL', data: [35, 71]},
+    {name: '大云MPP', data: [29, 64]}
+  ]);
+  drawChart($('#license-chart2')[0], options);
+</script>
+</body>
+</html>

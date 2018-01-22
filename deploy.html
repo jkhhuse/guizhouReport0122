@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>应用部署</title>
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <style>
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #fafafa;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+      color: #ccc;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+    .my-title {
+      font-size: 20px;
+    }
+
+    .app-checkbox {
+      margin-left: 20px;
+    }
+
+    .col-sm-2.control-label {
+      text-align: right;
+      line-height: 40px;
+    }
+    .detail-config-panel {
+      display: none;
+      position: fixed;
+      top: 0px;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+    }
+    .service_img {
+      max-width: 100%;
+      max-height: 60px;
+    }
+    .img-box {
+      border: 1px solid aliceblue;
+      line-height: 62px;
+      text-align: center;
+    }
+
+    .nengli_img {
+      width: 50px;
+    }
+    .img-box-2 {
+      border: 1px solid aliceblue;
+      line-height: 62px;
+      text-align: center;
+    }
+    .selected-item {
+      margin-bottom: 0
+    }
+    .col-my-1-7 {
+      float: left;
+      width: 14%;
+    }
+    .check-nengli {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+.nengli-check {
+  margin-left: 20px;
+      text-align: center;
+}
+.select-add-db {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.btn-add-db {
+  padding-left: 10px;
+  margin:0;
+}
+.table-selected {
+  padding-left: 10px;
+}
+  </style>
+
+</head>
+
+<body>
+
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top.html');
+  </script>
+</div>
+<div class="right" style="margin-left: 200px;">
+  <div class="breadcrumb-nav">
+    <img src="image/svg/appInstance-black.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span"><a href="tomcat.html">应用部署</a></span>
+  </div>
+  <h3 style="padding-left:50px;">应用名称:贵州移动办公平台</h3>
+  <form style="padding: 20px;">
+    <div class="form-group">
+      <label class="my-title" for="exampleInputPassword1">数据库</label>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="checkbox app-checkbox">
+            <input type="checkbox" id="check_mysql">
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/mysql.png" alt="mysql"></div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="checkbox app-checkbox">
+            <input type="checkbox" id="check_oracle">
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/oracle.png" alt="oracle"></div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="checkbox app-checkbox">
+            <input type="checkbox" disabled>
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/postgres.png" alt="oracle"></div>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+
+      </div>
+
+
+      <div class="form-group">
+        <label class="my-title" for="exampleInputFile">中间件</label>
+
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              <input type="checkbox" id="check_tomcat">
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/tomcat.png" alt="tomcat"></div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              <input type="checkbox" disabled>
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/nginx.png" alt="nginx"></div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              <input type="checkbox" disabled>
+            <div class="img-box"><img align="middle" class="service_img" src="image/business/bes.png" alt="bes"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+    <a class='btn' role='button' onclick="displayConf()">服务配置</a>
+
+
+      <div class="form-group">
+        <label class="my-title">数据</label>
+        <hr/>
+
+<div class="row">
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              
+        <h4>B 域</h4>
+
+        <div class="row">
+          <div class="col-xs-10 select-add-db">
+            <select id="bzone_data_sel" class="form-control">
+              <option value="" selected></option>
+              <option value="wf_proxy">wf_proxy</option>
+              <option value="uam_sns_group_user">uam_sns_group_user</option>
+              <option value="sm_sn_provider">sm_sn_provider</option>
+              <option value="b_S_O_DPI_LTE_X2_STD01">b_S_O_DPI_LTE_X2_STD01</option>
+              <option value="b_S_O_DPI_LTE_X2_STD02">b_S_O_DPI_LTE_X2_STD02</option>
+              <option value="b_S_O_DPI_LTE_X2_STD03">b_S_O_DPI_LTE_X2_STD03</option>
+              <option value="b_S_O_DPI_LTE_X2_STD">b_S_O_DPI_LTE_X2_STD</option>
+              <option value="b_S_O_DPI_LTE_UE_MR_STD01">b_S_O_DPI_LTE_UE_MR_STD01</option>
+              <option value="b_S_O_DPI_LTE_UE_MR_STD02">b_S_O_DPI_LTE_UE_MR_STD02</option>
+              <option value="b_S_O_DPI_LTE_S1U_P2P_STD01">b_S_O_DPI_LTE_S1U_P2P_STD01</option>
+              <option value="b_S_O_DPI_LTE_S1U_P2P_STD02">b_S_O_DPI_LTE_S1U_P2P_STD02</option>
+              <option value="b_S_O_DPI_LTE_S1U_P2P_STD03">b_S_O_DPI_LTE_S1U_P2P_STD03</option>
+
+            </select>
+          </div>
+          <div class="col-xs-2 btn-add-db">
+            <a class="btn btn-add-table" role="button">+</a>
+          </div>
+        </div>
+        <div class="table-selected">
+        </div>
+
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              
+        <h4>O 域</h4>
+
+        <div class="row">
+          <div class="col-xs-10 select-add-db">
+            <select class="form-control">
+              <option value="" selected></option>
+              <option value="o_dpi_lte_http">o_dpi_lte_http</option>
+              <option value="o_dpi_lte_mme">o_dpi_lte_mme</option>
+              <option value="o_dpi_lte_s11">o_dpi_lte_s11</option>
+              <option value="o_dpi_lte_sgs">o_dpi_lte_sgs</option>
+              <option value="o_dpi_lte_general">o_dpi_lte_general</option>
+              <option value="o_S_O_DPI_LTE_S1U_SP_STD01">o_S_O_DPI_LTE_S1U_SP_STD01</option>
+              <option value="o_S_O_DPI_LTE_S1U_SP_STD02">o_S_O_DPI_LTE_S1U_SP_STD02</option>
+              <option value="o_S_O_DPI_LTE_S1U_SP_STD03">o_S_O_DPI_LTE_S1U_SP_STD03</option>
+              <option value="o_S_O_DPI_LTE_S1U_SP_STD04">o_S_O_DPI_LTE_S1U_SP_STD04</option>
+              <option value="o_S_O_DPI_LTE_S1U_IM_STD01">o_S_O_DPI_LTE_S1U_IM_STD01</option>
+              <option value="o_S_O_DPI_LTE_S1U_IM_STD02">o_S_O_DPI_LTE_S1U_IM_STD02</option>
+            </select>
+          </div>
+          <div class="col-xs-2 btn-add-db">
+            <a class="btn btn-add-table" role="button">+</a>
+          </div>
+        </div>
+        <div class="table-selected">
+        </div>
+
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="checkbox app-checkbox">
+              
+        <h4>M 域</h4>
+
+        <div class="row">
+          <div class="col-xs-10 select-add-db">
+            <select class="form-control">
+              <option value="" selected></option>
+              <option value="sso_qrcode_token">sso_qrcode_token</option>
+              <option value="sso_remote_app_token">sso_remote_app_token</option>
+              <option value="store_convert_task">store_convert_task</option>
+              <option value="sync_data">sync_data</option>
+              <option value="sys_dictionary_items">sys_dictionary_items</option>
+              <option value="m_S_O_MR_S1U_SP_STD01">o_S_O_DPI_LTE_S1U_SP_STD01</option>
+              <option value="m_S_O_DPI_LTE_S1U_SP_STD02">m_S_O_DPI_LTE_S1U_SP_STD02</option>
+              <option value="m_S_O_DPI_LTE_S1U_SP_STD03">m_S_O_DPI_LTE_S1U_SP_STD03</option>
+              <option value="m_S_O_DPI_LTE_S1U_SP_STD04">m_S_O_DPI_LTE_S1U_SP_STD04</option>
+              <option value="m_S_O_HT_S1U_IM_STD01">m_S_O_HT_S1U_IM_STD01</option>
+              <option value="m_S_O_HT_S1U_IM_STD02">m_S_O_HT_S1U_IM_STD02</option>
+            </select>
+          </div>
+          <div class="col-xs-2 btn-add-db"><a class="btn btn-add-table" role="button">+</a></div>
+        </div>
+        <div class="table-selected">
+        </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+    <div class="form-group">
+      <label class="my-title" for="exampleInputPassword1">业务能力</label>
+      <div class="row">
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u128.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">手机号码归属地</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u120.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">话费充值</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u144.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">语音验证码</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u136.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">位置解析服务</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u126.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">流量充值</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u140.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">移动号码验证</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u134.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">统一认证</div>
+        </div>
+        <div style="clear:left"></div>
+
+<div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u132.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">统一代办</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u142.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">游戏充值</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u130.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">天气查询</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u118.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">公交查询</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u124.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">邮编查询</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u122.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">来电显示</div>
+        </div>
+        <div class="col-my-1-7">
+          <div class="checkbox app-checkbox">
+            <div class="img-box-2"><img align="middle" class="nengli_img" src="image/business/u138.png" alt="mysql">
+            <input class="check-nengli" type="checkbox"></div>
+          </div>
+          <div class="nengli-check">IP 地址</div>
+        </div>
+
+      </div>
+
+      </div>
+
+
+      <div style="margin: 30px 0 0 20px;"><a href="app-creating.html" type="submit" class="btn btn-primary">发布</a></div>
+  </form>
+
+
+<div class="detail-config-panel">
+  <div style="margin-top:40px">
+   <h4>服务配置</h4>
+    <a class='btn' role='button' style="position: absolute;top: 35px;left: 86px;" onclick="hide_conf_panel()">返回</a>
+  </div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <!-- li role="presentation" class="nav-tab-title active"><a href="#home" aria-controls="home" role="tab"
+                                                     data-toggle="tab">总览</a></li> -->
+    <li role="presentation" class="nav-tab-title"><a id="profile-b-ctl" href="#profile-b" aria-controls="profile-b" role="tab"
+                                                            data-toggle="tab">Mysql</a></li>
+    <li role="presentation" class="nav-tab-title"><a id="profile-o-ctl" href="#profile-o" aria-controls="profile-o" role="tab"
+                                                            data-toggle="tab">Oracle</a></li>
+    <li role="presentation" class="nav-tab-title"><a id="profile-m-ctl" href="#profile-m" aria-controls="profile-m" role="tab"
+                                                            data-toggle="tab">Tomcat</a></li>
+  </ul>
+
+  <div style="margin-left: 20px">
+
+  <!-- Tab panes -->
+  <div class="tab-content" style="margin-top: 20px" >
+    <div role="tabpanel" class="tab-pane" id="profile-b">
+        <div id="mysql_detail">
+          <div class="row">
+            <label class="col-sm-2 control-label">user</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="mysql">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">port</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="3306">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">database</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="mysql">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">password</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="4hCzNnKw">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">max_connections</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="3000">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">number</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3">
+            </div>
+          </div>
+        </div> <!-- end of mysql -->
+      </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="profile-o">
+
+        <div id="oracle_detail">
+          <div class="row">
+            <label class="col-sm-2 control-label">db_name</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="orcl">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">user</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="Orcl-user">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">password</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="TnWpaXvJ">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">port</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="1521">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">sessions</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="300">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">sga_max_size</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="4096M">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label"
+                  >pga_aggregate_target</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="2048M">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">cpu_count</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="16">
+            </div>
+          </div>
+
+        </div> <!-- end of oracle -->
+      </div>
+
+
+    <div role="tabpanel" class="tab-pane active" id="profile-m">
+
+        <div id="tomcat_detail">
+          <div class="row">
+            <label class="col-sm-2 control-label">connectionTimeout</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="20000">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">acceptCount</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="300">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">MaxTheads</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="300">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">maxProcessors</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="1000">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">minProcessors</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3" placeholder="Email" value="5">
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 control-label">number</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputEmail3">
+            </div>
+          </div>
+        </div> <!-- end of tomcat -->
+      </div>
+    </div>
+    </div> <!-- end of tab -->
+
+</div>
+
+
+</div>
+<script type="text/javascript">
+  function displayConf() {
+    var index=0;
+    if ($("#check_tomcat")[0].checked) {
+      $("#profile-m-ctl").parent().show();
+      index=2;
+    } else {
+      $("#profile-m-ctl").parent().hide();
+    }
+    if ($("#check_oracle")[0].checked) {
+      $("#profile-o-ctl").parent().show();
+      index=1;
+    } else {
+      $("#profile-o-ctl").parent().hide();
+    }
+    if ($("#check_mysql")[0].checked) {
+      $("#profile-b-ctl").parent().show();
+      index=0;
+    } else {
+      $("#profile-b-ctl").parent().hide();
+    }
+    console.log(index);
+    $("li.nav-tab-title a")[index].click();
+    $(".detail-config-panel").show();
+  }
+  function hide_conf_panel() {
+    $(".detail-config-panel").hide();
+  }
+
+
+  $(".btn-add-table").on("click", function (e) {
+    var htStr = '<p class="selected-item">';
+    htStr += $(e.target).parent().prev().find('select.form-control').val();
+    htStr += ' <a class="btn btn-remove-table" role="button" onClick="removeparent(this)">-</a></p>';
+
+    $(htStr).appendTo($(e.target).parent().parent().next());
+  });
+
+  function removeparent(item) {
+    $(item).parent().remove();
+  }
+
+</script>
+</body>
+</html>

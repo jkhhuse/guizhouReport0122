@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>存储资源</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/awesome/css/font-awesome.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/echarts.min.js"></script>
+  <style>
+    html, body {
+      color: #333;
+      height: 100%;
+    }
+    a {
+      color: #333;
+    }
+    a:hover, a:focus {
+      color: #333;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #fafafa;
+    }
+
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+    .storage-content {
+      margin-left: 200px;
+      height: 100%;
+    }
+    .block-pie {
+      width: 45%;
+      height: 240px;
+      float: left;
+      margin: 2% 0 0 1%;
+    }
+    .pie-container {
+      padding-top: 1%;
+    }
+    #return-storage:hover {
+      cursor: pointer;
+    }
+    .chart-wrap {
+      height: 40%;
+      padding: 1.5% 1%;
+    }
+    .chart-container {
+      height: 100%;
+      border-radius: 4px;
+    }
+    .chart-box {
+      height: 100%;
+      width: 49%;
+      margin-right: 1%;
+      padding: 5px;
+      float: left;
+    }
+    .chart-title {
+      border-bottom: 1px solid #3D5B77;
+      padding: 2px 0 3px 10px;
+    }
+    #capacity, #hard-disk {
+      height: calc(100% - 26px);
+    }
+  </style>
+</head>
+<body>
+<div class="left-nav-wrap">
+  <script>
+    $('.left-nav-wrap').load('leftNav.html');
+  </script>
+</div>
+<div class="top-wrap">
+  <script>
+    $('.top-wrap').load('fix-top.html');
+  </script>
+</div>
+<div class="storage-content">
+  <div class="breadcrumb-nav">
+    <img src="image/svg/docker-black.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span"><a href="storage.html">存储资源</a></span>
+  </div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="padding: 15px 0 0 15px;">
+    <li class="active">
+      <a id="return-storage" href="#home" aria-controls="home" role="tab" data-toggle="tab">块存储</a>
+    </li>
+    <li class="disabled">
+      <a href="javascript:void(0)">对象存储</a>
+    </li>
+  </ul>
+  <div class="chart-wrap">
+    <div class="chart-container">
+      <div class="chart-box">
+        <div class="chart-title">已分配资源</div>
+        <div id="capacity"></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">已使用资源</div>
+        <div id="hard-disk"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content" style="padding: 5px;">
+    <div role="tabpanel" class="tab-pane active" id="home" style="background-color: #FFFFFF">
+      <div class="disk-container">
+        <table class="table table-hover" id="disk-table">
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>容量</th>
+              <th>被使用应用</th>
+              <th>所属域</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="util/chart.js"></script>
+<script src="util/table.js"></script>
+<script>
+  var data = [
+    {name: 'V_BOSS_1', capacity: '500G', app: 'BOSS_YZ_GZ_1', area: 'B域', status: '已挂载'},
+    {name: 'V_DPI_2', capacity: '500G', app: 'DPI_WG_GZ_2', area: 'O域', status: '已挂载'},
+    {name: 'V_OA_1', capacity: '50G', app: 'OA_GX_GZ_1', area: 'M域', status: '已挂载'},
+    {name: 'V_BOSS_2', capacity: '300G', app: 'BOSS_YZ_GZ_2', area: 'B域', status: '已挂载'},
+    {name: 'V-CRM_1', capacity: '20G', app: 'CRM_YZ_GY_1', area: 'B域', status: '已挂载'},
+    {name: 'V_CRM_2', capacity: '40G', app: 'CRM_YZ_GY_2', area: 'B域', status: '已挂载'},
+    {name: 'V_CMOP', capacity: '400G', app: 'GZ_CMOP', area: 'M域', status: '已挂载'},
+    {name: 'V_MORE', capacity: '500G', app: 'AND_MORE', area: 'M域', status: '已挂载'},
+    {name: 'V_NPS', capacity: '700G', app: 'NPS_S_1', area: 'O域', status: '已挂载'},
+    {name: 'V_OA_2', capacity: '100G', app: 'OA_GX_GY_2', area: 'M域', status: '已挂载'},
+    {name: 'V_DPI_1', capacity: '800G', app: 'DPI_WG_GZ_1', area: 'B域', status: '已挂载'},
+    {name: 'V_MR_1', capacity: '900G', app: 'MR_WY_GZ_1', area: 'O域', status: '已挂载'},
+    {name: 'V_MR_2', capacity: '600G', app: 'MR_WY_GZ_2', area: 'O域', status: '已挂载'},
+    {name: 'V_ATHENA', capacity: '300G', app: 'ATHENA', area: 'M域', status: '已挂载'},
+    {name: 'V_DPI_3', capacity: '100G', app: 'DPI_WY_GY_3', area: 'O域', status: '已挂载'}
+  ];
+  var operation = '<a href="javascript:void(0)">卸载</a>&nbsp; <a href="javascript:void(0)">扩容</a>';
+  buildTable($('#disk-table'), data, operation);
+  var options = buildRingOptions('', [
+    {value: 830, name: 'B域'},
+    {value: 1358, name: 'O域'},
+    {value: 212, name: 'M域'},
+    {value: 1812, name: '未分配'}
+  ]);
+  var opacity = drawChart(document.getElementById('capacity'), options);
+  var pieClick = function(param) {
+    $('.chart-wrap').fadeOut();
+    var filterData = $.map(data, function(n) {
+      if(n.area == param.name) {
+        return n;
+      }
+    });
+    buildTable($('#disk-table'), filterData, operation)
+  };
+  opacity.on('click', function(param){
+    pieClick(param);
+  });
+  options = buildRingOptions('硬盘', [
+    {value: 52, name: 'B域'},
+    {value: 17, name: 'O域'},
+    {value: 31, name: 'M域'}
+  ]);
+  var disk = drawChart(document.getElementById('hard-disk'), options);
+  disk.on('click', function(param){
+    pieClick(param);
+  });
+  $('#return-storage').click(function(){
+    location.href = 'storage.html';
+  });
+</script>
+</body>
+</html>

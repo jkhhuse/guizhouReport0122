@@ -1,0 +1,368 @@
+{
+"tables": [
+  {
+    "Cname": "查询预算信息服务",
+    "Ename": "SB_FI_BMS_InquiryBudgetInfoSrv",
+    "time": "94784",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算项目与部门映射关系查询服务",
+    "Ename": "SB_FI_BMS_PageInquiryPrjMapDptInfoSrv",
+    "time": "32727",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算多维映射服务查询",
+    "Ename": "SB_FI_BMS_PageInquirymapInfoSrv",
+    "time": "19550",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算活动查询服务",
+    "Ename": "SB_FI_BMS_PageInquiryActivityInfoSrv",
+    "time": "15982",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询框架合同信息服务",
+    "Ename": "SB_SC_SCM_PageInquiryFrameContractInfoSrv",
+    "time": "10471",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询采购目录信息服务",
+    "Ename": "SB_SC_SCM_PageInquiryProductCatalogInfoSrv",
+    "time": "9770",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算项目查询服务",
+    "Ename": "SB_FI_BMS_PageInquiryPrjInfoSrv",
+    "time": "6742",
+    "category":"查询"
+  },
+  {
+    "Cname": "营改增查询采购订单头信息服务",
+    "Ename": "SB_SC_PO_PageInquiryOrderHeaderInfoSrv",
+    "time": "5554",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询应付发票列账信息服务",
+    "Ename": "SB_FI_AP_InquiryApInvoiceBdgtInfoSrv",
+    "time": "3552",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询资产地点服务（上市）",
+    "Ename": "SB_SC_PO_PageInquiryOrderLineInfoSrv",
+    "time": "2618",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "摊销费用实际发生数查询服务",
+    "Ename": "SB_FI_FA_InquiryLADataSrv",
+    "time": "2599",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算部门查询服务",
+    "Ename": "SB_FI_BMS_InquiryDeptInfoSrv",
+    "time": "2567",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算科目查询服务",
+    "Ename": "SB_FI_BMS_PageInquiryBdgtAcctInfoSrv",
+    "time": "2430",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算品牌查询服务",
+    "Ename": "SB_FI_BMS_InquiryBrandInfoSrv",
+    "time": "2371",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询项目基本信息分页服务",
+    "Ename": "SB_SC_PA_PageInquiryProjectBaseInfoSrv",
+    "time": "2182",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "预算战略查询服务",
+    "Ename": "SB_FI_BMS_InquiryStrategyInfoSrv",
+    "time": "2087",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询收款方法",
+    "Ename": "SB_FI_AR_InquiryReceiptMethodHeadSrv",
+    "time": "1895",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询应收事务处理类型",
+    "Ename": "SB_FI_AR_InquiryARTransactionTypesSrv",
+    "time": "1895",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询收款账户",
+    "Ename": "SB_FI_AR_InquiryReceiptMethodBankSrv",
+    "time": "1895",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询总账凭证导入结果",
+    "Ename": "SB_FI_GL_ValidateImportGLEntrySrv",
+    "time": "1878",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "预算渠道查询服务",
+    "Ename": "SB_FI_BMS_InquiryChannelInfoSrv",
+    "time": "1864",
+    "category":"查询"
+  },
+  {
+    "Cname": "预算用户群查询服务",
+    "Ename": "SB_FI_BMS_InquiryUserGroupInfoSrv",
+    "time": "1859",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询供应商地点服务",
+    "Ename": "SB_SC_PO_InquiryVendorSiteSrv",
+    "time": "1134",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询采购订单发运行信息",
+    "Ename": "SB_SC_PO_PageInquiryOrderLineLocationInfoSrv",
+    "time": "1067",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询资产会计期间状态服务（上市）",
+    "Ename": "SB_FI_FA_InquiryAssetPeriodStatusSrv",
+    "time": "1008",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "支付凭证查询服务",
+    "Ename": "SB_FI_AP_InquiryPaymentInfoSrv",
+    "time": "992",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询报账单号",
+    "Ename": "SB_FI_EAS_InquiryClaimDocNumInfoSrv",
+    "time": "840",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询供应商银行信息",
+    "Ename": "SB_SC_PO_InquiryVendorBankSrv",
+    "time": "829",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询供应商账户信息",
+    "Ename": "SB_SC_PO_InquiryVendorAccountSrv",
+    "time": "829",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询供应商银行关系信息",
+    "Ename": "SB_SC_PO_InquiryVendorBankRelationSrv",
+    "time": "820",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询配额信息服务",
+    "Ename": "SB_SC_SCM_PageInquiryQuotaInfoSrv",
+    "time": "810",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询转资资产清单信息分页服务（上市）",
+    "Ename": "SB_FI_FA_PageInquiryAssetCustDetailSrv",
+    "time": "729",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询银行账户信息",
+    "Ename": "SB_FI_GL_InquiryBankAccountSrv",
+    "time": "625",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询资产财务信息服务（TD）",
+    "Ename": "SB_FI_FA_TDTransFaAssetInfoSrv",
+    "time": "621",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询值集值信息服务",
+    "Ename": "SB_SY_SY_InquiryVSetValueInfoSrv",
+    "time": "582",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询资产会计期间状态服务（TD）",
+    "Ename": "SB_FI_FA_TDInquiryAssetPeriodStatusSrv",
+    "time": "525",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询资产头信息服务(TD)",
+    "Ename": "SB_FI_FA_TDTransAssetHeaderInfoSrv",
+    "time": "501",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询资产头信息服务(上市)",
+    "Ename": "SB_FI_FA_TransAssetHeaderInfoSrv",
+    "time": "480",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询合同基本信息分页服务",
+    "Ename": "SB_SC_CMS_PageInquiryContractInfoSrv",
+    "time": "455",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询报废资产信息（TD）",
+    "Ename": "SB_FI_FA_TDTransRetiredAssetDetailSrv",
+    "time": "420",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询资产财务信息服务（上市）",
+    "Ename": "SB_FI_FA_TransFaAssetInfoSrv",
+    "time": "417",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询项目开支服务",
+    "Ename": "SB_FI_PA_PageInquiryPaExpenditureSrv",
+    "time": "255",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询库存出入库实际发生数服务",
+    "Ename": "SB_SC_INV_InquiryMTLInventoryInfoSrv",
+    "time": "187",
+    "category":"查询"
+  },
+  {
+    "Cname": "供应商MDM综合查询",
+    "Ename": "SB_MDM_MDM_InquiryVendorMDMCompInfoSrv",
+    "time": "184",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询账户组合服务",
+    "Ename": "SB_FI_GL_InquiryAccountCodeCombinationSrv",
+    "time": "155",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "物料信息MDM查询服务",
+    "Ename": "SB_MDM_MATE_InquiryMaterialInfoSrv",
+    "time": "124",
+    "category":"查询"
+  },
+  {
+    "Cname": "物料类别MDM查询服务",
+    "Ename": "SB_MDM_MATE_InquiryMaterialClassMdmInfoSrv",
+    "time": "121",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询银行账户信息TD",
+    "Ename": "SB_FI_GL_TDInquiryBankAccountSrv",
+    "time": "117",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询内部往来实际发生数服务",
+    "Ename": "SB_SC_PO_InquiryInterApplyInfoSrv",
+    "time": "107",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询付款凭证信息TD",
+    "Ename": "SB_FI_AP_TDInquiryPaymentInfoSrv",
+    "time": "96",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询日记账实际发生数服务",
+    "Ename": "SB_FI_GL_InquiryJournalApplyInfoSrv",
+    "time": "94",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询应收业务",
+    "Ename": "SB_FI_AR_InquiryARActivitySrv",
+    "time": "87",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询杂项支出实际发生数服务",
+    "Ename": "SB_SC_PA_InquiryMixedApplyInfoSrv",
+    "time": "87",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询应付发票导入结果",
+    "Ename": "SB_FI_AP_TDValidateImportAPInvoiceSrv",
+    "time": "17",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询客户详细信息",
+    "Ename": "SB_FI_AR_InquiryCustomerDetailSrv",
+    "time": "12",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询银行账户",
+    "Ename": "SB_FI_AP_InquiryBankAccountSrv",
+    "time": "8",
+    "category":"查询"
+  },
+
+  {
+    "Cname": "查询通知单行信息",
+    "Ename": "SB_FI_AR_InquiryARMemoLineSrv",
+    "time": "4",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询客户头信息",
+    "Ename": "SB_FI_AR_InquiryCustomerHeaderSrv",
+    "time": "2",
+    "category":"查询"
+  },
+  {
+    "Cname": "查询客户地址信息",
+    "Ename": "SB_FI_AR_InquiryCustomerSiteSrv",
+    "time": "1",
+    "category":"查询"
+  }
+]}

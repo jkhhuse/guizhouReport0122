@@ -1,0 +1,39 @@
+{
+  "department_resource_statistics": [
+    {
+      "bm_name": "网络部",
+      "machine_type": "虚拟机",
+      "x86_vm_account": 68.51
+    },
+    {
+      "bm_name": "信息技术中心",
+      "machine_type": "虚拟机",
+      "x86_vm_account": 11.57
+    },
+    {
+      "bm_name": "大数据运营中心",
+      "machine_type": "虚拟机",
+      "x86_vm_account": 19.93
+    },
+    {
+      "bm_name": "网络部",
+      "machine_type": "物理机",
+      "x86_vm_account": 16.43
+    },
+    {
+      "bm_name": "信息技术中心",
+      "machine_type": "物理机",
+      "x86_vm_account": 8.96
+    },
+    {
+      "bm_name": "大数据运营中心",
+      "machine_type": "物理机",
+      "x86_vm_account": 13.64
+    },
+    {
+      "bm_name": "未分配",
+      "machine_type": "物理机",
+      "x86_vm_account": 61.05
+    }
+  ]
+}
