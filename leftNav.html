@@ -1,246 +1,243 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <style type="text/css">
-    .leftNav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200px;
-      border-right: 1px solid #404962;
-      height: 100%;
-      z-index: 200;
-      overflow-y: auto;
-      overflow-x: hidden;
-      background-color: #404962;
-      color: #fff;
-    }
-
-    .leftNav .nav-sidebar .active {
-      color: #FFFFFF !important;
-      background-color: #353c52;
-      border-left: 5px solid #5CB9FF;
-    }
-
-    .leftNav .nav-sidebar .active a {
-      color: #FFFFFF !important;
-      text-decoration: none;
-    }
-
-    .leftNav .nav-title {
-      background-color: #353c52;
-      color: #FFFFFF;
-      padding: 20px 20px 10px 20px;
-      height: 75px;
-    }
-
-    .leftNav .nav-title img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .leftNav .nav-title .span_title {
-      margin-left: 10px;
-      color: #FFFFFF;
-      vertical-align: top;
-      font-size: 16px;
-    }
-
-    .leftNav .nav-title .span_fu {
-      display: block;
-      color: #FFFFFF;
-      font-size: 12px;
-      margin-left: 26px;
-    }
-
-    #nav-sidebar {
-      padding: 0;
-    }
-
-    #nav-sidebar .nav-li-title {
-      color: #fff;
-      padding-top: 10px;
-      padding-left: 15px;
-      font-size: 14px;
-      font-weight: 200;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
-    #nav-sidebar .nav-header {
-      list-style: none;
-      height: 35px;
-      line-height: 35px;
-      font-size: 14px;
-      vertical-align: top;
-      cursor: pointer;
-    }
-
-    #nav-sidebar .nav-header a {
-      display: block;
-      color: #a2abbd;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    #nav-sidebar .nav-header a:hover {
-      color: #FFFFFF;
-    }
-
-    #nav-sidebar .nav-header a.disabled:hover {
-      cursor: not-allowed;
-      color: #a2abbd;
-    }
-
-    #nav-sidebar .nav-header .nav-svg {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin: 0 10px 0 25px;
-    }
-
-    #nav-sidebar .nav-header span {
-      line-height: 20px;
-    }
-
-    #nav-sidebar .nav-header:hover {
-      background-color: #353c4a;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .leftNav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            border-right: 1px solid #404962;
+            height: 100%;
+            z-index: 200;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: #404962;
+            color: #fff;
+        }
+        
+        .leftNav .nav-sidebar .active {
+            color: #FFFFFF !important;
+            background-color: #353c52;
+            border-left: 5px solid #5CB9FF;
+        }
+        
+        .leftNav .nav-sidebar .active a {
+            color: #FFFFFF !important;
+            text-decoration: none;
+        }
+        
+        .leftNav .nav-title {
+            background-color: #353c52;
+            color: #FFFFFF;
+            padding: 20px 20px 10px 20px;
+            height: 75px;
+        }
+        
+        .leftNav .nav-title img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .leftNav .nav-title .span_title {
+            margin-left: 10px;
+            color: #FFFFFF;
+            vertical-align: top;
+            font-size: 16px;
+        }
+        
+        .leftNav .nav-title .span_fu {
+            display: block;
+            color: #FFFFFF;
+            font-size: 12px;
+            margin-left: 26px;
+        }
+        
+        #nav-sidebar {
+            padding: 0;
+        }
+        
+        #nav-sidebar .nav-li-title {
+            color: #fff;
+            padding-top: 10px;
+            padding-left: 15px;
+            font-size: 14px;
+            font-weight: 200;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        #nav-sidebar .nav-header {
+            list-style: none;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        
+        #nav-sidebar .nav-header a {
+            display: block;
+            color: #a2abbd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        #nav-sidebar .nav-header a:hover {
+            color: #FFFFFF;
+        }
+        
+        #nav-sidebar .nav-header a.disabled:hover {
+            cursor: not-allowed;
+            color: #a2abbd;
+        }
+        
+        #nav-sidebar .nav-header .nav-svg {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0 25px;
+        }
+        
+        #nav-sidebar .nav-header span {
+            line-height: 20px;
+        }
+        
+        #nav-sidebar .nav-header:hover {
+            background-color: #353c4a;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-<div class="leftNav">
-  <div class="nav-title">
-    <img src="image/svg/logo.png" alt="" id="logo" style="cursor: pointer;"/>
-    <span class="span_title" onclick="window.close();">贵州</span>
-    <span class="span_fu">大IT-PaaS平台</span>
-  </div>
-  <ul class="nav-sidebar" id="nav-sidebar">
-   <li class="nav-li-title">总览</li>
-      <li role="presentation" class="nav-header">
-          <a href="overview.html" class="active">
-              <img src="image/svg/overview.svg"
-                   class="nav-svg" alt=""/>
-              <span>平台概况</span>
-          </a>
-      </li>
-   <!-- <li role="presentation" class="nav-header">
+    <div class="leftNav">
+        <div class="nav-title">
+            <img src="image/svg/logo.png" alt="" id="logo" style="cursor: pointer;" />
+            <span class="span_title" onclick="window.close();">贵州</span>
+            <span class="span_fu">大IT-PaaS平台</span>
+        </div>
+        <ul class="nav-sidebar" id="nav-sidebar">
+            <li class="nav-li-title">总览</li>
+            <li role="presentation" class="nav-header">
+                <a href="overview.html" class="active">
+                    <img src="image/svg/overview.svg" class="nav-svg" alt="" />
+                    <span>平台概况</span>
+                </a>
+            </li>
+            <!-- <li role="presentation" class="nav-header">
         <a href="dashboard.html" class="active">
             <img src="image/svg/overview.svg"
                  class="nav-svg" alt=""/>
             <span>平台总览</span>
         </a>
     </li>-->
-    <li class="nav-li-title">资源管理</li>
-    <li role="presentation" class="nav-header">
-      <a href="jisuan-index.html" class="active">
-        <img src="image/svg/db.svg"
-             class="nav-svg" alt=""/>
-        <span>计算资源</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="storage.html">
-        <img src="image/svg/docker.svg"
-             class="nav-svg" alt=""/>
-        <span>存储资源</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="javascript:void(0)" class="disabled">
-        <img src="image/svg/appInstance.svg"
-             class="nav-svg" alt=""/>
-        <span>网络资源</span>
-      </a>
-    </li>
-    <li class="nav-li-title">数据管理</li>
-    <li role="presentation" class="nav-header">
-      <a href="shujugailan.html">
-        <img src="image/svg/host.svg"
-             class="nav-svg" alt=""/>
-        <span>数据概览</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="dm-standard.html">
-        <img src="image/svg/appModule.svg"
-             class="nav-svg" alt=""/>
-        <span>数据标准</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="dm-assert.html">
-        <img src="image/svg/localMirror.svg"
-             class="nav-svg" alt=""/>
-        <span>数据资产</span>
-      </a>
-    </li>
+            <li class="nav-li-title">资源管理</li>
+            <li role="presentation" class="nav-header">
+                <a href="jisuan-index.html" class="active">
+                    <img src="image/svg/db.svg" class="nav-svg" alt="" />
+                    <span>计算资源</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="storage.html">
+                    <img src="image/svg/docker.svg" class="nav-svg" alt="" />
+                    <span>存储资源</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="javascript:void(0)" class="disabled">
+                    <img src="image/svg/appInstance.svg" class="nav-svg" alt="" />
+                    <span>网络资源</span>
+                </a>
+            </li>
+            <li class="nav-li-title">数据管理</li>
+            <li role="presentation" class="nav-header">
+                <a href="shujugailan.html">
+                    <img src="image/svg/host.svg" class="nav-svg" alt="" />
+                    <span>数据概览</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="dm-standard.html">
+                    <img src="image/svg/appModule.svg" class="nav-svg" alt="" />
+                    <span>数据标准</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="dm-assert.html">
+                    <img src="image/svg/localMirror.svg" class="nav-svg" alt="" />
+                    <span>数据资产</span>
+                </a>
+            </li>
 
-    <li class="nav-li-title">能力管理</li>
-    <li role="presentation" class="nav-header">
-      <a href="db.html">
-        <img src="image/svg/db.svg"
-             class="nav-svg" alt=""/>
-        <span>数据库</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="tomcat.html">
-        <img src="image/svg/tomcat.svg"
-             class="nav-svg" alt=""/>
-        <span>中间件</span>
-      </a>
-    </li>
-    <li role="presentation" class="nav-header">
-      <a href="ability.html">
-        <img src="image/svg/business.svg"
-             class="nav-svg" alt=""/>
-        <span>业务能力</span>
-      </a>
-    </li>
+            <li class="nav-li-title">能力管理</li>
+            <li role="presentation" class="nav-header">
+                <a href="ability-overview.html">
+                    <img src="image/svg/business.svg" class="nav-svg" alt="" />
+                    <span>能力概览</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="db.html">
+                    <img src="image/svg/db.svg" class="nav-svg" alt="" />
+                    <span>数据库</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="tomcat.html">
+                    <img src="image/svg/tomcat.svg" class="nav-svg" alt="" />
+                    <span>中间件</span>
+                </a>
+            </li>
+            <li role="presentation" class="nav-header">
+                <a href="ability.html">
+                    <img src="image/svg/business.svg" class="nav-svg" alt="" />
+                    <span>业务能力</span>
+                </a>
+            </li>
 
-    <li class="nav-li-title">应用管理</li>
-    <li role="presentation" class="nav-header">
-      <a href="app.html">
-        <img src="image/svg/appStore.svg"
-             class="nav-svg" alt=""/>
-        <span>应用概览</span>
-      </a>
-    </li>
-    <!--<li role="presentation" class="nav-header">-->
-      <!--<a href="">-->
-        <!--<img src="0517image/svg/appModule.svg"-->
-             <!--class="nav-svg" alt=""/>-->
-        <!--<span>应用模版</span>-->
-      <!--</a>-->
-    <!--</li>-->
-    <li role="presentation" class="nav-header">
-      <a href=store.html>
-        <img src="image/svg/appInstance.svg"
-             class="nav-svg" alt=""/>
-        <span>软件商城</span>
-      </a>
-    </li>
-  </ul>
-</div>
-<script>
-  var pathname = document.location.pathname;
-  var list = document.location.pathname.split('/');
-  var path = list[list.length - 1];
-  var contain = $('#nav-sidebar').find('a[href="' + path + '"]');
-  $('#nav-sidebar').find('a.active').removeClass('active');
-  contain.addClass('active');
-  $('#logo').click(function () {
-    if(path.indexOf('black') != -1) {
-      location.href = path.replace('-black', '');
-    } else {
-      location.href = path.replace('.html', '-black.html');
-    }
-  });
-</script>
+            <li class="nav-li-title">应用管理</li>
+            <li role="presentation" class="nav-header">
+                <a href="app.html">
+                    <img src="image/svg/appStore.svg" class="nav-svg" alt="" />
+                    <span>应用概览</span>
+                </a>
+            </li>
+            <!--<li role="presentation" class="nav-header">-->
+            <!--<a href="">-->
+            <!--<img src="0517image/svg/appModule.svg"-->
+            <!--class="nav-svg" alt=""/>-->
+            <!--<span>应用模版</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <li role="presentation" class="nav-header">
+                <a href=store.html>
+                    <img src="image/svg/appInstance.svg" class="nav-svg" alt="" />
+                    <span>软件商城</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var pathname = document.location.pathname;
+        var list = document.location.pathname.split('/');
+        var path = list[list.length - 1];
+        var contain = $('#nav-sidebar').find('a[href="' + path + '"]');
+        $('#nav-sidebar').find('a.active').removeClass('active');
+        contain.addClass('active');
+        $('#logo').click(function() {
+            if (path.indexOf('black') != -1) {
+                location.href = path.replace('-black', '');
+            } else {
+                location.href = path.replace('.html', '-black.html');
+            }
+        });
+    </script>
 </body>
+
 </html>
