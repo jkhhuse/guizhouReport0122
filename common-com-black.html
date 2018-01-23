@@ -270,6 +270,34 @@
             color: #4A90E2;
             padding-left: 3px;
         }
+        .progress{
+            float: left;
+            width: 50%;
+            height: 8px;
+            margin-right: 10px;
+            line-height: 40px;
+            margin-top: 16px;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+        .progress-bar{
+        }
+        .gradient{
+            background: -moz-linear-gradient(top, #0093DD 0%, #0049F8 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0093DD), color-stop(100%,#0049F8));
+            background: -webkit-linear-gradient(top, #0093DD 0%,#0049F8 100%);
+            background: -o-linear-gradient(top, #0093DD 0%,#0049F8 100%);
+            background: -ms-linear-gradient(top, #0093DD 0%,#0049F8 100%);
+            background: linear-gradient(to bottom, #0093DD 0%,#0049F8 100%);
+        }
+        .gradient2{
+            background: -moz-linear-gradient(top, #8E6BF1 0%, #6111FF 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8E6BF1), color-stop(100%,#6111FF));
+            background: -webkit-linear-gradient(top, #8E6BF1 0%,#6111FF 100%);
+            background: -o-linear-gradient(top, #8E6BF1 0%,#6111FF 100%);
+            background: -ms-linear-gradient(top, #8E6BF1 0%,#6111FF 100%);
+            background: linear-gradient(to bottom, #8E6BF1 0%,#6111FF 100%);
+        }
     </style>
 </head>
 
@@ -309,26 +337,142 @@
                     <table class="table" id="app_table">
                         <thead>
                             <tr>
-                                <th>应用名称</th>
-                                <th>部署状态</th>
-                                <th>部署版本</th>
-                                <th>容器个数</th>
-                                <th>运行状态</th>
-                                <th>创建时间</th>
-                                <th>使用模板</th>
+                                <th>租户名称</th>
+                                <th>所需厂家</th>
+                                <th>存储资源分配</th>
+                                <th>计算资源分配</th>
+                                <th>最大计算资源</th>
+                                <th>调用能力</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#" id="app_info">贵州移动网络代维管理平台<i class="glyphicon glyphicon-tags"></i></a></td>
-                                <td>已部署</td>
-                                <td>Latest</td>
-                                <td>5</td>
-                                <td>运行中</td>
+                                <td><a href="#" id="app_info">tenantYXJF<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>亚信经分</td>
+                                <td>10.789 TB</td>
                                 <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        </div>
+                                    </div>
+                                    60%
+
                                 </td>
-                                <td>ZTMS0503</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        </div>
+                                    </div>
+                                    40%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
                             </tr>
+                            <tr>
+                                <td><a href="#" id="app_info">tenantYXJF<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>亚信经分</td>
+                                <td>6.78 TB</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                        </div>
+                                    </div>
+                                    30%
+
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        </div>
+                                    </div>
+                                    80%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" id="app_info">hwcdm<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>东方国信</td>
+                                <td>12.214 TB</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 49%">
+                                        </div>
+                                    </div>
+                                    49%
+
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                                        </div>
+                                    </div>
+                                    65%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" id="app_info">hwcwd1<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>华为</td>
+                                <td>15.225 TB</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 63%">
+                                        </div>
+                                    </div>
+                                    63%
+
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 41%">
+                                        </div>
+                                    </div>
+                                    41%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" id="app_info">hwcwd2<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>华为</td>
+                                <td>5.562 TB</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 26%">
+                                        </div>
+                                    </div>
+                                    26%
+
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 79%">
+                                        </div>
+                                    </div>
+                                    79%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" id="app_info">tenantYXJF<i class="glyphicon glyphicon-tags"></i></a></td>
+                                <td>华为</td>
+                                <td>9.456 TB</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                                        </div>
+                                    </div>
+                                    18%
+
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 67%">
+                                        </div>
+                                    </div>
+                                    67%
+                                </td>
+                                <td>HDFS/Yarn/hive</td>
+                            </tr>
+
                         </tbody>
                     </table>
 
