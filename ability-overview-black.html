@@ -15,6 +15,7 @@
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/echarts.min.js"></script>
+    <script src="lib/echarts-gl.js"></script>
 
     <style>
         /*
@@ -201,786 +202,640 @@
     <div class="breadcrumb-nav" style="margin-left:200px;">
         <img src="image/svg/db.svg" class="breadcrumb-svg" alt="" />
         <span class="breadcrumb-span">能力概览</span>
+        <button onclick="console.log(111);changeOption();">change</button>
     </div>
     <div style="padding: 0px;margin-left:200px;height:100%;background-color: #1C2331">
         <div style="width: 100%;height:600px;margin: 0px  0px auto;">
-            <div id="chart" style="width: 80%;height:820px; padding: 0px 0px;"></div>
+            <div id="chart" style="width: 80%;height:520px; padding: 0px 0px;"></div>
         </div>
     </div>
+    <div id="barChart3" style="width: 350px;height:300px;float: right;"></div>
+    <div id="barChart4" style="width: 350px;height:300px;float: right;"></div>
 
-    </div>
     <script type="text/javascript">
-        //表3
-        var myChart = echarts.init(document.getElementById('chart'));
-        var data = [{
-            name: '业务能力',
-            itemStyle: {
-                color: '#1A8FE0'
-            },
-            children: [{
-                name: '查询',
-                itemStyle: {
-                    color: '#1E88DB'
-                },
-                children: [{
-                    name: '查询预算信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算项目与部门映射关系查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算多维映射服务查询',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算活动查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询框架合同信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询采购目录信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算项目查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算项目查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询应付发票列账信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产地点服务（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '摊销费用实际发生数查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算部门查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算科目查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算品牌查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询项目基本信息分页服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算战略查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询收款方法',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询应收事务处理类型',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询收款账户',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询总账凭证导入结果',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算渠道查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '预算用户群查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询供应商地点服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询采购订单发运行信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产会计期间状态服务（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '支付凭证查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询报账单号',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询供应商银行信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询供应商账户信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询供应商银行关系信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询配额信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询转资资产清单信息分页服务（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询银行账户信息）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产财务信息服务（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询值集值信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产会计期间状态服务（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产头信息服务(TD)',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产头信息服务(上市)',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询合同基本信息分页服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询报废资产信息（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询资产财务信息服务（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询项目开支服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询库存出入库实际发生数服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '供应商MDM综合查询',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询账户组合服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询账户组合服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '物料信息MDM查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '物料类别MDM查询服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询银行账户信息TD',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询内部往来实际发生数服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询付款凭证信息TD',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询日记账实际发生数服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询应收业务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询杂项支出实际发生数服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询应付发票导入结果',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询客户详细信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询银行账户',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询通知单行信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询客户头信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }, {
-                    name: '查询客户地址信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00AFFF'
-                    }
-                }]
-            }, {
-                name: '导入',
-                itemStyle: {
-                    color: '#56CEDF'
-                },
-                children: [{
-                    name: '导入值集（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入值集（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入仓库收发存信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '应付发票导入',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入红字增值税发票状态服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '收款发票导入服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '收款发票导入子服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '退换票通知导入服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '薪酬发放导入应付状态信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '地点组合批量导入服务（上市）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '地点组合批量导入服务（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入薪酬发放报账单服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入采购订单信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入合同基本信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入红字发票信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入总帐TD',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入人工成本报销类报账单审核信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入人工成本报销报账单审核信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '应收导入',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入呆滞物资信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入应付发票TD',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }, {
-                    name: '导入薪酬发放报账单审批退回信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#00DFFF'
-                    }
-                }]
-            }, {
-                name: '同步',
-                itemStyle: {
-                    color: '#7E99F4'
-                },
-                children: [{
-                    name: '供应商信息同步服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步值集值信息服务（TD)',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商TD',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商分页服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步OU组织',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步ERP账户组合信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商银行信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商账户信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商地点信息（TD）',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步供应商与银行关系信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步收款方法账户信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步收款方法头信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }, {
-                    name: '同步资产账簿信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#7889BC'
-                    }
-                }]
-            }, {
-                name: '验证',
-                itemStyle: {
-                    color: '#F6BD5D'
-                },
-                children: [{
-                    name: '验证发票导入状态信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证薪酬发放导入应付状态信息',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证导入薪酬发放报账单服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证导入人工成本报销报账单审核信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证导入人工成本报销报账单审核信息服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证总账导入服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }, {
-                    name: '验证应收发票导入结果服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#BFA172'
-                    }
-                }]
-            }, {
-                name: '其他',
-                itemStyle: {
-                    color: '#FE7278'
-                },
-                children: [{
-                    name: '回传支付状态服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: '日期弹性域配置服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: '预算检查与保留服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: '回传支付状态服务(TD)',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: '提交增值税发票认证服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: '预算资源释放服务',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }, {
-                    name: 'ERP总账凭证导',
-                    value: 1,
-                    itemStyle: {
-                        color: '#C6848A'
-                    }
-                }]
-            }]
-        }];
+      var myChart = echarts.init(document.getElementById('chart'));
+      var optionNum = 1;
+      // 3D图的配置信息
+      var index = ['0','1', '2', '3', '4', '5', '6'];
+      var category = ['数据库', '大数据', '中间件'];
+      var data2 = [[0,0,5,'zookeper'],
+        [0,0,0,'redis'],
+        [1,0,1,'redis'],
+        [2,0,12,'redis'],
+        [3,0,3,'redis'],
+        [4,0,4,'redis'],
+        [5,0,15,'redis'],
+        [6,0,6,'redis'],
 
-        option = {
-            title: {
-                textStyle: {
-                    fontSize: 8,
-                    align: 'center'
-                },
-                subtextStyle: {
-                    align: 'center'
-                }
-            },
-            grid: {
-                left: '10%',
-                right: '10%',
-                top: '10%',
-                bottom: 130
-            },
-            color: '#fff',
-            series: {
-                type: 'sunburst',
-                data: data,
-                radius: [0, '95%'],
-                center: ['50%', '60%'],
-                sort: null,
-                label: {
-                    color: '#fff'
-                },
-                levels: [{
-                    itemStyle: {
-                        color: '#1C2331'
-                    },
-                    highlight: {
-                        itemStyle: {
-                            color: '#1C2331'
-                        }
-                    },
-                }, {
-                    r0: '15%',
-                    r: '35%',
-                    highlight: {
-                        itemStyle: {
-                            color: '#1A8FE0'
-                        }
-                    },
-                    emphasis: {
-                        itemStyle: {
-                            color: '#1A8FE0'
-                        }
-                    },
-                    itemStyle: {
-                        color: '#1A8FE0',
-                        borderWidth: 1,
-                    },
-                    label: {
-                        rotate: 'tangential',
-                    }
-                }, {
-                    r0: '35%',
-                    r: '50%',
-                    label: {
-                        rotate: '90',
-                    }
-                }, {
-                    r0: '50%',
-                    r: '51%',
-                    label: {
-                        position: 'outside',
-                        color: 'auto',
-                        fontWeight: 100,
-                        textBorderColor: 'auto',
-                        fontSize: 10
-                    },
-                    itemStyle: {
-                        borderWidth: 0
-                    }
-                }]
+        [0,1,10,'redis'],
+        [1,1,13,'redis'],
+        [2,1,2,'redis'],
+        [3,1,23,'redis'],
+        [4,1,14,'redis'],
+        [5,1,5,'redis'],
+        [6,1,19,'redis'],
+
+        [0,2,15,'redis'],
+        [1,2,6,'redis'],
+        [2,2,20,'redis'],
+        [3,2,15,'redis'],
+        [4,2,3,'redis'],
+        [5,2,5,'redis'],
+        [6,2,12,'redis'],
+
+
+      ];
+      option2 = {
+        // backgroundImage: linear-gradient('-30deg, #181E2D 0%, #12285D 43%, #162E66 57%, #15346B 100%'),
+        /* backgroundColor:{
+           color: {
+             type: 'linear',
+             x: 0,
+             y: 0,
+             z: 0,
+             x2: 0,
+             y2: 1,
+             z2: 1,
+             colorStops: [{
+               offset: 0, color: '#181E2D'
+             }, {
+               offset: 1, color: '#15346B'
+             }]
+           }
+         },*/
+        backgroundColor:'#12285D',
+        tooltip:{
+          padding:15,
+          backgroundColor:'#03263E',
+          borderColor: '#294A66',
+          textStyle:{
+            fontSize: '14',
+            color: '#48ADFF',
+          },
+          formatter: function (obj) {
+            console.log("ooooo:" + obj);
+            return obj.name + '<br/>调用次数：' +obj.value[2];
+          }
+        },
+        visualMap: {
+          max: 30,
+          inRange: {
+            color: ['#004189', '#4BAEDE', '#5CC6F1', '#83B1D3', '#A79FB8', '#C98D9F', '#C98D9F', '#EA7C86']      }
+        },
+        xAxis3D: {
+          show: 'false',
+          name: '',
+          type: 'category',
+          data: index
+        },
+        yAxis3D: {
+          show: 'false',
+          name: '',
+          type: 'category',
+          data: category,
+          nameTextStyle: {
+            color: 'red'
+          }
+        },
+        zAxis3D: {
+          name: '',
+          type: 'value',
+          nameTextStyle: {
+            color: 'red'
+          }
+        },
+        grid3D: {
+          axisLine:{
+            lineStyle: {
+              color: '#46F3FF'
             }
-        };
-        myChart.setOption(option);
+          },
+          splitLine: {
+            show: true,
+            interval: {
+              color: ['#fff000'],
+              opacity: 1,
+              width: 1,
+            },
+          },
+          splitArea: {
+            show: false,
+            /*interval: {
+              color: ['#ff00ff','#00ff00'],
+              opacity: 0.1,
+              width: 1
+            }*/
+          },
+          boxWidth: 200,
+          boxDepth: 80,
+          viewControl: {
+            // projection: 'orthographic'
+          },
+          light: {
+            main: {
+              intensity: 1.2,
+              shadow: false
+            },
+            ambient: {
+              intensity: 0.3
+            }
+          },
+          // backgroundImage: linear-gradient('-30deg, #181E2D 0%, #12285D 43%, #162E66 57%, #15346B 100%'),
+
+          environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0, color: '#0F417B' // 天空颜色
+          }, {
+            offset: 0.7, color: '#000000' // 地面颜色
+          }, {
+            offset: 1, color: '#131C32' // 地面颜色
+          }], false)
+        },
+        series: [{
+          type: 'bar3D',
+          data: data2.map(function (item) {
+            return {
+              name: item[3],
+              value: [item[0], item[1], item[2]],
+            }
+          }),
+          shading: 'lambert',
+
+          label: {
+            show: false,
+            textStyle: {
+              fontSize: 16,
+              borderWidth: 1
+            }
+          },
+
+          emphasis: {
+            label: {
+              show: false,
+              textStyle: {
+                fontSize: 14,
+                color: 'red'
+              }
+            },
+            itemStyle: {
+              color: '#34D3FD'
+            }
+          }
+        }]
+      };
+      // 圆形图的配置信息
+      var data = [{
+        name: '业务能力',
+        itemStyle: {
+          color: '#1A8FE0'
+        },
+        children: [{
+          name: '查询',
+          itemStyle: {
+            color: '#1E88DB'
+          },
+          children: [{
+            name: '查询预算信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算项目与部门映射关系查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '查询采购目录信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算项目查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算项目查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '查询应付发票列账信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '查询资产地点服务（上市）',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '摊销费用实际发生数查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算部门查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算科目查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }, {
+            name: '预算品牌查询服务',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          },{
+            name: '查询客户地址信息',
+            value: 1,
+            itemStyle: {
+              color: '#00AFFF'
+            }
+          }]
+        }, {
+          name: '导入',
+          itemStyle: {
+            color: '#56CEDF'
+          },
+          children: [{
+            name: '导入值集（上市）',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入值集（TD）',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '收款发票导入子服务',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '退换票通知导入服务',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '薪酬发放导入应付状态信息',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入采购订单信息',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入合同基本信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入红字发票信息',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入总帐TD',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '应收导入',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入呆滞物资信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入应付发票TD',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }, {
+            name: '导入薪酬发放报账单审批退回信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#00DFFF'
+            }
+          }]
+        }, {
+          name: '同步',
+          itemStyle: {
+            color: '#7E99F4'
+          },
+          children: [{
+            name: '供应商信息同步服务',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }, {
+            name: '同步OU组织',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }, {
+            name: '同步ERP账户组合信息服务',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }, {
+            name: '同步供应商银行信息',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }, {
+            name: '同步供应商账户信息',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          },{
+            name: '同步收款方法头信息',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }, {
+            name: '同步资产账簿信息',
+            value: 1,
+            itemStyle: {
+              color: '#7889BC'
+            }
+          }]
+        }, {
+          name: '验证',
+          itemStyle: {
+            color: '#F6BD5D'
+          },
+          children: [{
+            name: '验证发票导入状态信息',
+            value: 1,
+            itemStyle: {
+              color: '#BFA172'
+            }
+          }, {
+            name: '验证总账导入服务',
+            value: 1,
+            itemStyle: {
+              color: '#BFA172'
+            }
+          }, {
+            name: '验证应收发票导入结果服务',
+            value: 1,
+            itemStyle: {
+              color: '#BFA172'
+            }
+          }]
+        }, {
+          name: '其他',
+          itemStyle: {
+            color: '#FE7278'
+          },
+          children: [{
+            name: '回传支付状态服务',
+            value: 1,
+            itemStyle: {
+              color: '#C6848A'
+            }
+          }, {
+            name: '日期弹性域配置服务',
+            value: 1,
+            itemStyle: {
+              color: '#C6848A'
+            }
+          }, {
+            name: '预算资源释放服务',
+            value: 1,
+            itemStyle: {
+              color: '#C6848A'
+            }
+          }, {
+            name: 'ERP总账凭证导',
+            value: 1,
+            itemStyle: {
+              color: '#C6848A'
+            }
+          }]
+        }]
+      }];
+
+      option = {
+        title: {
+          textStyle: {
+            fontSize: 8,
+            align: 'center'
+          },
+          subtextStyle: {
+            align: 'center'
+          }
+        },
+        grid: {
+          left: '10%',
+          right: '10%',
+          top: '10%',
+          bottom: 130
+        },
+        color: '#fff',
+        series: {
+          type: 'sunburst',
+          data: data,
+          radius: [0, '95%'],
+          center: ['50%', '60%'],
+          sort: null,
+          label: {
+            color: '#fff'
+          },
+          levels: [{
+            itemStyle: {
+              color: '#1C2331'
+            },
+            highlight: {
+              itemStyle: {
+                color: '#1C2331'
+              }
+            },
+          }, {
+            r0: '15%',
+            r: '35%',
+            highlight: {
+              itemStyle: {
+                color: '#1A8FE0'
+              }
+            },
+            emphasis: {
+              itemStyle: {
+                color: '#1A8FE0'
+              }
+            },
+            itemStyle: {
+              color: '#1A8FE0',
+              borderWidth: 1,
+            },
+            label: {
+              rotate: 'tangential',
+            }
+          }, {
+            r0: '35%',
+            r: '50%',
+            label: {
+              rotate: '90',
+            }
+          }, {
+            r0: '50%',
+            r: '51%',
+            label: {
+              position: 'outside',
+              color: 'auto',
+              fontWeight: 100,
+              textBorderColor: 'auto',
+              fontSize: 10
+            },
+            itemStyle: {
+              borderWidth: 0
+            }
+          }]
+        }
+      };
+      myChart.setOption(option);
+      function changeOption() {
+        myChart.showLoading();
+        if(optionNum == 1) {
+          setTimeout(function () {
+            myChart.setOption(option2);
+            myChart.hideLoading();
+          }, 2000);
+          optionNum = 2;
+        } else {
+          setTimeout(function () {
+            myChart.setOption(option);
+            myChart.hideLoading();
+          }, 2000);
+          optionNum = 1;
+        }
+
+      };
+    </script>
+    <script type="text/javascript">
+      var barChart3 = echarts.init(document.getElementById('barChart3'));
+      var barChart4 = echarts.init(document.getElementById('barChart4'));
+      var barChartoption3 = {
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        textStyle: {
+          color: '#9AA1B0'
+        },
+        tooltip : {
+          trigger: 'axis',
+          formatter: '{a}:{c}个',
+          axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
+        calculable: true,
+        xAxis: [
+          {
+            type: 'category',
+            data: ['查询', '导入', '同步', '验证', '其他'],
+            axisLabel: {
+              rotate: -40,
+              interval: 0
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#2d3f64'
+              }
+            },
+            axisTick: {
+              show: false
+            }
+          }
+        ],
+        grid: {
+          x: 57,
+          y: 50
+        },
+        yAxis: [
+          {
+            type: 'value',
+            name: '',
+            left:'20%',
+            axisLabel: {
+              show: true,
+              interval: 'auto'
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#2d3f64'
+              }
+            },
+            axisTick: {
+              show: true
+            },
+            splitLine: {
+              lineStyle: {
+                color: '#2d3f64',
+                type: 'dotted'
+              }
+            }
+          }],
+        series: [
+          {
+            name: '数据源',
+            type: 'bar',
+            data: [24.2614, 8.6259, 8.5779, 1.6707, 70.2997],
+            barWidth: '40%',
+            itemStyle: {
+              normal: {
+                color: '#75B8E2',
+                barBorderRadius: [10, 10, 0, 0]
+
+              }
+            }
+          }
+        ]
+      };
+      barChart3.setOption(barChartoption3);
+      barChart4.setOption(barChartoption4);
     </script>
 </body>
+
+</html>
