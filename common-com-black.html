@@ -18,6 +18,7 @@
     <!-- Latest compiled and minified Locales -->
     <script src="lib/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
     <script src="lib/echarts.min.js"></script>
+
     <style>
         html,
         body {
@@ -94,62 +95,6 @@
             font-size: 24px;
         }
         
-        .con-metric {
-            margin-top: 15px;
-            padding: 0px 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        
-        .con-metric .metric-box {
-            width: 30%;
-            background: #1C2331;
-            padding: 10px 20px;
-            line-height: 30px;
-            text-align: center;
-        }
-        
-        .metric-box>.box-style {
-            padding: 6px 15px;
-            border-radius: 4px;
-            height: 30px;
-            margin-left: 11px;
-            line-height: 30px;
-            font-size: 20px;
-        }
-        
-        .metric-box>.box-style.desc {
-            color: #21AEFF;
-        }
-        
-        .metric-box>.box-style.normal {
-            color: #00AAAB;
-        }
-        
-        .metric-box>.box-style.danger {
-            color: #FF2C16;
-        }
-        
-        .con-app {
-            margin: 20px 0px 0px 0px;
-            padding: 0px 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        
-        .con-app>.app-chart {
-            background: #1C2331;
-        }
-        
-        .con-app>.app-chart>div {
-            height: 170px;
-            width: 250px;
-            background: #1C2331;
-            padding: 2px 8px;
-        }
-        
         .nav-tabs>li>a:hover,
         .nav-tabs>li.active>a,
         .nav-tabs>li.active>a:focus,
@@ -196,7 +141,7 @@
         }
         
         .table-wrapper {
-            padding: 10px;
+            padding: 15px;
         }
         
         #business-support-system thead {
@@ -270,6 +215,184 @@
             color: #4A90E2;
             padding-left: 3px;
         }
+        
+        .con-metric {
+            margin-top: 15px;
+            padding: 0px 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .con-metric .metric-box {
+            width: 23%;
+            height: 150px;
+            background: #1C2331;
+            padding: 8px 20px;
+            line-height: 30px;
+            border: 1px solid #32507A;
+        }
+        
+        .metric-box>.title {
+            color: #44C0FF;
+            font-size: 18px;
+        }
+        
+        .metric-box>.split {
+            border: 1px solid #32507A;
+        }
+        
+        .metric-box>.desc {
+            color: #FFFFFF;
+            font-size: 12px;
+        }
+        
+        .metric-box>.bottom {
+            color: #B4B4B4;
+            font-size: 12px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .metric-box>.bottom>.version>span {
+            color: #ED6474;
+            font-size: 14px;
+        }
+        
+        .metric-box>.bottom>.option,
+        .metric-box>.bottom>.common-option {
+            color: #44C0FF;
+            cursor: pointer;
+        }
+        
+        .con-desc {
+            margin-top: 15px;
+            height: 196px;
+            background: #1C2331;
+            border: 1px solid #32507A;
+            margin: 15px 15px;
+            padding: 13px 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        
+        .con-desc>.con-desc-chart {
+            width: 32%;
+        }
+        
+        .con-desc-chart>.con-chart-style {
+            height: 172px;
+            width: 100%;
+            background: #1C2331;
+            padding: 2px 8px;
+        }
+        
+        .con-desc-chart>.con-desc-title {
+            color: #FCFCFC;
+            font-size: 12px;
+            line-height: 2;
+        }
+        
+        .con-desc-chart>.con-desc-split {
+            border-bottom: 1px solid #25445B;
+        }
+        
+        .con-line-style {
+            margin-top: 35px;
+        }
+        
+        .con-line-style>.con-line-svg {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+        
+        .con-line-style>.con-line-svg>div:first-child {
+            margin-top: 15px;
+            width: 80px;
+        }
+        
+        .con-line-style>.con-line-svg>div:nth-child(2) {
+            width: calc(60%);
+        }
+        
+        .con-line-style>.con-line-svg>div:nth-child(2)>svg {
+            height: 14px;
+            margin-top: 18px;
+            width: calc(100% - 10px);
+        }
+        
+        .con-line-style>.con-line-svg>div:last-child {
+            margin-top: 15px;
+            width: 50px;
+        }
+        
+        .con-common-desc {
+            margin-top: 15px;
+            height: 196px;
+            background: #1C2331;
+            border: 1px solid #32507A;
+            margin: 15px 15px;
+            padding: 13px 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        
+        .con-common-desc>.con-common-desc-chart {
+            width: 48%;
+        }
+        
+        .con-common-desc-chart>.con-common-chart-style {
+            height: 172px;
+            width: 380px;
+            background: #1C2331;
+            padding: 2px 8px;
+            margin: 0 auto;
+        }
+        
+        .con-common-desc-chart>.con-common-desc-title {
+            color: #FCFCFC;
+            font-size: 12px;
+            line-height: 2;
+        }
+        
+        .con-common-desc-chart>.con-common-desc-split {
+            border-bottom: 1px solid #25445B;
+        }
+        
+        .con-common-line-style {
+            margin-top: 35px;
+        }
+        
+        .con-common-line-style>.con-common-line-svg {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+        
+        .con-common-line-style>.con-common-line-svg>div:first-child {
+            margin-top: 15px;
+            width: 80px;
+        }
+        
+        .con-common-line-style>.con-common-line-svg>div:nth-child(2) {
+            width: calc(60%);
+        }
+        
+        .con-common-line-style>.con-common-line-svg>div:nth-child(2)>svg {
+            height: 14px;
+            margin-top: 18px;
+            width: calc(100% - 10px);
+        }
+        
+        .con-common-line-style>.con-common-line-svg>div:last-child {
+            margin-top: 15px;
+            width: 50px;
+        }
     </style>
 </head>
 
@@ -331,522 +454,404 @@
                             </tr>
                         </tbody>
                     </table>
-
-                </div>
-                <div id="step-two" style="padding: 5px;">
-                    <div class="panel panel-default app-panel">
-                        <div class="panel-heading">
-                            <span>贵州移动网络代维管理平台</span>
-                            <a id="app_info_link" href="http://211.139.11.136:18128/NetMaintain/login" target="_blank">访问</a>
-                        </div>
-                        <div class="panel-body app-panel-body">
-                            <span>创建时间：2分钟前</span>
-                            <span>部署版本：Latest</span>
-                        </div>
-                    </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>服务</th>
-                                <th>健康状态</th>
-                                <th>镜像</th>
-                                <th>压力负载</th>
-                                <th>容器数</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>tomcat</td>
-                                <td>良好</td>
-                                <td>gz.chinamobile.com/tomcat:8.5.8</td>
-                                <td>
-                                    <div class="progress app-info-progress">
-                                        <div class="progress-bar progress-bar-danger" style="width: 87%">
-                                            <span>87%</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="add_minus">
-                                    <span>2</span>
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                    <span class="glyphicon glyphicon-minus disabled"></span>
-                                </td>
-                                <td>
-                                    <span class="loading-icon">
-                  <span class="fa fa-spin fa-spinner"></span>
-                                    <span>伸缩中</span>
-                                    </span>
-
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">重新部署</a></li>
-                                            <li><a href="#">删除</a></li>
-                                            <li><a href="#">重启</a></li>
-                                            <li><a href="#">停止</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mysql</td>
-                                <td>良好</td>
-                                <td>gz.chinamobile.com/mysql:5.7.38</td>
-                                <td>
-                                    <div class="progress app-info-progress">
-                                        <div class="progress-bar progress-bar-warning" style="width: 61%">
-                                            <span>61%</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="add_minus">
-                                    <span>3</span>
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                    <span class="glyphicon glyphicon-minus disabled"></span>
-                                </td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">重新部署</a></li>
-                                            <li><a href="#">删除</a></li>
-                                            <li><a href="#">重启</a></li>
-                                            <li><a href="#">停止</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table" id="app_containers">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>服务</th>
-                                <th>容器名称</th>
-                                <th>运行状态</th>
-                                <th>健康状态</th>
-                                <th>标签</th>
-                                <th>IP地址</th>
-                                <th>主机</th>
-                                <th>镜像</th>
-                                <th>命令</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#">74a2821faa2a</a></td>
-                                <td>tomcat</td>
-                                <td>office-tomcat-1</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>bigdata=true</td>
-                                <td>192.168.19.12</td>
-                                <td><a href="#">agent1877</a></td>
-                                <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
-                                <td>catalina.sh run</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">7upk804ybseq</a></td>
-                                <td>tomcat</td>
-                                <td>office-tomcat-2</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>bigdata=true</td>
-                                <td>192.168.19.10</td>
-                                <td><a href="#">agent1871</a></td>
-                                <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
-                                <td>catalina.sh run</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">9hlv47df9mn</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-1</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.11</td>
-                                <td><a href="#">agent1872</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">1plfryun78v4</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-2</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.18</td>
-                                <td><a href="#">agent1873</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">28opkjdf7y9f</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-3</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.19</td>
-                                <td><a href="#">agent1876</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="commom" style="padding: 5px;">
+                <div class="con-metric">
+                    <div class="metric-box">
+                        <div class="title">Zookeeper</div>
+                        <div class="split"></div>
+                        <div class="desc">一款分布式应用程序协调软件</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Redis</div>
+                        <div class="split"></div>
+                        <div class="desc">一款Key-Value形式的内存数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Spring Cloud</div>
+                        <div class="split"></div>
+                        <div class="desc">一款开源微服务架构</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>6</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Mysql</div>
+                        <div class="split"></div>
+                        <div class="desc">一款开源关系型数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>5</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="con-metric">
+                    <div class="metric-box">
+                        <div class="title">MongoDB</div>
+                        <div class="split"></div>
+                        <div class="desc">一个基于分布式文件存储的数据库系统</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Oracle</div>
+                        <div class="split"></div>
+                        <div class="desc">一款主流的商业数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Memcache</div>
+                        <div class="split"></div>
+                        <div class="desc">一款分布式的存储系统</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>6</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Dubbo</div>
+                        <div class="split"></div>
+                        <div class="desc">一款开源的分布式服务架构</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>5</span>
+                            </div>
+                            <div class="common-option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="con-common-desc">
+                    <div class="con-common-desc-chart">
+                        <div class="con-common-desc-title">
+                            三域分配
+                        </div>
+                        <div class="con-common-desc-split"></div>
+                        <div id="chart-bom-common" class="con-common-chart-style"></div>
+                    </div>
+                    <div class="con-common-desc-chart">
+                        <div class="con-common-desc-title">
+                            资源使用率
+                        </div>
+                        <div class="con-common-desc-split"></div>
+                        <div class="con-common-line-style">
+                            <div class="con-common-line-svg">
+                                <div>云数据库: </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-common-color)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    50%
+                                </div>
+                            </div>
+                            <div class="con-common-line-svg">
+                                <div>传统数据库<br/>(未改造): </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-common-color)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    25%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="table-wrapper">
                     <table class="table" id="app_table">
                         <thead>
                             <tr>
-                                <th>应用名称</th>
-                                <th>部署状态</th>
-                                <th>部署版本</th>
-                                <th>容器个数</th>
-                                <th>运行状态</th>
+                                <th>服务名称</th>
+                                <th>所属中间件</th>
+                                <th>所属应用</th>
+                                <th>所用镜像</th>
+                                <th>所用分配集群</th>
                                 <th>创建时间</th>
-                                <th>使用模板</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#" id="app_info">贵州移动网络代维管理平台<i class="glyphicon glyphicon-tags"></i></a></td>
-                                <td>已部署</td>
-                                <td>Latest</td>
-                                <td>5</td>
-                                <td>运行中</td>
-                                <td>
-                                </td>
-                                <td>ZTMS0503</td>
+                                <td>service_a</td>
+                                <td>oracle</td>
+                                <td>gbase_attribute</td>
+                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>135.10.59.64</td>
+                                <td>2018-01-23</td>
                             </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-                <div id="step-two" style="padding: 5px;">
-                    <div class="panel panel-default app-panel">
-                        <div class="panel-heading">
-                            <span>贵州移动网络代维管理平台</span>
-                            <a id="app_info_link" href="http://211.139.11.136:18128/NetMaintain/login" target="_blank">访问</a>
-                        </div>
-                        <div class="panel-body app-panel-body">
-                            <span>创建时间：2分钟前</span>
-                            <span>部署版本：Latest</span>
-                        </div>
-                    </div>
-                    <table class="table">
-                        <thead>
                             <tr>
-                                <th>服务</th>
-                                <th>健康状态</th>
-                                <th>镜像</th>
-                                <th>压力负载</th>
-                                <th>容器数</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
+                                <td>service_b</td>
                                 <td>tomcat</td>
-                                <td>良好</td>
-                                <td>gz.chinamobile.com/tomcat:8.5.8</td>
-                                <td>
-                                    <div class="progress app-info-progress">
-                                        <div class="progress-bar progress-bar-danger" style="width: 87%">
-                                            <span>87%</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="add_minus">
-                                    <span>2</span>
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                    <span class="glyphicon glyphicon-minus disabled"></span>
-                                </td>
-                                <td>
-                                    <span class="loading-icon">
-                  <span class="fa fa-spin fa-spinner"></span>
-                                    <span>伸缩中</span>
-                                    </span>
-
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">重新部署</a></li>
-                                            <li><a href="#">删除</a></li>
-                                            <li><a href="#">重启</a></li>
-                                            <li><a href="#">停止</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mysql</td>
-                                <td>良好</td>
-                                <td>gz.chinamobile.com/mysql:5.7.38</td>
-                                <td>
-                                    <div class="progress app-info-progress">
-                                        <div class="progress-bar progress-bar-warning" style="width: 61%">
-                                            <span>61%</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="add_minus">
-                                    <span>3</span>
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                    <span class="glyphicon glyphicon-minus disabled"></span>
-                                </td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">重新部署</a></li>
-                                            <li><a href="#">删除</a></li>
-                                            <li><a href="#">重启</a></li>
-                                            <li><a href="#">停止</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table" id="app_containers">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>服务</th>
-                                <th>容器名称</th>
-                                <th>运行状态</th>
-                                <th>健康状态</th>
-                                <th>标签</th>
-                                <th>IP地址</th>
-                                <th>主机</th>
-                                <th>镜像</th>
-                                <th>命令</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#">74a2821faa2a</a></td>
-                                <td>tomcat</td>
-                                <td>office-tomcat-1</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>bigdata=true</td>
-                                <td>192.168.19.12</td>
-                                <td><a href="#">agent1877</a></td>
-                                <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
-                                <td>catalina.sh run</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">7upk804ybseq</a></td>
-                                <td>tomcat</td>
-                                <td>office-tomcat-2</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>bigdata=true</td>
-                                <td>192.168.19.10</td>
-                                <td><a href="#">agent1871</a></td>
-                                <td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>
-                                <td>catalina.sh run</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">9hlv47df9mn</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-1</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.11</td>
-                                <td><a href="#">agent1872</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">1plfryun78v4</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-2</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.18</td>
-                                <td><a href="#">agent1873</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">28opkjdf7y9f</a></td>
-                                <td>Mysql</td>
-                                <td>office-Mysql-3</td>
-                                <td>运行中</td>
-                                <td>良好</td>
-                                <td>innoDB=true</td>
-                                <td>192.168.19.19</td>
-                                <td><a href="#">agent1876</a></td>
-                                <td><a href="#">gz.chinamobile.com/Mysql:5.7.38</a></td>
-                                <td>service mysqld start</td>
-                                <td>
-                                    <div class="dropdown app-info-dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    操作
-                                    <span class="caret"></span>
-                                </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#">上传文件</a></li>
-                                            <li><a href="#">保存镜像</a></li>
-                                            <li><a href="#">提取文件</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
+                                <td>gbase_attribute</td>
+                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>135.10.59.64</td>
+                                <td>2018-01-21</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane active standard" id="home" style="padding: 5px;">
-                <div class="table-wrapper standard">
-                    <table id="business-support-system" class="table">
+                <div class="con-metric">
+                    <div class="metric-box">
+                        <div class="title">Oracle</div>
+                        <div class="split"></div>
+                        <div class="desc">一款主流的商业数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">大云 Mysql</div>
+                        <div class="split"></div>
+                        <div class="desc">一款基于列存储的APP架构数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>6</span>
+                            </div>
+                            <div class="option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">大云 MPP</div>
+                        <div class="split"></div>
+                        <div class="desc">中移苏研自研的 Mysql 数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>5</span>
+                            </div>
+                            <div class="option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">Vertica</div>
+                        <div class="split"></div>
+                        <div class="desc">中移苏研自研的 Mysql 数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>8</span>
+                            </div>
+                            <div class="option">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="con-desc">
+                    <div class="con-desc-chart">
+                        <div class="con-desc-title">
+                            三域分配
+                        </div>
+                        <div class="con-desc-split"></div>
+                        <div id="chart-bom" class="con-chart-style"></div>
+                    </div>
+                    <div class="con-desc-chart">
+                        <div class="con-desc-title">
+                            资源使用率
+                        </div>
+                        <div class="con-desc-split"></div>
+                        <div class="con-line-style">
+                            <div class="con-line-svg">
+                                <div>云数据库: </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-color)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    50%
+                                </div>
+                            </div>
+                            <div class="con-line-svg">
+                                <div>传统数据库<br/>(未改造): </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-color)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    25%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con-desc-chart">
+                        <div class="con-desc-title">
+                            数据库复用率
+                        </div>
+                        <div class="con-desc-split"></div>
+                        <div class="con-line-style">
+                            <div class="con-line-svg">
+                                <div>云数据库: </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-color-p)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    50%
+                                </div>
+                            </div>
+                            <div class="con-line-svg">
+                                <div>传统数据库<br/>(未改造): </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                      <defs>
+                                        <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                                          <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>
+                                          <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>
+                                        </linearGradient>
+                                      </defs>
+                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-color-p)"></rect>   
+                                    </svg>
+                                </div>
+                                <div>
+                                    25%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table" id="app_table">
+                        <thead>
+                            <tr>
+                                <th>数据库名称</th>
+                                <th>数据库类型</th>
+                                <th>所属域</th>
+                                <th>状态</th>
+                                <th>使用方式</th>
+                                <th>CPU</th>
+                                <th>内存</th>
+                                <th>资源使用率</th>
+                                <th>license</th>
+                                <th>所属应用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>cloud1</td>
+                                <td>mysql</td>
+                                <td>o域</td>
+                                <td>运行中</td>
+                                <td>独立数据库</td>
+                                <td>32GB</td>
+                                <td>512GB</td>
+                                <td>91%</td>
+                                <td>apache</td>
+                                <td>OA-YZ-3001</td>
+                            </tr>
+                            <tr>
+                                <td>cloud2</td>
+                                <td>mysql</td>
+                                <td>o域</td>
+                                <td>运行中</td>
+                                <td>独立数据库</td>
+                                <td>32GB</td>
+                                <td>512GB</td>
+                                <td>40%</td>
+                                <td>apache</td>
+                                <td>OA-YZ-3001</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div style="padding: 5px;">
-        </div>
+    </div>
+    <div style="padding: 5px;">
+    </div>
     </div>
     <script>
         $('.nav-tabs a').click(function(e) {
@@ -858,69 +863,7 @@
             $('.con-info').hide();
             $('#step-two').show();
         });
-        $('.add_minus .glyphicon-plus').click(function(e) {
-            var tomcat_add = '<tr style="background: #15AAAA">' +
-                '<td><a href="#">86skfdupmnwq</a></td>' +
-                '<td>tomcat</td>' +
-                '<td>office-tomcat-3</td>' +
-                '<td>伸缩中</td>' +
-                '<td>未配置</td>' +
-                '<td>bigdata=true</td>' +
-                '<td>192.168.19.9</td>' +
-                '<td><a href="#">agent1869</a></td>' +
-                '<td><a href="#">gz.chinamobile.com/tomcat:8.5.8</a></td>' +
-                '<td>catalina.sh run</td>' +
-                '<td>' +
-                '<div class="dropdown app-info-dropdown">' +
-                '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
-                '操作' +
-                '<span class="caret"></span>' +
-                '</button>' +
-                '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">' +
-                '<li><a href="#">上传文件</a></li>' +
-                '<li><a href="#">保存镜像</a></li>' +
-                '<li><a href="#">提取文件</a></li>' +
-                '</ul>' +
-                '</div>' +
-                '</td>' +
-                '</tr>';
-            $('#app_containers').find('tbody').prepend(tomcat_add);
-            setTimeout(function() {
-                $('#app_containers').find('tbody').children().eq(0).animate({
-                    opacity: 0.3
-                }, 1000, function() {
-                    $('#app_containers').find('tbody').children().eq(0).animate({
-                        opacity: 1
-                    }, 1000, function() {
-                        $('#app_containers').find('tbody').children().eq(0).animate({
-                            opacity: 0.3
-                        }, 1000, function() {
-                            $('#app_containers').find('tbody').children().eq(0).animate({
-                                opacity: 1
-                            }, 1000, function() {
-                                $('#app_containers').find('tbody').children().eq(0).animate({
-                                    opacity: 0.3
-                                }, 1000, function() {
-                                    $('#app_containers').find('tbody').children().eq(0).animate({
-                                        opacity: 1
-                                    }, 1000);
-                                });
-                            });
-                        });
-                    });
-                });
-            }, 500);
-            $(e.target).parent().next().find('.loading-icon').show().css('display', 'inline-block');
-            $(e.target).parent().next().find('.app-info-dropdown').hide();
-            setTimeout(function() {
-                $(e.target).parent().next().find('.loading-icon').hide();
-                $(e.target).parent().next().find('.app-info-dropdown').show();
-                $(e.target).parent().prev().find('.progress-bar').removeClass('progress-bar-danger')
-                    .addClass('progress-bar-warning').css('width', '58%').find('span').html('58%');
-                $('#app_containers').find('tbody').children().eq(0).css('background', 'none').children().eq(3).html('运行中');
-            }, 6000);
-            $(e.target).prev().html(parseInt($(e.target).prev().html()) + 1);
-        });
+
         Date.prototype.Format = function(fmt) {
             var o = {
                 "M+": this.getMonth() + 1, //月份
@@ -977,19 +920,8 @@
         }
 
 
-
-        var chartInstances = echarts.init(document.getElementById('chart-instance'));
-        var chartInstanceOption = {
-            title: {
-                text: '应用实例分布',
-                left: 'left',
-                textStyle: {
-                    color: '#fff',
-                    fontSize: 12,
-                    height: 15,
-                    lineHeight: 45
-                }
-            },
+        var chartBomCommon = echarts.init(document.getElementById('chart-bom-common'));
+        var chartBomCommonOption = {
             tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b}: {d}%"
@@ -997,11 +929,11 @@
             // 图例
             legend: {
                 orient: 'vertical',
-                left: '0%',
-                bottom: '0%',
-                data: ["生产域", "测试域"],
+                right: '0%',
+                bottom: '15%',
                 itemWidth: 12,
                 itemHeight: 8,
+                data: ["B域", "O域", "M域"],
                 textStyle: {
                     color: '#ccc',
                     fontSize: 10
@@ -1011,8 +943,8 @@
             series: [{
                 name: '',
                 type: 'pie',
-                center: ['50%', '50%'],
-                radius: ['42%', '53%'],
+                center: ['42%', '44%'],
+                radius: ['32%', '53%'],
                 avoidLabelOverlap: false,
                 label: {
                     normal: {
@@ -1023,12 +955,16 @@
                         show: true
                     }
                 },
+                roseType: 'radius',
                 data: [{
-                    value: 50,
-                    name: '生产域'
+                    value: 30,
+                    name: 'B域'
                 }, {
-                    value: 50,
-                    name: '测试域'
+                    value: 25,
+                    name: 'O域'
+                }, {
+                    value: 45,
+                    name: 'M域'
                 }],
                 itemStyle: {
                     normal: {
@@ -1042,177 +978,12 @@
                     }
                 }
             }],
-            color: ['#1494DB', '#00D0CB']
+            color: ['#1494DB', '#00D0CB', '#B871D8']
         };
-        chartInstances.setOption(chartInstanceOption);
-
-
-        var chartPack = echarts.init(document.getElementById('chart-pack'));
-        var chartPackOption = {
-            title: {
-                text: '应用使用容器个数top 5',
-                left: 'left',
-                textStyle: {
-                    color: '#fff',
-                    fontSize: 12,
-                    height: 15,
-                    lineHeight: 45
-                }
-            },
-            grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '8%',
-                containLabel: true
-            },
-            textStyle: {
-                color: '#9AA1B0'
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            calculable: true,
-            xAxis: [{
-                type: 'category',
-                data: ['v1', 'v2', 'v3', 'v4', 'v5'],
-                axisLabel: {
-                    rotate: -40,
-                    interval: 0
-                },
-                axisLine: {
-                    lineStyle: {
-                        color: '#2d3f64'
-                    }
-                },
-                axisTick: {
-                    show: false
-                }
-            }],
-            yAxis: [{
-                type: 'value',
-                name: '',
-                min: 'dataMin',
-                axisLabel: {
-                    show: true,
-                    interval: 'auto',
-                    formatter: '{value}'
-                },
-                axisLine: {
-                    lineStyle: {
-                        color: '#2d3f64'
-                    }
-                },
-                axisTick: {
-                    show: false
-                },
-                splitLine: {
-                    lineStyle: {
-                        color: '#2d3f64',
-                        type: 'dotted'
-                    }
-                }
-            }],
-
-            series: [{
-                type: 'bar',
-                barMinHeight: '1',
-                data: [90, 65, 71, 42, 29],
-                barWidth: '20%'
-            }],
-            color: ['#7E99F4', '#7E99F4', '#7E99F4']
-
-        };
-        chartPack.setOption(chartPackOption);
-
-
-        var chartDeploy = echarts.init(document.getElementById('chart-deploy'));
-        var chartDeployOption = {
-            title: {
-                text: '应用部署情况',
-                left: 'left',
-                textStyle: {
-                    color: '#fff',
-                    fontSize: 12,
-                    height: 15,
-                    lineHeight: 45
-                }
-            },
-            grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '8%',
-                containLabel: true
-            },
-            textStyle: {
-                color: '#9AA1B0'
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            calculable: true,
-            xAxis: [{
-                type: 'category',
-                data: ['已部署', '未部署'],
-                axisLabel: {
-                    interval: 0
-                },
-                axisLine: {
-                    lineStyle: {
-                        color: '#2d3f64'
-                    }
-                },
-                axisTick: {
-                    show: false
-                }
-            }],
-            yAxis: [{
-                type: 'value',
-                name: '',
-                min: 'dataMin',
-                axisLabel: {
-                    show: true,
-                    interval: 'auto',
-                    formatter: '{value}'
-                },
-                axisLine: {
-                    lineStyle: {
-                        color: '#2d3f64'
-                    }
-                },
-                axisTick: {
-                    show: false
-                },
-                splitLine: {
-                    lineStyle: {
-                        color: '#2d3f64',
-                        type: 'dotted'
-                    }
-                }
-            }],
-
-            series: [{
-                type: 'bar',
-                barMinHeight: '1',
-                data: [90, 65, 71, 42, 29],
-                barWidth: '20%'
-            }],
-            color: ['#7E99F4', '#7E99F4', '#7E99F4']
-
-        };
-        chartDeploy.setOption(chartDeployOption);
+        chartBomCommon.setOption(chartBomCommonOption);
 
         var chartBom = echarts.init(document.getElementById('chart-bom'));
         var chartBomOption = {
-            title: {
-                text: 'BOM应用分布情况',
-                left: 'left',
-                textStyle: {
-                    color: '#fff',
-                    fontSize: 12,
-                    height: 15,
-                    lineHeight: 45
-                }
-            },
             tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b}: {d}%"
@@ -1220,8 +991,8 @@
             // 图例
             legend: {
                 orient: 'vertical',
-                left: '0%',
-                bottom: '0%',
+                right: '0%',
+                bottom: '15%',
                 itemWidth: 12,
                 itemHeight: 8,
                 data: ["B域", "O域", "M域"],
@@ -1234,7 +1005,7 @@
             series: [{
                 name: '',
                 type: 'pie',
-                center: ['50%', '50%'],
+                center: ['46%', '44%'],
                 radius: ['32%', '53%'],
                 avoidLabelOverlap: false,
                 label: {
@@ -1272,6 +1043,17 @@
             color: ['#1494DB', '#00D0CB', '#B871D8']
         };
         chartBom.setOption(chartBomOption);
+
+        $('.con-desc').hide();
+        $('.con-common-desc').hide();
+
+        $('.metric-box > .bottom > .option').click(function() {
+            $('.con-desc').toggle();
+        });
+
+        $('.metric-box > .bottom > .common-option').click(function() {
+            $('.con-common-desc').toggle();
+        });
     </script>
 </body>
 
