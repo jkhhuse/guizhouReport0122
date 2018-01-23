@@ -183,6 +183,29 @@
             font-size: 24px;
             color: #FFFFFF;
         }
+        .chartClass{
+            width: 760px;
+            height: 500px;
+            float: left;
+        }
+        .chartClassWrapper{
+            position: absolute;
+            border: 1px solid #1C3D6E;
+            width: 760px;
+            height: 500px;
+        }
+        #chart_img{
+            position: absolute;
+            top:0;
+            right: 0;
+            height: 80px;
+            width: 120px;
+        }
+
+        @keyframes move{
+            0%{width:120px;height: 80px}
+            100%{width:760px;height: 500px}
+        }
     </style>
 
 </head>
@@ -202,48 +225,69 @@
     <div class="breadcrumb-nav" style="margin-left:200px;">
         <img src="image/svg/db.svg" class="breadcrumb-svg" alt="" />
         <span class="breadcrumb-span">能力概览</span>
-        <button onclick="console.log(111);changeOption();">change</button>
     </div>
-    <div style="padding: 0px;margin-left:200px;height:100%;background-color: #1C2331">
-        <div style="width: 100%;height:600px;margin: 0px  0px auto;">
-            <div id="chart" style="width: 80%;height:520px; padding: 0px 0px;"></div>
+  <!--  <div style="height: 50px;">
+        <div class="con-info-vm">
+            <div class="info-box">
+                <span class="box-previous">数据库: </span>
+                <span class="box-last one">32</span>
+            </div>
+            <div class="info-box">
+                <span class="box-previous">大数据: </span>
+                <span class="box-last two">21</span>
+            </div>
+            <div class="info-box">
+                <span class="box-previous">中间件: </span>
+                <span class="box-last three">17</span>
+            </div>
         </div>
+    </div>-->
+    <div style="padding: 0px;margin-left:200px;height:100%;background-color: #1C2331">
+        <div style="padding:30px;width: 100%;height: calc(100% - 75px);">
+            <div class="chartClassWrapper">
+                <div id="chart1" class="chartClass"></div>
+                <div id="chart2" class="hide chartClass"></div>
+                <img id="chart_img" onclick="changeOption()" src="image/nengli_chart_2.png" alt="">
+            </div>
+
+            <div style="width: 29%;height:100%;float: right;">
+                <div id="barChart3" style="margin-bottom:15px;border: 1px solid #1C3D6E;width: 100%;height: 49%;"></div>
+                <div id="barChart4" style="border: 1px solid #1C3D6E;width: 100%;height: 48%;"></div>
+            </div>
+        </div>
+
     </div>
-    <div id="barChart3" style="width: 350px;height:300px;float: right;"></div>
-    <div id="barChart4" style="width: 350px;height:300px;float: right;"></div>
 
     <script type="text/javascript">
-      var myChart = echarts.init(document.getElementById('chart'));
+      var myChart1 = echarts.init(document.getElementById('chart1'));
+      var myChart2 = echarts.init(document.getElementById('chart2'));
       var optionNum = 1;
       // 3D图的配置信息
       var index = ['0','1', '2', '3', '4', '5', '6'];
       var category = ['数据库', '大数据', '中间件'];
       var data2 = [[0,0,5,'zookeper'],
-        [0,0,0,'redis'],
-        [1,0,1,'redis'],
-        [2,0,12,'redis'],
-        [3,0,3,'redis'],
-        [4,0,4,'redis'],
-        [5,0,15,'redis'],
-        [6,0,6,'redis'],
+        [0,0,13,'redis'],
+        [1,0,15,'mysql'],
+        [2,0,11,'mongodb'],
+        [3,0,12,'oracle'],
+        [4,0,5,'memcache'],
+        [5,0,10,'dubbo'],
+        [6,0,2,'sping cloud'],
 
-        [0,1,10,'redis'],
-        [1,1,13,'redis'],
-        [2,1,2,'redis'],
-        [3,1,23,'redis'],
-        [4,1,14,'redis'],
-        [5,1,5,'redis'],
-        [6,1,19,'redis'],
+        [0,1,2,'hive'],
+        [1,1,1,'HDFS'],
+        [2,1,2,'spark'],
+        [3,1,3,'MapReduce'],
+        [4,1,8,'Hadoop'],
+        [5,1,5,'Flume'],
+        [6,1,7,'Yarn'],
 
-        [0,2,15,'redis'],
-        [1,2,6,'redis'],
-        [2,2,20,'redis'],
-        [3,2,15,'redis'],
-        [4,2,3,'redis'],
-        [5,2,5,'redis'],
-        [6,2,12,'redis'],
-
-
+        [0,2,16,'tomcat'],
+        [1,2,11,'zookeeper'],
+        [2,2,2,'nginx'],
+        [3,2,3,'httpd'],
+        [4,2,8,'BES'],
+        [5,2,9,'jdk']
       ];
       option2 = {
         // backgroundImage: linear-gradient('-30deg, #181E2D 0%, #12285D 43%, #162E66 57%, #15346B 100%'),
@@ -280,7 +324,7 @@
         visualMap: {
           max: 30,
           inRange: {
-            color: ['#004189', '#4BAEDE', '#5CC6F1', '#83B1D3', '#A79FB8', '#C98D9F', '#C98D9F', '#EA7C86']      }
+            color: ['#004189', '#5CC6F1', '#83B1D3','#C98D9F', '#C98D9F', '#EA7C86']      }
         },
         xAxis3D: {
           show: 'false',
@@ -395,12 +439,6 @@
           },
           children: [{
             name: '查询预算信息服务',
-            value: 1,
-            itemStyle: {
-              color: '#00AFFF'
-            }
-          }, {
-            name: '预算项目与部门映射关系查询服务',
             value: 1,
             itemStyle: {
               color: '#00AFFF'
@@ -676,7 +714,7 @@
           type: 'sunburst',
           data: data,
           radius: [0, '95%'],
-          center: ['50%', '60%'],
+          center: ['50%', '48%'],
           sort: null,
           label: {
             color: '#fff'
@@ -732,29 +770,43 @@
           }]
         }
       };
-      myChart.setOption(option);
+      myChart1.setOption(option2);
+      myChart2.setOption(option);
       function changeOption() {
-        myChart.showLoading();
         if(optionNum == 1) {
+          $('#chart_img').css('animation','move 2s');
           setTimeout(function () {
-            myChart.setOption(option2);
-            myChart.hideLoading();
+            $('#chart2').removeClass('hide');
+            $('#chart1').addClass('hide');
+            $('#chart_img').attr('src','image/nengli_chart_1.png');
+            $('#chart_img').css('animation','');
           }, 2000);
           optionNum = 2;
         } else {
+          $('#chart_img').css('animation','move 2s');
           setTimeout(function () {
-            myChart.setOption(option);
-            myChart.hideLoading();
+            $('#chart1').removeClass('hide');
+            $('#chart2').addClass('hide');
+            $('#chart_img').attr('src','image/nengli_chart_2.png');
+            $('#chart_img').css('animation','');
           }, 2000);
           optionNum = 1;
         }
-
       };
     </script>
     <script type="text/javascript">
       var barChart3 = echarts.init(document.getElementById('barChart3'));
       var barChart4 = echarts.init(document.getElementById('barChart4'));
       var barChartoption3 = {
+        title: {
+          text: '公共能力调用Top10',
+          left:5,
+          top:5,
+          textStyle: {
+            color: '#ccc',
+            fontSize: 14,
+          }
+        },
         label: {
           normal: {
             show: false
@@ -774,7 +826,7 @@
         xAxis: [
           {
             type: 'category',
-            data: ['查询', '导入', '同步', '验证', '其他'],
+            data: ['tomcat', 'Mysql', 'redis','Oracle','zookeeper','mongodb','dubbo','Hadoop', 'BES','Yarn'],
             axisLabel: {
               rotate: -40,
               interval: 0
@@ -819,13 +871,102 @@
           }],
         series: [
           {
-            name: '数据源',
+            name: '调用次数',
             type: 'bar',
-            data: [24.2614, 8.6259, 8.5779, 1.6707, 70.2997],
+            data: [16, 15, 13, 12, 11, 11, 10, 8, 8, 7],
             barWidth: '40%',
             itemStyle: {
               normal: {
                 color: '#75B8E2',
+                barBorderRadius: [10, 10, 0, 0]
+
+              }
+            }
+          }
+        ]
+      };
+      var barChartoption4 = {
+        title: {
+          text: '业务能力Top5',
+          left:5,
+          top:5,
+          textStyle: {
+            color: '#ccc',
+            fontSize: 14,
+          }
+        },
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        textStyle: {
+          color: '#9AA1B0'
+        },
+        tooltip : {
+          trigger: 'axis',
+          formatter: '{a}:{c}个',
+          axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
+        calculable: true,
+        xAxis: [
+          {
+            type: 'category',
+            data: ['回传支付状态服务', '查询预算信息服务', '日期弹性域配置服务','预算检查与保留服务','部门映射关系查询服务',],
+            axisLabel: {
+              rotate: -20,
+              interval: 0
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#2d3f64',
+                fontSize: 10,
+              }
+            },
+            axisTick: {
+              show: false
+            }
+          }
+        ],
+        grid: {
+          x: 57,
+          y: 50
+        },
+        yAxis: [
+          {
+            type: 'value',
+            name: '',
+            left:'20%',
+            axisLabel: {
+              show: true,
+              interval: 'auto'
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#2d3f64'
+              }
+            },
+            axisTick: {
+              show: true
+            },
+            splitLine: {
+              lineStyle: {
+                color: '#2d3f64',
+                type: 'dotted'
+              }
+            }
+          }],
+        series: [
+          {
+            name: '业务能力',
+            type: 'bar',
+            data: [582972, 94784, 48019, 36424, 32727],
+            barWidth: '40%',
+            itemStyle: {
+              normal: {
+                color: '#869BF6',
                 barBorderRadius: [10, 10, 0, 0]
 
               }
