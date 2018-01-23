@@ -99,7 +99,7 @@
             padding: 0px 20px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         
         .con-metric .metric-box {
@@ -132,11 +132,11 @@
         }
         
         .con-app {
-            margin: 20px 5px 0px 5px;
+            margin: 20px 0px 0px 0px;
             padding: 0px 20px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         
         .con-app>.app-chart {
@@ -157,8 +157,8 @@
         .con-info,
         .con-info-vm {
             height: 85px;
-            margin: 15px 5px 10px 5px;
-            padding: 20px;
+            margin: 5px 0px 10px 0px;
+            padding: 20px 0PX;
         }
         
         .info-box {
@@ -223,8 +223,8 @@
         }
         
         #app-ul {
-            padding-top: 15px;
-            margin: 0 10px;
+            padding-top: 25px;
+            margin: 0 20px;
             border-color: #32507A !important;
         }
         
@@ -246,7 +246,7 @@
         }
         
         .table-wrapper {
-            padding: 5px;
+            padding: 10px;
         }
         
         #business-support-system thead {
@@ -334,10 +334,39 @@
             $('.top-wrap').load('fix-top-black.html');
         </script>
     </div>
+
     <div class="app-content">
         <div class="breadcrumb-nav">
             <img src="image/svg/appStore.svg" class="breadcrumb-svg" alt="" />
             <span class="breadcrumb-span"><a href="app-black.html">应用概览</a></span>
+        </div>
+        <div class="con-metric">
+            <div class="metric-box">
+                <span class="">已发布应用</span>
+                <span class="box-style desc">1759 个</span>
+            </div>
+            <div class="metric-box">
+                <span class="">正常状态: </span>
+                <span class="box-style normal">457 个</span>
+            </div>
+            <div class="metric-box">
+                <span class="">异常状态: </span>
+                <span class="box-style danger">457 个</span>
+            </div>
+        </div>
+        <div class="con-app">
+            <div class="app-chart">
+                <div id="chart-instance" class="app-chart-style"></div>
+            </div>
+            <div class="app-chart">
+                <div id="chart-pack" class="app-chart-style"></div>
+            </div>
+            <div class="app-chart">
+                <div id="chart-deploy" class="app-chart-style"></div>
+            </div>
+            <div class="app-chart">
+                <div id="chart-bom" class="app-chart-style"></div>
+            </div>
         </div>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs app-nav" id="app-ul" role="tablist">
@@ -348,36 +377,9 @@
                 <a href="#con">容器</a>
             </li>
         </ul>
+
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane" id="con" style="padding: 5px;">
-                <div class="con-metric">
-                    <div class="metric-box">
-                        <span class="">已发布应用</span>
-                        <span class="box-style desc">1759 个</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="">正常状态: </span>
-                        <span class="box-style normal">457 个</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="">异常状态: </span>
-                        <span class="box-style danger">457 个</span>
-                    </div>
-                </div>
-                <div class="con-app">
-                    <div class="app-chart">
-                        <div id="chart-instance" class="app-chart-style"></div>
-                    </div>
-                    <div class="app-chart">
-                        <div id="chart-pack" class="app-chart-style"></div>
-                    </div>
-                    <div class="app-chart">
-                        <div id="chart-deploy" class="app-chart-style"></div>
-                    </div>
-                    <div class="app-chart">
-                        <div id="chart-bom" class="app-chart-style"></div>
-                    </div>
-                </div>
                 <div class="con-info">
                     <div class="info-box">
                         <span class="box-previous">使用容器个数</span>
