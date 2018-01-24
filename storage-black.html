@@ -1,251 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" style="height:100%;">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="UTF-8">
+  <title>存储资源</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/awesome/css/font-awesome.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/echarts.min.js"></script>
+  <style>
+    html, body {
+      background: #12141B;
+      color: #ccc;
+      height: 100%;
+    }
+    a {
+      color: #ccc;
+    }
+    a:hover, a:focus {
+      color: #ccc;
+    }
+    .breadcrumb-nav {
+      height: 75px;
+      padding: 20px 40px 20px 40px;
+      font-size: 0;
+      background: #262C37;
+    }
 
-    <title>存储资源</title>
-    <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="lib/jquery-3.2.1.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/echarts.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="lib/bootstrap-table/bootstrap-table.min.css">
+    .breadcrumb-nav .breadcrumb-svg {
+      height: 30px;
+      width: 30px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
 
-    <link href="css/table.css" rel="stylesheet">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="lib/bootstrap-table/bootstrap-table.min.js"></script>
-
-    <!-- Latest compiled and minified Locales -->
-    <script src="lib/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
-
-    <style>
-        /*
-         * Global add-ons
-         */
-
-        .sub-header {
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /*
-         * Top navigation
-         * Hide default border to remove 1px line.
-         */
-        .navbar-fixed-top {
-            border: 0;
-        }
-
-        /*
-         * Sidebar
-         */
-
-        /* Hide for mobile, show later */
-        .sidebar {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .sidebar {
-                position: fixed;
-                top: 51px;
-                bottom: 0;
-                left: 0;
-                z-index: 1000;
-                display: block;
-                padding: 20px;
-                overflow-x: hidden;
-                overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-                background-color: #f5f5f5;
-                border-right: 1px solid #eee;
-            }
-        }
-
-        /*
-         * Main content
-         */
-
-        .main {
-            padding: 20px;
-        }
-
-        @media (min-width: 768px) {
-            .main {
-                padding-right: 40px;
-                padding-left: 40px;
-            }
-        }
-
-        .main .page-header {
-            margin-top: 0;
-        }
-
-        /*
-         * Placeholder dashboard ideas
-         */
-
-        .placeholders {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .placeholders h4 {
-            margin-bottom: 0;
-        }
-
-        .placeholder {
-            margin-bottom: 20px;
-        }
-
-        .placeholder img {
-            display: inline-block;
-            border-radius: 50%;
-        }
-
-        .jumbotron {
-            text-align: left;
-            padding: 20px;
-        }
-
-        .jumbotron p {
-            font-size: inherit;
-        }
-
-        .big-character {
-            margin-right: 40px;
-            font-size: 24px;
-            color: #53ad7d;
-        }
-
-        .chart-box {
-            height: 500px;
-            background-color: #eef3f7;
-        }
-
-        .btn-close {
-            font-size: 16px;
-            color: #286090;
-        }
-
-        .detail-panel {
-            margin-left: -40px;
-            margin-top: -40px;
-            text-align: center;
-            position: absolute;
-            top: 103px;
-            background: white;
-            width: 88%;
-            min-width: 800px;
-            padding: 40px;
-            display: none;
-        }
-
-        .detail-main-page {
-            display: none;
-        }
-
-        .detail-waiting-page {
-            height: 400px;
-        }
-
-        .detail-external-page {
-            display: none;
-        }
-
-        .detail-external-page.active {
-            display: block;
-        }
-
-        .terminal-box {
-            width: 100%;
-            background: #3f3f3f;
-            color: white;
-            font-family: Courier New;
-        }
-
-        .host-detail {
-            cursor: pointer;
-        }
-
-        .breadcrumb-nav {
-            height: 75px;
-            padding: 20px 40px 20px 40px;
-            background-color: #262D37;;
-            box-shadow: 0 1px 3px #ddd;
-        }
-
-        .breadcrumb-nav .breadcrumb-svg {
-            height: 30px;
-            width: 30px;
-            vertical-align: top;
-            margin-right: 10px;
-        }
-
-        .breadcrumb-nav .breadcrumb-span {
-            font-size: 24px;
-            color: #FFFFFF;
-        }
-
-        #detail_table thead {
-            height: 44px;
-            background-color: #2d3543;
-            font-weight: normal;
-            font-size: 12px;
-
-        }
-
-        #detail_table > thead > tr > th {
-            /*padding-left: 15px;*/
-            border-bottom: 2px solid #5792E5;
-        }
-
-        #detail_table > tbody > tr > td {
-            padding: 0;
-        }
-        #detail_table > tbody > tr:hover {
-            color:#5792E5;
-        }
-        #detail_table > tbody > tr > td {
-            height: 40px;
-            line-height: 40px;
-            /*padding-left: 15px;*/
-            background: #1C2331;
-            font-weight: normal;
-            font-size: 12px;
-            border-bottom: 1px solid #32507A;
-        }
-
-        #detail_table .glyphicon {
-            color: #4A90E2;
-            padding-left: 3px;
-        }
-    </style>
-
+    .breadcrumb-nav .breadcrumb-span {
+      font-size: 24px;
+    }
+    .storage-content {
+      margin-left: 200px;
+      height: 100%;
+    }
+    #return-storage:hover {
+      cursor: pointer;
+    }
+    .chart-wrap {
+      height: 40%;
+      padding: 1.5% 1%;
+    }
+    .chart-container {
+      height: 100%;
+      border-radius: 4px;
+    }
+    .chart-box {
+      height: 100%;
+      width: 49%;
+      margin-right: 1%;
+      padding: 5px;
+      float: left;
+    }
+    .chart-title {
+      border-bottom: 1px solid #3D5B77;
+      padding: 2px 0 3px 10px;
+    }
+    #capacity, #hard-disk {
+      height: calc(100% - 26px);
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+      background: none;
+      color: #ccc;
+    }
+    .table>thead>tr>th, .table>tbody>tr>td {
+      border-color: #555;
+    }
+    .chart-container {
+      height: 100%;
+      background: #1C2331;
+      border-radius: 4px;
+      border: 1px solid #1B3C6E;
+    }
+  </style>
 </head>
-
-<body style="height:100%;">
-
+<body>
 <div class="left-nav-wrap">
-    <script>
-        $('.left-nav-wrap').load('leftNav-black.html');
-    </script>
+  <script>
+    $('.left-nav-wrap').load('leftNav-black.html');
+  </script>
 </div>
 <div class="top-wrap">
-    <script>
-        $('.top-wrap').load('fix-top-black.html');
-    </script>
+  <script>
+    $('.top-wrap').load('fix-top-black.html');
+  </script>
 </div>
-<div style="margin-left:200px;height:100%;background-color: #12141B">
-    <iframe id="iFrame1" name="iFrame1" width="100%" height="100%"
-            onload="this.height=iFrame1.document.body.scrollHeight"
-            frameborder="0"
-            src="http://211.139.11.136:18908/css/index.html?u=cmcc&p=91ee54dc4397af3c93fc32b6c7ec3eac&v=cloud2&t=0&flag=0"></iframe>
+<div class="storage-content">
+  <div class="breadcrumb-nav">
+    <img src="image/svg/docker.svg" class="breadcrumb-svg" alt=""/>
+    <span class="breadcrumb-span"><a href="storage-black.html">存储资源</a></span>
+  </div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="padding: 15px 0 0 15px;">
+    <li class="active">
+      <a id="return-storage" href="#home" aria-controls="home" role="tab" data-toggle="tab">块存储</a>
+    </li>
+    <li class="disabled">
+      <a href="javascript:void(0)">对象存储</a>
+    </li>
+  </ul>
+  <div class="chart-wrap">
+    <div class="chart-container">
+      <div class="chart-box">
+        <div class="chart-title">已分配资源</div>
+        <div id="capacity"></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">已使用资源</div>
+        <div id="hard-disk"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content" style="padding: 5px;">
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <div class="disk-container">
+        <table class="table" id="disk-table">
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>容量</th>
+              <th>被使用应用</th>
+              <th>所属域</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
+<script src="util/chart.js"></script>
+<script src="util/table.js"></script>
+<script>
+  var data = [
+    {name: 'V_BOSS_1', capacity: '500G', app: 'BOSS_YZ_GZ_1', area: 'B域', status: '已挂载'},
+    {name: 'V_DPI_2', capacity: '500G', app: 'DPI_WG_GZ_2', area: 'O域', status: '已挂载'},
+    {name: 'V_OA_1', capacity: '50G', app: 'OA_GX_GZ_1', area: 'M域', status: '已挂载'},
+    {name: 'V_BOSS_2', capacity: '300G', app: 'BOSS_YZ_GZ_2', area: 'B域', status: '已挂载'},
+    {name: 'V-CRM_1', capacity: '20G', app: 'CRM_YZ_GY_1', area: 'B域', status: '已挂载'},
+    {name: 'V_CRM_2', capacity: '40G', app: 'CRM_YZ_GY_2', area: 'B域', status: '已挂载'},
+    {name: 'V_CMOP', capacity: '400G', app: 'GZ_CMOP', area: 'M域', status: '已挂载'},
+    {name: 'V_MORE', capacity: '500G', app: 'AND_MORE', area: 'M域', status: '已挂载'},
+    {name: 'V_NPS', capacity: '700G', app: 'NPS_S_1', area: 'O域', status: '已挂载'},
+    {name: 'V_OA_2', capacity: '100G', app: 'OA_GX_GY_2', area: 'M域', status: '已挂载'},
+    {name: 'V_DPI_1', capacity: '800G', app: 'DPI_WG_GZ_1', area: 'B域', status: '已挂载'},
+    {name: 'V_MR_1', capacity: '900G', app: 'MR_WY_GZ_1', area: 'O域', status: '已挂载'},
+    {name: 'V_MR_2', capacity: '600G', app: 'MR_WY_GZ_2', area: 'O域', status: '已挂载'},
+    {name: 'V_ATHENA', capacity: '300G', app: 'ATHENA', area: 'M域', status: '已挂载'},
+    {name: 'V_DPI_3', capacity: '100G', app: 'DPI_WY_GY_3', area: 'O域', status: '已挂载'}
+  ];
+  var operation = '<a href="javascript:void(0)">卸载</a>&nbsp; <a href="javascript:void(0)">扩容</a>';
+  buildTable($('#disk-table'), data, operation);
+  var options = buildBlackRingOptions('', [
+    {value: 830, name: 'B域'},
+    {value: 1358, name: 'O域'},
+    {value: 212, name: 'M域'},
+    {value: 1812, name: '未分配'}
+  ], 'right');
+  var opacity = drawChart(document.getElementById('capacity'), options);
+  var pieClick = function(param) {
+    $('.chart-wrap').fadeOut();
+    var filterData = $.map(data, function(n) {
+      if(n.area == param.name) {
+        return n;
+      }
+    });
+    buildTable($('#disk-table'), filterData, operation)
+  };
+  opacity.on('click', function(param){
+    pieClick(param);
+  });
+  options = buildBlackRingOptions('', [
+    {value: 823, name: 'B域'},
+    {value: 1298, name: 'O域'},
+    {value: 205, name: 'M域'}
+  ], 'right');
+  var disk = drawChart(document.getElementById('hard-disk'), options);
+  disk.on('click', function(param){
+    pieClick(param);
+  });
+  $('#return-storage').click(function(){
+    location.href = 'storage-black.html';
+  });
+</script>
 </body>
 </html>
