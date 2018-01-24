@@ -47,7 +47,7 @@
             height: 40px;
             line-height: 40px;
             padding-left: 15px;
-            background: #1C2331;
+            /* background: #1C2331; */
             font-weight: normal;
             font-size: 12px;
             border-bottom: 1px solid #32507A;
@@ -538,13 +538,12 @@
         });
 
         $('#auto-toggle').click(function(e) {
-            // 弹性伸缩，移除列表中前两项，progress恢复至56%
+            // 弹性伸缩，移除列表中前两项，progress恢复至58%
             var mockId = ['b32fwyunbsf1', 'c20aavfbbs2z'];
             autoToggle(mockId[1], mockId[0]);
         });
 
         function autoToggle(id1, id2) {
-
             $('#' + id1).addClass('aimation-autoHide');
             $('#' + id2).addClass('aimation-autoHide');
             setTimeout(function() {
@@ -552,6 +551,7 @@
                 $('#' + id2).remove();
                 $('.tomcat-progress-bar').css('width', '58%');
                 $('.tomcat-progress-bar > span').html('58%');
+                var packNumber = $('#tomcat-number').html('3');
             }, 5500);
         }
 
@@ -566,7 +566,7 @@
                 '<td>' +
                 mockAgent +
                 '</td>' +
-                '<td><div class="progress-bar tomcat-progress-bar1 progress-bar-info progress-bar-striped active" style="width: 100%;border-radius:3px;"> <span>伸缩中</span> </div></td>>' +
+                '<td><div class="progress"><div class="progress-bar tomcat-progress-bar1 progress-bar-info progress-bar-striped active" style="width: 100%;border-radius:3px;"> <span>伸缩中</span> </div></div></td>' +
                 '<td>良好</td>' +
                 '<td>o域</td>' +
                 '<td>' +
@@ -624,8 +624,7 @@
                 $(e.target).parent().next().find('.app-info-dropdown').show();
                 $(e.target).parent().prev().find('.progress-bar').removeClass('progress-bar-danger')
                     .addClass('progress-bar-warning').css('width', mockProgress).find('span').html(mockProgress);
-
-                $('#app_containers').find('tbody').children().eq(0).css('background', 'none').children().eq(3).html("<div class='progress-bar tomcat-progress-bar1 progress-bar-info progress-bar-striped active' style='width: 100%;border-radius:3px;'><span>100%</span> </div></td>");
+                $('#app_containers').find('tbody').children().eq(0).css('background', 'none').children().eq(3).html("<div class='progress'><div class='progress-bar tomcat-progress-bar1 progress-bar-info progress-bar-striped active' style='width: 100%;border-radius:3px;'><span>100%</span></div> </div></td>");
                 $('#create_time').html("创建时间：2分钟前");
 
             }, 6000);
