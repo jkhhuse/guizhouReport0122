@@ -474,9 +474,7 @@
                                 <div class="version">
                                     版本: <span>3</span>
                                 </div>
-                                <div class="option">
-
-                                </div>
+                                <div class="option"></div>
                             </div>
                         </div>
                         <div class="metric-box">
@@ -855,22 +853,62 @@
                                 <th>创建时间</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="db-common-table">
                             <tr>
-                                <td>service_a</td>
-                                <td>oracle</td>
-                                <td>gbase_attribute</td>
-                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>ZK_BigData_MORE_V1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
                                 <td>135.10.59.64</td>
-                                <td>2018-01-23</td>
+                                <td>2017-11-23</td>
                             </tr>
                             <tr>
-                                <td>service_b</td>
-                                <td>tomcat</td>
-                                <td>gbase_attribute</td>
-                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>ZK_BigData_MORE_V2</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
+                                <td>135.10.59.65</td>
+                                <td>2017-11-23</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MOA1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.53.64/appdata/zookeeper-2181-V2</td>
+                                <td>135.10.53.114</td>
+                                <td>2017-06-17</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MOA2</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181-V2</td>
+                                <td>135.10.53.115</td>
+                                <td>2017-06-23</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MORE_V1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
                                 <td>135.10.59.64</td>
-                                <td>2018-01-21</td>
+                                <td>2017-08-05</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_HJH_100</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动和聚汇客户端</td>
+                                <td>135.10.66.80/appdata/zookeeper-2181</td>
+                                <td>135.10.66.81</td>
+                                <td>2017-11-10</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_HJH_100</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动和聚汇客户端</td>
+                                <td>135.10.66.80/appdata/zookeeper-2181</td>
+                                <td>135.10.66.102</td>
+                                <td>2017-11-10</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1044,30 +1082,54 @@
                                 <th>所属应用</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="db-table">
                             <tr>
-                                <td>cloud1</td>
-                                <td>mysql</td>
-                                <td>o域</td>
+                                <td>DB_MSS_OA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
                                 <td>运行中</td>
                                 <td>独立数据库</td>
                                 <td>32GB</td>
-                                <td>512GB</td>
-                                <td>91%</td>
-                                <td>apache</td>
-                                <td>OA-YZ-3001</td>
+                                <td>256GB</td>
+                                <td>40%</td>
+                                <td>oracle_license_v1</td>
+                                <td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_2</td>
                             </tr>
                             <tr>
-                                <td>cloud2</td>
-                                <td>mysql</td>
-                                <td>o域</td>
+                                <td>DB_MSS_OA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
                                 <td>运行中</td>
                                 <td>独立数据库</td>
-                                <td>32GB</td>
-                                <td>512GB</td>
-                                <td>40%</td>
-                                <td>apache</td>
-                                <td>OA-YZ-3001</td>
+                                <td>32C</td>
+                                <td>256GB</td>
+                                <td>49%</td>
+                                <td>oracle_license_v2</td>
+                                <td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_3</td>
+                            </tr>
+                            <tr>
+                                <td>DB_OA_ORA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
+                                <td>运行中</td>
+                                <td>云数据库</td>
+                                <td>8C</td>
+                                <td>64GB</td>
+                                <td>42%</td>
+                                <td>oracle_license_v3</td>
+                                <td>CMOP_YZ_GZ_1, CMOP_YZ_GZ_2</td>
+                            </tr>
+                            <tr>
+                                <td>DB_OA_ORA_2</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
+                                <td>运行中</td>
+                                <td>云数据库</td>
+                                <td>8C</td>
+                                <td>64GB</td>
+                                <td>25%</td>
+                                <td>oracle_license_v3</td>
+                                <td>CMOP_YZ_GZ_2</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1303,6 +1365,37 @@
             "rc": '47%',
             "rt": '31%'
         };
+
+        var tableDB = {
+            "oracle": [
+                "<tr><td>DB_MSS_OA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>独立数据库</td><td>32GB</td><td>256GB</td><td>40%</td><td>oracle_license_v1</td><td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_2</td></tr>",
+                "<tr><td>DB_MSS_OA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>独立数据库</td><td>32C</td><td>256GB</td><td>49%</td><td>oracle_license_v2</td><td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_3</td></tr>",
+                "<tr><td>DB_OA_ORA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>云数据库</td><td>8C</td><td>64GB</td><td>42%</td><td>oracle_license_v3</td><td>CMOP_YZ_GZ_1, CMOP_YZ_GZ_2</td></tr>",
+                "<tr><td>DB_OA_ORA_2</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>云数据库</td><td>8C</td><td>64GB</td><td>25%</td><td>oracle_license_v3</td><td>CMOP_YZ_GZ_2</td></tr>"
+            ],
+            "mpp": [
+                "<tr><td>DB_MORE_ORA_1</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>16C</td><td>128GB</td><td>25%</td><td>Vertica_license_v1</td><td>MORA_DMZ_GZ_1，MORA_DMZ_GZ_2</td></tr>",
+                "<tr><td>DB_MORE_ORA_2</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>16C</td><td>128GB</td><td>25%</td><td>Vertica_license_v1</td><td>MORA_DMZ_GZ_1，MORA_DMZ_GZ_2</td></tr>",
+                "<tr><td>DB_KAMO_ORA_1</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>8C</td><td>128GB</td><td>25%</td><td>Vertica_license_v2</td><td>KAMO_YZ_GZ_1，MORA_YZ_GZ_2，KAMO_YZ_GZ_3</td></tr>"
+            ]
+        };
+        var tableCommon = {
+            "zk": ["<tr><td>ZK_BigData_MORE_V1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.64</td><td>2017-11-23</td></tr>",
+                "value<tr><td>ZK_BigData_MORE_V2</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.65</td><td>2017-11-23</td></tr>",
+                "<tr><td>ZK_BigData_MOA1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.53.64/appdata/zookeeper-2181-V2</td><td>135.10.53.114</td><td>2017-06-17</td></tr>",
+                "<tr><td>ZK_BigData_MOA2</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181-V2</td><td>135.10.53.115</td><td>2017-06-23</td></tr>",
+                "<tr><td>ZK_BigData_MORE_V1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.64</td><td>2017-08-05</td></tr>",
+                "<tr><td>ZK_BigData_HJH_100</td><td>Zookeeper</td><td>贵州移动和聚汇客户端</td><td>135.10.66.80/appdata/zookeeper-2181</td><td>135.10.66.81</td><td>2017-11-10</td></tr>",
+                "<tr><td>ZK_BigData_HJH_100</td><td>Zookeeper</td><td>贵州移动和聚汇客户端</td><td>135.10.66.80/appdata/zookeeper-2181</td><td>135.10.66.102</td><td>2017-11-10</td></tr>"
+            ],
+            "redis": [
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.107</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.108</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.109</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.110</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.111</td><td>2017-10-23</td></tr>"
+            ]
+        };
         var chartBomCommon = echarts.init(document.getElementById('chart-bom-common'));
         var chartBomCommonOption = {
             tooltip: {
@@ -1459,6 +1552,20 @@
             $('.con-line-svg>.con-dbt').html(bomData.dbt);
             addResourceSvg(bomData.rc, bomData.rt);
             addDBSvg(bomData.dbc, bomData.dbt);
+
+            if (name === 'oracle') {
+                var tempHtml = '';
+                for (var i = 0; i < tableDB.oracle.length; i++) {
+                    tempHtml = tempHtml + tableDB.oracle[i];
+                }
+                $('.db-table').html(tempHtml);
+            } else if (name === 'mpp') {
+                var tempHtml = '';
+                for (var i = 0; i < tableDB.mpp.length; i++) {
+                    tempHtml = tempHtml + tableDB.mpp[i];
+                }
+                $('.db-table').html(tempHtml);
+            }
         }
 
         function changeComDesc(name) {
@@ -1485,6 +1592,19 @@
             $('.con-common-line-svg>.con-rc').html(bomCommonData.rc);
             $('.con-common-line-svg>.con-rt').html(bomCommonData.rt);
             addCommonResourceSvg(bomCommonData.rc, bomCommonData.rt);
+            if (name === 'zk') {
+                var tempHtml = '';
+                for (var i = 0; i < tableCommon.zk.length; i++) {
+                    tempHtml = tempHtml + tableCommon.zk[i];
+                }
+                $('.db-common-table').html(tempHtml);
+            } else if (name === 'redis') {
+                var tempHtml = '';
+                for (var i = 0; i < tableCommon.redis.length; i++) {
+                    tempHtml = tempHtml + tableCommon.redis[i];
+                }
+                $('.db-common-table').html(tempHtml);
+            }
         }
 
         function addCommonResourceSvg(rc, rt) {
@@ -1575,7 +1695,11 @@
             $('.svg-con-dbt').html(svgDbtStr);
         }
 
-        $('.metric-box > .bottom > .common-option').click(function() {});
+
+
+        function addToDBTable() {
+
+        }
     </script>
 </body>
 
