@@ -10,7 +10,8 @@
   <style>
     .store-content {
       margin-left: 200px;
-      height: 100%;
+      min-height: 100%;
+      height: auto;
       background-color: #12141B;
     }
     html, body {
@@ -60,8 +61,48 @@
       background: url("image/office.png") no-repeat 0 0;
       background-size: cover;
     }
-    .app-icon.icon-two {
-      background: url("image/building.png") no-repeat 0 0;
+    .icon-1 {
+      background: url("image/app1.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-2 {
+      background: url("image/app2.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-3 {
+      background: url("image/app3.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-4 {
+      background: url("image/app4.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-5 {
+      background: url("image/app5.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-6 {
+      background: url("image/app6.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-7 {
+      background: url("image/app7.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-8 {
+      background: url("image/app8.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-9 {
+      background: url("image/app9.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-10 {
+      background: url("image/app10.png") no-repeat 0 0;
+      background-size: cover;
+    }
+    .icon-11 {
+      background: url("image/app11.png") no-repeat 0 0;
       background-size: cover;
     }
     .app-title {
@@ -71,6 +112,10 @@
     .app-deploy {
       margin: 0 auto;
       display: block;
+    }
+    .app-list li {
+      margin-right: 15px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -90,10 +135,87 @@
     <img src="image/svg/appInstance.svg" class="breadcrumb-svg" alt=""/>
     <span class="breadcrumb-span"><a href="tomcat.html" style="color:#ccc;">软件商城</a></span>
   </div>
-  <ul class="app-list" style="margin-top: 2%;">
+  <ul class="app-list" style="margin-top: 2%;clear: both;">
+    <li>
+      <div class="app-icon icon-1"></div>
+      <div class="app-title" style="color:#ccc">MM能力开发平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
     <li>
       <div class="app-icon icon-one"></div>
       <div class="app-title" style="color:#ccc">贵州移动网络代维管理平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-2"></div>
+      <div class="app-title" style="color:#ccc">贵州移动Devops平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <!--<li>
+      <div class="app-icon icon-3"></div>
+      <div class="app-title" style="color:#ccc">贵州移动网络部后评估工具</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>-->
+    <li>
+      <div class="app-icon icon-4"></div>
+      <div class="app-title" style="color:#ccc">贵州移动有线宽带一体化</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-5"></div>
+      <div class="app-title" style="color:#ccc">短厅智能应答</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-6"></div>
+      <div class="app-title" style="color:#ccc">仪器仪表资源管理平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-7"></div>
+      <div class="app-title" style="color:#ccc">集客专线工程管理平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-8"></div>
+      <div class="app-title" style="color:#ccc">贵州移动创客天地</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-9"></div>
+      <div class="app-title" style="color:#ccc">网络运行维护项目管理平台</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-10"></div>
+      <div class="app-title" style="color:#ccc">在线客服智能应答</div>
+      <div>
+        <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
+      </div>
+    </li>
+    <li>
+      <div class="app-icon icon-11"></div>
+      <div class="app-title" style="color:#ccc">i玩红包</div>
       <div>
         <button type="button" class="btn btn-primary app-deploy"style="color:#ccc;">一键部署</button>
       </div>

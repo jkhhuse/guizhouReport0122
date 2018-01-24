@@ -438,7 +438,7 @@
             var myChart1 = echarts.init(document.getElementById('chart1'));
             var option1 = {
                 title: {
-                    text: '2224',
+                    text: '2120',
                     left: '32%',
                     bottom: 'center',
                     textStyle: {
@@ -580,7 +580,7 @@
         var pieChart1 = echarts.init(document.getElementById('pieChart1'));
         var pieChartoption1 = {
             title: [{
-                text: '102',
+                text: '80',
                 left: '34%',
                 bottom: 'center',
                 textStyle: {
@@ -608,7 +608,7 @@
                 orient: 'vertical',
                 right: '5%',
                 top: '10%',
-                data: ["B域", "O域", 'M域'],
+                data: ["B域", "O域", 'M域', '大数据'],
                 textStyle: {
                     color: '#ccc'
                 }
@@ -630,9 +630,10 @@
                         }
                     },
                     data: [
-                        {value: 40, name: 'B域'},
-                        {value: 32, name: 'O域'},
-                        {value: 28, name: 'M域'}
+                        {value: 32.5, name: 'B域'},
+                        {value: 55, name: 'O域'},
+                        {value: 5, name: 'M域'},
+                        {value: 7.5, name: '大数据'}
                     ],
                     itemStyle: {
                         normal: {
@@ -680,7 +681,7 @@
                  }
                  }*/
             ],
-            color: ['#E4A730', '#49B8F2', '#9A64CE']
+            color: ['#E4A730', '#49B8F2', '#9A64CE', '#3D5B77']
 
         };
         pieChart1.setOption(pieChartoption1);
@@ -1070,7 +1071,7 @@
             var myChart2 = echarts.init(document.getElementById('chart1'));
             var option2 = {
                 title: {
-                    text: '1340',
+                    text: '1460',
                     left: '32%',
                     bottom: 'center',
                     textStyle: {
@@ -1089,7 +1090,7 @@
                     orient: 'vertical',
                     right: '5%',
                     top: '10%',
-                    data: ["B域", "M域", 'O域'],
+                    data: ["B域", "M域", 'O域', '大数据'],
                     textStyle: {
                         color: '#ccc'
                     }
@@ -1113,9 +1114,10 @@
                             }
                         },
                         data: [
-                            {value: 0.26, name: 'B域'},
-                            {value: 0.29, name: 'O域'},
-                            {value: 0.45, name: 'M域'}
+                            {value: 0.18, name: 'B域'},
+                            {value: 0.54, name: 'O域'},
+                            {value: 0.05, name: 'M域'},
+                            {value: 0.23, name: '大数据'},
                         ],
                         itemStyle: {
                             normal: {
@@ -1131,7 +1133,7 @@
                         }
                     }
                 ],
-                color: ['#E4A730', '#49B8F2', '#9A64CE']
+                color: ['#E4A730', '#49B8F2', '#9A64CE', '#0A51AC']
             };
             myChart2.setOption(option2);
             myChart2.on('click', function (param) {
@@ -1155,7 +1157,7 @@
             var myChart3 = echarts.init(document.getElementById('chart1'));
             var option3 = {
                 title: {
-                    text: '240',
+                    text: '1240',
                     left: '32%',
                     bottom: 'center',
                     textStyle: {
@@ -1174,7 +1176,7 @@
                     orient: 'vertical',
                     right: '5%',
                     top: '10%',
-                    data: ["B域", "M域", 'O域'],
+                    data: ["大数据", "B域", "O域", 'M域'],
                     textStyle: {
                         color: '#ccc'
                     }
@@ -1198,9 +1200,10 @@
                             }
                         },
                         data: [
-                            {value: 0.36, name: 'B域'},
-                            {value: 0.19, name: 'O域'},
-                            {value: 0.45, name: 'M域'}
+                              {value: 0.23, name: '大数据'},
+                              {value: 0.13, name: 'B域'},
+                              {value: 0.19, name: 'O域'},
+                              {value: 0.45, name: 'M域'}
                         ],
                         itemStyle: {
                             normal: {
@@ -1216,7 +1219,7 @@
                         }
                     }
                 ],
-                color: ['#E4A730', '#49B8F2', '#9A64CE']
+              color: ['#ECBE65', '#49B8F2', '#A08BCD', '#15AAAA']
             };
             myChart3.setOption(option3);
             myChart3.on('click', function (param) {

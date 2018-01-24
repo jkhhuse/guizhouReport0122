@@ -268,17 +268,23 @@
         <div style="padding:15px;width: 100%;height: calc(100% - 75px);">
              <div style="height: 50px;width: 760px;display: inline-block;">
                    <div class="con-info-vm">
-                       <div class="info-box">
-                           <span class="box-previous">数据库: </span>
-                           <span class="box-last one">68个</span>
+                       <div id="box1">
+                           <div class="info-box" id="" >
+                               <span class="box-previous">数据库: </span>
+                               <span class="box-last one">68个</span>
+                           </div>
+                           <div class="info-box" id="">
+                               <span class="box-previous">大数据: </span>
+                               <span class="box-last two">28个</span>
+                           </div>
+                           <div class="info-box" id="" style="margin-right: 0!important;">
+                               <span class="box-previous">中间件: </span>
+                               <span class="box-last three">49个</span>
+                           </div>
                        </div>
-                       <div class="info-box">
-                           <span class="box-previous">大数据: </span>
-                           <span class="box-last two">28个</span>
-                       </div>
-                       <div class="info-box" style="margin-right: 0!important;">
-                           <span class="box-previous">中间件: </span>
-                           <span class="box-last three">49个</span>
+                       <div class="info-box" id="box2" style="display: none;">
+                           <span class="box-previous">业务能力: </span>
+                           <span class="box-last three">108个</span>
                        </div>
                    </div>
                </div>
@@ -818,6 +824,8 @@
             $('#chart1').addClass('hide');
             $('#chart_img').attr('src','image/nengli_chart_1.png');
             $('#chart_img').css('animation','');
+            $('#box1').css('display', 'none');
+            $('#box2').css('display', 'block');
           }, 2000);
           optionNum = 2;
         } else {
@@ -827,6 +835,8 @@
             $('#chart2').addClass('hide');
             $('#chart_img').attr('src','image/nengli_chart_2.png');
             $('#chart_img').css('animation','');
+            $('#box2').css('display', 'none');
+            $('#box1').css('display', 'block');
           }, 2000);
           optionNum = 1;
         }
