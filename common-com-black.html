@@ -221,11 +221,15 @@
             padding: 0px 15px;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
         }
         
         .con-metric .metric-box {
             width: 24%;
+            margin-right: 1%;
+            margin-top: 8px;
             height: 150px;
             background: #1C2331;
             padding: 8px 20px;
@@ -699,6 +703,19 @@
                         </div>
                     </div>
                     <div class="metric-box">
+                        <div class="title">Tomcat</div>
+                        <div class="split"></div>
+                        <div class="desc">一个免费的开放源代码的Web 应用服务器</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option" onclick="changeComDesc('tomcat')">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
                         <div class="title">Redis</div>
                         <div class="split"></div>
                         <div class="desc">一款Key-Value形式的内存数据库</div>
@@ -724,47 +741,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="metric-box">
-                        <div class="title">Mysql</div>
-                        <div class="split"></div>
-                        <div class="desc">一款开源关系型数据库</div>
-                        <div class="bottom">
-                            <div class="version">
-                                版本: <span>5</span>
-                            </div>
-                            <div class="common-option" onclick="changeComDesc('mysql')">
-                                详情
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="con-metric">
-                    <div class="metric-box">
-                        <div class="title">MongoDB</div>
-                        <div class="split"></div>
-                        <div class="desc">基于分布式文件存储的数据库系统</div>
-                        <div class="bottom">
-                            <div class="version">
-                                版本: <span>3</span>
-                            </div>
-                            <div class="common-option" onclick="changeComDesc('mongo')">
-                                详情
-                            </div>
-                        </div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="title">Oracle</div>
-                        <div class="split"></div>
-                        <div class="desc">一款主流的商业数据库</div>
-                        <div class="bottom">
-                            <div class="version">
-                                版本: <span>3</span>
-                            </div>
-                            <div class="common-option" onclick="changeComDesc('oracle')">
-                                详情
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="metric-box">
                         <div class="title">Memcache</div>
                         <div class="split"></div>
@@ -807,7 +784,7 @@
                         <div class="con-common-desc-split"></div>
                         <div class="con-common-line-style">
                             <div class="con-common-line-svg">
-                                <div>云数据库: </div>
+                                <div>CPU: </div>
                                 <div class="svg-common-con-rc">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
@@ -825,7 +802,7 @@
                                 </div>
                             </div>
                             <div class="con-common-line-svg">
-                                <div>传统数据库<br/>(未改造): </div>
+                                <div>内存: </div>
                                 <div class="svg-common-con-rt">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
@@ -968,6 +945,19 @@
                                 版本: <span>5</span>
                             </div>
                             <div class="option" onclick="changeDesc('mpp')">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">MongoDB</div>
+                        <div class="split"></div>
+                        <div class="desc">基于分布式文件存储的数据库系统</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>3</span>
+                            </div>
+                            <div class="common-option" onclick="changeDesc('mongo')">
                                 详情
                             </div>
                         </div>
@@ -1254,6 +1244,17 @@
             "rt": '20%',
             "dbc": '62%',
             "dbt": '23%'
+        }, {
+          "name": "mongo",
+          "data": {
+            bData: 38,
+            oData: 20,
+            mData: 42
+          },
+          "rc": '22%',
+          "rt": '40%',
+          "dbc": '22%',
+          "dbt": '43%'
         }];
 
         var bomData = {
@@ -1303,29 +1304,7 @@
             "dbc": '34%',
             "dbt": '8%'
         }, {
-            "name": "mysql",
-            "data": {
-                bData: 18,
-                oData: 60,
-                mData: 22
-            },
-            "rc": '42%',
-            "rt": '20%',
-            "dbc": '62%',
-            "dbt": '23%'
-        }, {
-            "name": "mongo",
-            "data": {
-                bData: 38,
-                oData: 20,
-                mData: 42
-            },
-            "rc": '22%',
-            "rt": '40%',
-            "dbc": '22%',
-            "dbt": '43%'
-        }, {
-            "name": "oracle",
+            "name": "tomcat",
             "data": {
                 bData: 18,
                 oData: 60,
@@ -1360,7 +1339,7 @@
         }];
 
         var bomCommonData = {
-            "name": "oracle",
+            "name": "tomcat",
             "data": {
                 bData: 30,
                 oData: 50,
@@ -1697,12 +1676,6 @@
                 '</svg>';
             $('.svg-con-dbc').html(svgDbcStr);
             $('.svg-con-dbt').html(svgDbtStr);
-        }
-
-
-
-        function addToDBTable() {
-
         }
     </script>
 </body>
