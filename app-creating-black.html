@@ -97,7 +97,8 @@
         }
         
         .app-info-dropdown .btn-default {
-            padding: 2px 10px;
+            padding: 2px 5px;
+            margin: 2px;
         }
         
         .add_minus .glyphicon {
@@ -122,6 +123,7 @@
         
         .progress {
             margin-bottom: 0 !important;
+            background: #1C2331;
         }
         /* #b32fwyunbsf1, */
         /* #c20aavfbbs2z {
@@ -176,6 +178,11 @@
         .progress {
             margin-top: 10px;
         }
+        .btn-goujian{
+            color: #fff;
+            background-color: #4A90E2;
+            border-color: #4A90E2;
+        }
     </style>
 </head>
 
@@ -207,7 +214,7 @@
                 </div>
             </div>
             <div>
-                <button class="btn btn-default" id="auto-toggle" type="button">弹性伸缩</button>
+                <button class="btn btn-success" id="auto-toggle" type="button">弹性伸缩</button>
             </div>
         </div>
 
@@ -229,7 +236,7 @@
                     <td>gz.chinamobile.com/tomcat:8.5.8</td>
                     <td>
                         <div class="progress app-info-progress progress-tomcat">
-                            <div class="progress-bar progress-bar-danger tomcat-progress-bar progress-bar-striped active" style="width: 0">
+                            <div id="tomcat-progress-bar" class="progress-bar progress-bar-danger tomcat-progress-bar progress-bar-striped active" style="width: 0">
                                 <span>0%</span>
                             </div>
                         </div>
@@ -243,7 +250,7 @@
                         <span class="loading-icon fa fa-spin fa-spinner"></span>
 
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -274,7 +281,7 @@
                     </td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -325,7 +332,7 @@
                     <td>catalina.sh run</td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -356,7 +363,7 @@
                     <td>catalina.sh run</td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -387,7 +394,7 @@
                     <td>service mysqld start</td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -418,7 +425,7 @@
                     <td>service mysqld start</td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -449,7 +456,7 @@
                     <td>service mysqld start</td>
                     <td>
                         <div class="dropdown app-info-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         操作
                         <span class="caret"></span>
                     </button>
@@ -527,13 +534,16 @@
             var mockAgent = ['tomcat4', 'tomcat5', 'tomcat6'];
             var mockIp = ['192.168.19.9', '192.168.19.8', '192.168.19.7'];
             var mockProgress = ['58%', '32%', '18%'];
+            var mockClass = ['progress-bar-warning', 'progress-bar-success', 'progress-bar-success'];
             var packNumber = $('#tomcat-number').html();
             if (packNumber === '2') {
-                addToList(e, mockId[0], mockName[0], mockAgent[0], mockIp[0], mockProgress[0]);
+                addToList(e, mockId[0], mockName[0], mockAgent[0], mockIp[0], mockProgress[0], mockClass[0]);
+
             } else if (packNumber === '3') {
-                addToList(e, mockId[1], mockName[1], mockAgent[1], mockIp[1], mockProgress[1]);
+                addToList(e, mockId[1], mockName[1], mockAgent[1], mockIp[1], mockProgress[1], mockClass[1]);
+
             } else if (packNumber === '4') {
-                addToList(e, mockId[2], mockName[2], mockAgent[2], mockIp[2], mockProgress[2]);
+                addToList(e, mockId[2], mockName[2], mockAgent[2], mockIp[2], mockProgress[2], mockClass[2]);
             }
         });
 
@@ -549,13 +559,15 @@
             setTimeout(function() {
                 $('#' + id1).remove();
                 $('#' + id2).remove();
-                $('.tomcat-progress-bar').css('width', '58%');
+              $('.tomcat-progress-bar').removeClass('progress-bar-success');
+              $('.tomcat-progress-bar').addClass('progress-bar-warning');
+              $('.tomcat-progress-bar').css('width', '58%');
                 $('.tomcat-progress-bar > span').html('58%');
                 var packNumber = $('#tomcat-number').html('3');
             }, 5500);
         }
 
-        function addToList(e, mockId, mockName, mockAgent, mockIp, mockProgress) {
+        function addToList(e, mockId, mockName, mockAgent, mockIp, mockProgress, mockClass) {
             var tomcat_add = '<tr id="' +
                 mockId +
                 '" style="background: #15AAAA">' +
@@ -579,7 +591,7 @@
                 '<td>catalina.sh run</td>' +
                 '<td>' +
                 '<div class="dropdown app-info-dropdown">' +
-                '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+                '<button class="btn btn-goujian dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
                 '操作' +
                 '<span class="caret"></span>' +
                 '</button>' +
@@ -622,8 +634,9 @@
             setTimeout(function() {
                 $(e.target).parent().next().find('.loading-icon').hide();
                 $(e.target).parent().next().find('.app-info-dropdown').show();
-                $(e.target).parent().prev().find('.progress-bar').removeClass('progress-bar-danger')
-                    .addClass('progress-bar-warning').css('width', mockProgress).find('span').html(mockProgress);
+                console.log(mockClass);
+                $(e.target).parent().prev().find('.progress-bar').removeClass('progress-bar-danger').removeClass('progress-bar-warning')
+                    .addClass(mockClass).css('width', mockProgress).find('span').html(mockProgress);
                 $('#app_containers').find('tbody').children().eq(0).css('background', 'none').children().eq(3).html("<div class='progress'><div class='progress-bar tomcat-progress-bar1 progress-bar-info progress-bar-striped active' style='width: 100%;border-radius:3px;'><span>100%</span></div> </div></td>");
                 $('#create_time').html("创建时间：2分钟前");
 

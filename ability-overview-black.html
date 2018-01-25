@@ -243,11 +243,17 @@
             color: #fff;
             margin-right: 20px;
         }
+        #barChart3{
+            background: #1C2331!important;
+        }
+        #barChart4{
+            background: #1C2331!important;
+        }
     </style>
 
 </head>
 
-<body style="height:100%;">
+<body style="height:100%;background: #12141B">
 
     <div class="left-nav-wrap">
         <script>
@@ -264,22 +270,22 @@
         <span class="breadcrumb-span">能力概览</span>
     </div>
 
-    <div style="padding: 0px;margin-left:200px;height:100%;background-color: #1C2331">
+    <div style="padding: 0px;margin-left:200px;height:100%;">
         <div style="padding:15px;width: 100%;height: calc(100% - 75px);">
              <div style="height: 50px;width: 760px;display: inline-block;">
                    <div class="con-info-vm">
                        <div id="box1">
                            <div class="info-box" id="" >
                                <span class="box-previous">数据库: </span>
-                               <span class="box-last one">68个</span>
+                               <span class="box-last one">68次</span>
                            </div>
                            <div class="info-box" id="">
                                <span class="box-previous">大数据: </span>
-                               <span class="box-last two">28个</span>
+                               <span class="box-last two">28次</span>
                            </div>
                            <div class="info-box" id="" style="margin-right: 0!important;">
                                <span class="box-previous">中间件: </span>
-                               <span class="box-last three">49个</span>
+                               <span class="box-last three">49次</span>
                            </div>
                        </div>
                        <div class="info-box" id="box2" style="display: none;">
@@ -307,50 +313,47 @@
       var myChart2 = echarts.init(document.getElementById('chart2'));
       var optionNum = 1;
       // 3D图的配置信息
-      var index = ['0','1', '2', '3', '4', '5', '6'];
+      var index = ['0','1', '2', '3', '4', '5', '6','7','8','9'];
       var category = ['数据库', '大数据', '中间件'];
       var data2 = [[0,0,5,'zookeper'],
         [0,0,13,'redis'],
-        [1,0,15,'mysql'],
+        [4,0,15,'mysql'],
         [2,0,11,'mongodb'],
-        [3,0,12,'oracle'],
-        [4,0,5,'memcache'],
-        [5,0,10,'dubbo'],
-        [6,0,2,'sping cloud'],
+        [5,0,12,'oracle'],
+        [2,0,0,''],
+        [3,0,5,'memcache'],
+        [6,0,0,''],
+        [7,0,10,'dubbo'],
+        [8,0,2,'sping cloud'],
 
         [0,1,2,'hive'],
         [1,1,1,'HDFS'],
         [2,1,2,'spark'],
-        [3,1,3,'MapReduce'],
-        [4,1,8,'Hadoop'],
-        [5,1,5,'Flume'],
-        [6,1,7,'Yarn'],
+        [3,1,,''],
+        [4,1,3,'MapReduce'],
+        [5,1,8,'Hadoop'],
+        [6,1,5,'Flume'],
+        [8,1,7,'Yarn'],
 
         [0,2,16,'tomcat'],
         [1,2,11,'zookeeper'],
         [2,2,2,'nginx'],
-        [3,2,3,'httpd'],
+        [3,2,3,'apache httpd'],
         [4,2,8,'BES'],
-        [5,2,9,'jdk']
+        [5,2,9,'jdk'],
+        [7,2,0,'0'],
+        [6,2,1,'weblogic'],
+        [8,2,1,'JBOSS']
       ];
       option2 = {
-        // backgroundImage: linear-gradient('-30deg, #181E2D 0%, #12285D 43%, #162E66 57%, #15346B 100%'),
-        /* backgroundColor:{
-           color: {
-             type: 'linear',
-             x: 0,
-             y: 0,
-             z: 0,
-             x2: 0,
-             y2: 1,
-             z2: 1,
-             colorStops: [{
-               offset: 0, color: '#181E2D'
-             }, {
-               offset: 1, color: '#15346B'
-             }]
-           }
-         },*/
+        title: {
+          text: '基础公共组件调用次数',
+          left:5,
+          top:5,
+          textStyle: {
+            color: '#fff'
+          }
+        },
         backgroundColor:'#12285D',
         tooltip:{
           padding:15,
@@ -739,6 +742,14 @@
 
       option = {
         title: {
+          text: '业务能力',
+          left:5,
+          top:5,
+          textStyle: {
+            color: '#fff'
+          }
+        },
+       /* title: {
           textStyle: {
             fontSize: 8,
             align: 'center'
@@ -746,7 +757,7 @@
           subtextStyle: {
             align: 'center'
           }
-        },
+        },*/
         grid: {
           left: '10%',
           right: '10%',
