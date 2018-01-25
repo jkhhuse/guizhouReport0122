@@ -404,7 +404,6 @@
             border-radius: 0;
             margin-bottom: 0;
             background-color: #000!important;
-
         }
         
         .progress-bar {}
@@ -426,7 +425,8 @@
             background: -ms-linear-gradient(top, #8E6BF1 0%, #6111FF 100%);
             background: linear-gradient(to bottom, #8E6BF1 0%, #6111FF 100%);
         }
-        #app_table .progress{
+        
+        #app_table .progress {
             background-color: #000!important;
         }
     </style>
@@ -464,7 +464,7 @@
 
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane" id="bigData" style="padding: 5px;">
-                <div role="tabpanel" class="tab-pane active standard"  style="padding: 5px;">
+                <div role="tabpanel" class="tab-pane active standard" style="padding: 5px;">
                     <div class="con-metric">
                         <div class="metric-box">
                             <div class="title">HDFS</div>
@@ -474,9 +474,7 @@
                                 <div class="version">
                                     版本: <span>3</span>
                                 </div>
-                                <div class="option">
-
-                                </div>
+                                <div class="option"></div>
                             </div>
                         </div>
                         <div class="metric-box">
@@ -634,7 +632,10 @@
                                         </div>
                                     </div>38%
                                 </td>
-                                <td><div class="progress"><div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>100%</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="gradient2 progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                                    </div>100%</td>
                                 <td>HDFS/Yarn/Hive/Kafka/Spark/Flume</td>
                             </tr>
                             <tr>
@@ -688,7 +689,7 @@
                             <div class="version">
                                 版本: <span>3</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('zk')">
                                 详情
                             </div>
                         </div>
@@ -701,7 +702,7 @@
                             <div class="version">
                                 版本: <span>3</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('redis')">
                                 详情
                             </div>
                         </div>
@@ -714,7 +715,7 @@
                             <div class="version">
                                 版本: <span>6</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('sc')">
                                 详情
                             </div>
                         </div>
@@ -727,7 +728,7 @@
                             <div class="version">
                                 版本: <span>5</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('mysql')">
                                 详情
                             </div>
                         </div>
@@ -742,7 +743,7 @@
                             <div class="version">
                                 版本: <span>3</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('mongo')">
                                 详情
                             </div>
                         </div>
@@ -755,7 +756,7 @@
                             <div class="version">
                                 版本: <span>3</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('oracle')">
                                 详情
                             </div>
                         </div>
@@ -768,7 +769,7 @@
                             <div class="version">
                                 版本: <span>6</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('mc')">
                                 详情
                             </div>
                         </div>
@@ -781,7 +782,7 @@
                             <div class="version">
                                 版本: <span>5</span>
                             </div>
-                            <div class="common-option">
+                            <div class="common-option" onclick="changeComDesc('dubbo')">
                                 详情
                             </div>
                         </div>
@@ -803,7 +804,7 @@
                         <div class="con-common-line-style">
                             <div class="con-common-line-svg">
                                 <div>云数据库: </div>
-                                <div>
+                                <div class="svg-common-con-rc">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
                                         <linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -811,17 +812,17 @@
                                           <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
                                         </linearGradient>
                                       </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-common-color)"></rect>   
+                                      <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="47%" height="14" fill="url(#shade-common-color)"></rect>   
                                     </svg>
                                 </div>
-                                <div>
-                                    50%
+                                <div class="con-rc">
+                                    47%
                                 </div>
                             </div>
                             <div class="con-common-line-svg">
                                 <div>传统数据库<br/>(未改造): </div>
-                                <div>
+                                <div class="svg-common-con-rt">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
                                         <linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -829,12 +830,12 @@
                                           <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
                                         </linearGradient>
                                       </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-common-color)"></rect>   
+                                      <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="31%" height="14" fill="url(#shade-common-color)"></rect>   
                                     </svg>
                                 </div>
-                                <div>
-                                    25%
+                                <div class="con-rt">
+                                    31%
                                 </div>
                             </div>
                         </div>
@@ -852,22 +853,62 @@
                                 <th>创建时间</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="db-common-table">
                             <tr>
-                                <td>service_a</td>
-                                <td>oracle</td>
-                                <td>gbase_attribute</td>
-                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>ZK_BigData_MORE_V1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
                                 <td>135.10.59.64</td>
-                                <td>2018-01-23</td>
+                                <td>2017-11-23</td>
                             </tr>
                             <tr>
-                                <td>service_b</td>
-                                <td>tomcat</td>
-                                <td>gbase_attribute</td>
-                                <td>135.10.59.64/appdata/tomcat-8080</td>
+                                <td>ZK_BigData_MORE_V2</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
+                                <td>135.10.59.65</td>
+                                <td>2017-11-23</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MOA1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.53.64/appdata/zookeeper-2181-V2</td>
+                                <td>135.10.53.114</td>
+                                <td>2017-06-17</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MOA2</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181-V2</td>
+                                <td>135.10.53.115</td>
+                                <td>2017-06-23</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_MORE_V1</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动雅典娜平台</td>
+                                <td>135.10.59.64/appdata/zookeeper-2181</td>
                                 <td>135.10.59.64</td>
-                                <td>2018-01-21</td>
+                                <td>2017-08-05</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_HJH_100</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动和聚汇客户端</td>
+                                <td>135.10.66.80/appdata/zookeeper-2181</td>
+                                <td>135.10.66.81</td>
+                                <td>2017-11-10</td>
+                            </tr>
+                            <tr>
+                                <td>ZK_BigData_HJH_100</td>
+                                <td>Zookeeper</td>
+                                <td>贵州移动和聚汇客户端</td>
+                                <td>135.10.66.80/appdata/zookeeper-2181</td>
+                                <td>135.10.66.102</td>
+                                <td>2017-11-10</td>
                             </tr>
                         </tbody>
                     </table>
@@ -883,33 +924,7 @@
                             <div class="version">
                                 版本: <span>3</span>
                             </div>
-                            <div class="option">
-                                详情
-                            </div>
-                        </div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="title">大云 Mysql</div>
-                        <div class="split"></div>
-                        <div class="desc">一款基于列存储的APP架构数据库</div>
-                        <div class="bottom">
-                            <div class="version">
-                                版本: <span>6</span>
-                            </div>
-                            <div class="option">
-                                详情
-                            </div>
-                        </div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="title">大云 MPP</div>
-                        <div class="split"></div>
-                        <div class="desc">中移苏研自研的 Mysql 数据库</div>
-                        <div class="bottom">
-                            <div class="version">
-                                版本: <span>5</span>
-                            </div>
-                            <div class="option">
+                            <div class="option" onclick="changeDesc('oracle')">
                                 详情
                             </div>
                         </div>
@@ -917,12 +932,38 @@
                     <div class="metric-box">
                         <div class="title">Vertica</div>
                         <div class="split"></div>
-                        <div class="desc">中移苏研自研的 Mysql 数据库</div>
+                        <div class="desc">一款基于列存储的 MPP 架构的数据库</div>
                         <div class="bottom">
                             <div class="version">
                                 版本: <span>8</span>
                             </div>
-                            <div class="option">
+                            <div class="option" onclick="changeDesc('vertica')">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">大云 Mysql</div>
+                        <div class="split"></div>
+                        <div class="desc">中移苏研自研的 Mysql 数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>6</span>
+                            </div>
+                            <div class="option" onclick="changeDesc('mysql')">
+                                详情
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="title">大云 MPP</div>
+                        <div class="split"></div>
+                        <div class="desc">中移苏研自研的 MPP 数据库</div>
+                        <div class="bottom">
+                            <div class="version">
+                                版本: <span>5</span>
+                            </div>
+                            <div class="option" onclick="changeDesc('mpp')">
                                 详情
                             </div>
                         </div>
@@ -944,7 +985,7 @@
                         <div class="con-line-style">
                             <div class="con-line-svg">
                                 <div>云数据库: </div>
-                                <div>
+                                <div class="svg-con-rc">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
                                         <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -952,17 +993,17 @@
                                           <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
                                         </linearGradient>
                                       </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-color)"></rect>   
+                                      <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="47%" height="14" fill="url(#shade-color)"></rect>   
                                     </svg>
                                 </div>
-                                <div>
-                                    50%
+                                <div class="con-rc">
+                                    47%
                                 </div>
                             </div>
                             <div class="con-line-svg">
                                 <div>传统数据库<br/>(未改造): </div>
-                                <div>
+                                <div class="svg-con-rt">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                                       <defs>
                                         <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -970,12 +1011,12 @@
                                           <stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>
                                         </linearGradient>
                                       </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-color)"></rect>   
+                                      <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>    
+                                      <rect x="9" y="0" rx="2" ry="2" width="31%" height="14" fill="url(#shade-color)"></rect>   
                                     </svg>
                                 </div>
-                                <div>
-                                    25%
+                                <div class="con-rt">
+                                    31%
                                 </div>
                             </div>
                         </div>
@@ -988,38 +1029,38 @@
                         <div class="con-line-style">
                             <div class="con-line-svg">
                                 <div>云数据库: </div>
-                                <div>
+                                <div class="svg-con-dbc">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                      <defs>
-                                        <linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">
-                                          <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>
-                                          <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>
-                                        </linearGradient>
-                                      </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="40%" height="14" fill="url(#shade-color-p)"></rect>   
-                                    </svg>
+                                    <defs>
+                                      <linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>
+                                        <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>
+                                      </linearGradient>
+                                    </defs>
+                                    <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>    
+                                    <rect x="9" y="0" rx="2" ry="2" width="38%" height="14" fill="url(#shade-color-p)"></rect>   
+                                  </svg>
                                 </div>
-                                <div>
-                                    50%
+                                <div class="con-dbc">
+                                    38%
                                 </div>
                             </div>
                             <div class="con-line-svg">
                                 <div>传统数据库<br/>(未改造): </div>
-                                <div>
+                                <div class="svg-con-dbt">
                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                      <defs>
-                                        <linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">
-                                          <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>
-                                          <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>
+                                    <defs>
+                                        <linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#6111FF;stop-opacity:1" />
                                         </linearGradient>
-                                      </defs>
-                                      <rect x="10" y="0" rx="2" ry="2" width="80%" height="14" fill="#000"></rect>    
-                                      <rect x="9" y="0" rx="2" ry="2" width="20%" height="14" fill="url(#shade-color-p)"></rect>   
+                                    </defs>
+                                    <rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>
+                                    <rect x="9" y="0" rx="2" ry="2" width="53%" height="14" fill="url(#shade-color-p)"></rect>
                                     </svg>
                                 </div>
-                                <div>
-                                    25%
+                                <div class="con-dbt">
+                                    53%
                                 </div>
                             </div>
                         </div>
@@ -1041,30 +1082,54 @@
                                 <th>所属应用</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="db-table">
                             <tr>
-                                <td>cloud1</td>
-                                <td>mysql</td>
-                                <td>o域</td>
+                                <td>DB_MSS_OA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
                                 <td>运行中</td>
                                 <td>独立数据库</td>
                                 <td>32GB</td>
-                                <td>512GB</td>
-                                <td>91%</td>
-                                <td>apache</td>
-                                <td>OA-YZ-3001</td>
+                                <td>256GB</td>
+                                <td>40%</td>
+                                <td>oracle_license_v1</td>
+                                <td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_2</td>
                             </tr>
                             <tr>
-                                <td>cloud2</td>
-                                <td>mysql</td>
-                                <td>o域</td>
+                                <td>DB_MSS_OA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
                                 <td>运行中</td>
                                 <td>独立数据库</td>
-                                <td>32GB</td>
-                                <td>512GB</td>
-                                <td>40%</td>
-                                <td>apache</td>
-                                <td>OA-YZ-3001</td>
+                                <td>32C</td>
+                                <td>256GB</td>
+                                <td>49%</td>
+                                <td>oracle_license_v2</td>
+                                <td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_3</td>
+                            </tr>
+                            <tr>
+                                <td>DB_OA_ORA_1</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
+                                <td>运行中</td>
+                                <td>云数据库</td>
+                                <td>8C</td>
+                                <td>64GB</td>
+                                <td>42%</td>
+                                <td>oracle_license_v3</td>
+                                <td>CMOP_YZ_GZ_1, CMOP_YZ_GZ_2</td>
+                            </tr>
+                            <tr>
+                                <td>DB_OA_ORA_2</td>
+                                <td>Oracle.12c</td>
+                                <td>M域</td>
+                                <td>运行中</td>
+                                <td>云数据库</td>
+                                <td>8C</td>
+                                <td>64GB</td>
+                                <td>25%</td>
+                                <td>oracle_license_v3</td>
+                                <td>CMOP_YZ_GZ_2</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1141,7 +1206,196 @@
 
         }
 
+        var bomDataArray = [{
+            "name": "oracle",
+            "data": {
+                bData: 30,
+                oData: 50,
+                mData: 20
+            },
+            "rc": '47%',
+            "rt": '31%',
+            "dbc": '41%',
+            "dbt": '53%'
+        }, {
+            "name": "mysql",
+            "data": {
+                bData: 20,
+                oData: 35,
+                mData: 45
+            },
+            "rc": '26%',
+            "rt": '21%',
+            "dbc": '68%',
+            "dbt": '25%'
+        }, {
+            "name": "mpp",
+            "data": {
+                bData: 22,
+                oData: 35,
+                mData: 43
+            },
+            "rc": '24%',
+            "rt": '68%',
+            "dbc": '34%',
+            "dbt": '8%'
+        }, {
+            "name": "vertica",
+            "data": {
+                bData: 18,
+                oData: 60,
+                mData: 22
+            },
+            "rc": '42%',
+            "rt": '20%',
+            "dbc": '62%',
+            "dbt": '23%'
+        }];
 
+        var bomData = {
+            "name": "oracle",
+            "data": {
+                bData: 30,
+                oData: 50,
+                mData: 20
+            },
+            "rc": '47%',
+            "rt": '31%',
+            "dbc": '41%',
+            "dbt": '23%'
+        };
+
+        var bomCommonDataArray = [{
+            "name": "zk",
+            "data": {
+                bData: 30,
+                oData: 50,
+                mData: 20
+            },
+            "rc": '47%',
+            "rt": '31%',
+            "dbc": '41%',
+            "dbt": '53%'
+        }, {
+            "name": "redis",
+            "data": {
+                bData: 20,
+                oData: 35,
+                mData: 45
+            },
+            "rc": '26%',
+            "rt": '21%',
+            "dbc": '68%',
+            "dbt": '25%'
+        }, {
+            "name": "sc",
+            "data": {
+                bData: 22,
+                oData: 35,
+                mData: 43
+            },
+            "rc": '24%',
+            "rt": '68%',
+            "dbc": '34%',
+            "dbt": '8%'
+        }, {
+            "name": "mysql",
+            "data": {
+                bData: 18,
+                oData: 60,
+                mData: 22
+            },
+            "rc": '42%',
+            "rt": '20%',
+            "dbc": '62%',
+            "dbt": '23%'
+        }, {
+            "name": "mongo",
+            "data": {
+                bData: 38,
+                oData: 20,
+                mData: 42
+            },
+            "rc": '22%',
+            "rt": '40%',
+            "dbc": '22%',
+            "dbt": '43%'
+        }, {
+            "name": "oracle",
+            "data": {
+                bData: 18,
+                oData: 60,
+                mData: 22
+            },
+            "rc": '72%',
+            "rt": '11%',
+            "dbc": '12%',
+            "dbt": '21%'
+        }, {
+            "name": "mc",
+            "data": {
+                bData: 55,
+                oData: 25,
+                mData: 20
+            },
+            "rc": '22%',
+            "rt": '60%',
+            "dbc": '17%',
+            "dbt": '73%'
+        }, {
+            "name": "dubbo",
+            "data": {
+                bData: 28,
+                oData: 50,
+                mData: 22
+            },
+            "rc": '33%',
+            "rt": '63%',
+            "dbc": '22%',
+            "dbt": '13%'
+        }];
+
+        var bomCommonData = {
+            "name": "oracle",
+            "data": {
+                bData: 30,
+                oData: 50,
+                mData: 20
+            },
+            "rc": '47%',
+            "rt": '31%'
+        };
+
+        var tableDB = {
+            "oracle": [
+                "<tr><td>DB_MSS_OA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>独立数据库</td><td>32GB</td><td>256GB</td><td>40%</td><td>oracle_license_v1</td><td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_2</td></tr>",
+                "<tr><td>DB_MSS_OA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>独立数据库</td><td>32C</td><td>256GB</td><td>49%</td><td>oracle_license_v2</td><td>ATHENA_YZ_GZ_1,ATHENA_YZ_GZ_3</td></tr>",
+                "<tr><td>DB_OA_ORA_1</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>云数据库</td><td>8C</td><td>64GB</td><td>42%</td><td>oracle_license_v3</td><td>CMOP_YZ_GZ_1, CMOP_YZ_GZ_2</td></tr>",
+                "<tr><td>DB_OA_ORA_2</td><td>Oracle.12c</td><td>M域</td><td>运行中</td><td>云数据库</td><td>8C</td><td>64GB</td><td>25%</td><td>oracle_license_v3</td><td>CMOP_YZ_GZ_2</td></tr>"
+            ],
+            "mpp": [
+                "<tr><td>DB_MORE_ORA_1</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>16C</td><td>128GB</td><td>25%</td><td>Vertica_license_v1</td><td>MORA_DMZ_GZ_1，MORA_DMZ_GZ_2</td></tr>",
+                "<tr><td>DB_MORE_ORA_2</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>16C</td><td>128GB</td><td>25%</td><td>Vertica_license_v1</td><td>MORA_DMZ_GZ_1，MORA_DMZ_GZ_2</td></tr>",
+                "<tr><td>DB_KAMO_ORA_1</td><td>Vertica</td><td>B域</td><td>运行中</td><td>独立数据库</td><td>8C</td><td>128GB</td><td>25%</td><td>Vertica_license_v2</td><td>KAMO_YZ_GZ_1，MORA_YZ_GZ_2，KAMO_YZ_GZ_3</td></tr>"
+            ]
+        };
+        var tableCommon = {
+            "zk": ["<tr><td>ZK_BigData_MORE_V1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.64</td><td>2017-11-23</td></tr>",
+                "value<tr><td>ZK_BigData_MORE_V2</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.65</td><td>2017-11-23</td></tr>",
+                "<tr><td>ZK_BigData_MOA1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.53.64/appdata/zookeeper-2181-V2</td><td>135.10.53.114</td><td>2017-06-17</td></tr>",
+                "<tr><td>ZK_BigData_MOA2</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181-V2</td><td>135.10.53.115</td><td>2017-06-23</td></tr>",
+                "<tr><td>ZK_BigData_MORE_V1</td><td>Zookeeper</td><td>贵州移动雅典娜平台</td><td>135.10.59.64/appdata/zookeeper-2181</td><td>135.10.59.64</td><td>2017-08-05</td></tr>",
+                "<tr><td>ZK_BigData_HJH_100</td><td>Zookeeper</td><td>贵州移动和聚汇客户端</td><td>135.10.66.80/appdata/zookeeper-2181</td><td>135.10.66.81</td><td>2017-11-10</td></tr>",
+                "<tr><td>ZK_BigData_HJH_100</td><td>Zookeeper</td><td>贵州移动和聚汇客户端</td><td>135.10.66.80/appdata/zookeeper-2181</td><td>135.10.66.102</td><td>2017-11-10</td></tr>"
+            ],
+            "redis": [
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.107</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.108</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.109</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.110</td><td>2017-10-23</td></tr>",
+                "<tr><td>Redis_GZ_MORE_V1.0</td><td>redis</td><td>贵州移动和MORE平台</td><td>135.16.59.72/appdata/Redis2.7</td><td>135.16.62.111</td><td>2017-10-23</td></tr>"
+            ]
+        };
         var chartBomCommon = echarts.init(document.getElementById('chart-bom-common'));
         var chartBomCommonOption = {
             tooltip: {
@@ -1179,13 +1433,13 @@
                 },
                 roseType: 'radius',
                 data: [{
-                    value: 30,
+                    value: bomCommonData.data.bData,
                     name: 'B域'
                 }, {
-                    value: 25,
+                    value: bomCommonData.data.oData,
                     name: 'O域'
                 }, {
-                    value: 45,
+                    value: bomCommonData.data.mData,
                     name: 'M域'
                 }],
                 itemStyle: {
@@ -1203,6 +1457,7 @@
             color: ['#1494DB', '#00D0CB', '#B871D8']
         };
         chartBomCommon.setOption(chartBomCommonOption);
+
 
         var chartBom = echarts.init(document.getElementById('chart-bom'));
         var chartBomOption = {
@@ -1241,13 +1496,13 @@
                 },
                 roseType: 'radius',
                 data: [{
-                    value: 30,
+                    value: bomData.data.bData,
                     name: 'B域'
                 }, {
-                    value: 25,
+                    value: bomData.data.oData,
                     name: 'O域'
                 }, {
-                    value: 45,
+                    value: bomData.data.mData,
                     name: 'M域'
                 }],
                 itemStyle: {
@@ -1266,16 +1521,185 @@
         };
         chartBom.setOption(chartBomOption);
 
-        $('.con-desc').hide();
-        $('.con-common-desc').hide();
-
         $('.metric-box > .bottom > .option').click(function() {
-            $('.con-desc').toggle();
+            // $('.con-desc').toggle();
         });
 
-        $('.metric-box > .bottom > .common-option').click(function() {
-            $('.con-common-desc').toggle();
-        });
+        function changeDesc(name) {
+            var temp;
+            for (var i = 0; i < bomDataArray.length; i++) {
+                if (bomDataArray[i].name === name) {
+                    bomData = bomDataArray[i];
+                }
+            }
+            chartBom.setOption({
+                series: [{
+                    data: [{
+                        value: bomData.data.bData,
+                        name: 'B域'
+                    }, {
+                        value: bomData.data.oData,
+                        name: 'O域'
+                    }, {
+                        value: bomData.data.mData,
+                        name: 'M域'
+                    }],
+                }]
+            });
+            $('.con-line-svg>.con-rc').html(bomData.rc);
+            $('.con-line-svg>.con-rt').html(bomData.rt);
+            $('.con-line-svg>.con-dbc').html(bomData.dbc);
+            $('.con-line-svg>.con-dbt').html(bomData.dbt);
+            addResourceSvg(bomData.rc, bomData.rt);
+            addDBSvg(bomData.dbc, bomData.dbt);
+
+            if (name === 'oracle') {
+                var tempHtml = '';
+                for (var i = 0; i < tableDB.oracle.length; i++) {
+                    tempHtml = tempHtml + tableDB.oracle[i];
+                }
+                $('.db-table').html(tempHtml);
+            } else if (name === 'mpp') {
+                var tempHtml = '';
+                for (var i = 0; i < tableDB.mpp.length; i++) {
+                    tempHtml = tempHtml + tableDB.mpp[i];
+                }
+                $('.db-table').html(tempHtml);
+            }
+        }
+
+        function changeComDesc(name) {
+            var temp;
+            for (var i = 0; i < bomCommonDataArray.length; i++) {
+                if (bomCommonDataArray[i].name === name) {
+                    bomCommonData = bomCommonDataArray[i];
+                }
+            }
+            chartBomCommon.setOption({
+                series: [{
+                    data: [{
+                        value: bomCommonData.data.bData,
+                        name: 'B域'
+                    }, {
+                        value: bomCommonData.data.oData,
+                        name: 'O域'
+                    }, {
+                        value: bomCommonData.data.mData,
+                        name: 'M域'
+                    }],
+                }]
+            });
+            $('.con-common-line-svg>.con-rc').html(bomCommonData.rc);
+            $('.con-common-line-svg>.con-rt').html(bomCommonData.rt);
+            addCommonResourceSvg(bomCommonData.rc, bomCommonData.rt);
+            if (name === 'zk') {
+                var tempHtml = '';
+                for (var i = 0; i < tableCommon.zk.length; i++) {
+                    tempHtml = tempHtml + tableCommon.zk[i];
+                }
+                $('.db-common-table').html(tempHtml);
+            } else if (name === 'redis') {
+                var tempHtml = '';
+                for (var i = 0; i < tableCommon.redis.length; i++) {
+                    tempHtml = tempHtml + tableCommon.redis[i];
+                }
+                $('.db-common-table').html(tempHtml);
+            }
+        }
+
+        function addCommonResourceSvg(rc, rt) {
+
+            var s1 = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect> ' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                rc +
+                '" height="14" fill="url(#shade-common-color)"></rect>' +
+                '</svg>';
+            var s2 = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-common-color" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect> ' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                rt +
+                '" height="14" fill="url(#shade-common-color)"></rect>' +
+                '</svg>';
+            $('.svg-common-con-rc').html(s1);
+            $('.svg-common-con-rt').html(s2);
+        }
+
+        function addResourceSvg(rc, rt) {
+            var svgRcStr = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                rc +
+                '" height="14" fill="url(#shade-color)"></rect>' +
+                '</svg>';
+            var svgRtStr = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-color" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#0049F8;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#0093DD;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                rt +
+                '" height="14" fill="url(#shade-color)"></rect>' +
+                '</svg>';
+            $('.svg-con-rc').html(svgRcStr);
+            $('.svg-con-rt').html(svgRtStr);
+        }
+
+        function addDBSvg(dbc, dbt) {
+            var svgDbcStr = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                dbc +
+                '" height="14" fill="url(#shade-color-p)"></rect>' +
+                '</svg>';
+            var svgDbtStr = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+                '<defs>' +
+                '<linearGradient id="shade-color-p" x1="0%" y1="0%" x2="100%" y2="0%">' +
+                '<stop offset="0%" style="stop-color:#8E6BF1;stop-opacity:1"/>' +
+                '<stop offset="100%" style="stop-color:#6111FF;stop-opacity:1"/>' +
+                '</linearGradient>' +
+                '</defs>' +
+                '<rect x="10" y="0" rx="2" ry="2" width="100%" height="14" fill="#000"></rect>' +
+                '<rect x="9" y="0" rx="2" ry="2" width="' +
+                dbt +
+                '" height="14" fill="url(#shade-color-p)"></rect>' +
+                '</svg>';
+            $('.svg-con-dbc').html(svgDbcStr);
+            $('.svg-con-dbt').html(svgDbtStr);
+        }
+
+
+
+        function addToDBTable() {
+
+        }
     </script>
 </body>
 
